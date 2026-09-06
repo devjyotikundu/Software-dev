@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Translate — LoopSync{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="mb-3">Translate</h2>
+        <p class="text-muted">No login needed — translate freely.</p>
+
+        {% if error %}<div class="alert alert-danger">{{ error }}</div>{% endif %}
+
+        <form id="translate-form" class="row g-3">
+            <div class="col-6">
+                <label class="form-label">From</label>
+                <select name="source" id="source" class="form-select">
+                    {% for code, label in languages.items %}
+                        <option value="{{ code }}" {% if code == source|default:'auto' %}selected{% endif %}>{{ label }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-6">
+                <label class="form-label">To</label>
+                <select name="target" id="target" class="form-select">
+                    {% for code, label in languages.items %}
+                        {% if code != 'auto' %}
+                        <option value="{{ code }}" {% if code == target|default:'es' %}selected{% endif %}>{{ label }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-12">
+                <label class="form-label">Text</label>
+                <textarea name="text" id="text" class="form-control" rows="4" placeholder="Type something to translate...">{{ text|default:'' }}</textarea>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Translate</button>
+            </div>
+        </form>
+
+        <div class="mt-4">
+            <label class="form-label">Translation</label>
+            <div id="result" class="card">
+                <div class="card-body" id="result-text">{{ translated_text|default:'' }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

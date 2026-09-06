@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Course complete — LoopSync{% endblock %}
+{% block content %}
+<div class="text-center py-5">
+    <h2>🎉 You've completed every {{ language.name }} lesson!</h2>
+    <p class="lead">Nice work. You can switch languages or level any time.</p>
+    <a href="{% url 'learning:profile_setup' %}" class="btn btn-primary mt-3">Change course</a>
+</div>
+{% endblock %}

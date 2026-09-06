@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}LoopSync — Learn & Translate{% endblock %}
+{% block content %}
+<div class="text-center py-5">
+    <h1>Welcome to LoopSync</h1>
+    <p class="lead">Learn a new language through short courses, or translate text instantly.</p>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="{% url 'translator:translate' %}" class="btn btn-primary btn-lg">Translate</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'learning:next_lesson' %}" class="btn btn-outline-primary btn-lg">Continue learning</a>
+        {% else %}
+            <a href="{% url 'accounts:register' %}" class="btn btn-outline-primary btn-lg">Start learning</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
