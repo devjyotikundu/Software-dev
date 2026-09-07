@@ -5,11 +5,49 @@
     <div class="col-md-7">
         <p class="text-muted mb-1">{{ language.name }} · Lesson {{ lesson.lesson_order }}</p>
         <h2 class="mb-3">{{ lesson.title }}</h2>
+
         <div class="card mb-4">
             <div class="card-body">
                 <p style="white-space: pre-wrap;">{{ lesson.contents }}</p>
             </div>
         </div>
+
+        {% if vocabulary_items %}
+        <h4 class="mb-3">Vocabulary</h4>
+        <div class="mb-4">
+            {% for item in vocabulary_items %}
+            <div class="card mb-2 vocab-card">
+                <div class="card-body py-2">
+                    <div class="vocab-term">{{ item.term }}</div>
+                    <div class="vocab-translation">{{ item.translation }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if quiz_questions %}
+        <h4 class="mb-3">Quick quiz</h4>
+        <div class="mb-4">
+            {% for q in quiz_questions %}
+            <div class="card mb-2 quiz-card">
+                <div class="card-body py-2">
+                    <div class="quiz-question">{{ forloop.counter }}. {{ q.question }}</div>
+                    <button type="button"
+                            class="btn btn-sm btn-outline-secondary mt-2 quiz-reveal-btn"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#quiz-answer-{{ q.id }}">
+                        Show answer
+                    </button>
+                    <div class="collapse" id="quiz-answer-{{ q.id }}">
+                        <div class="quiz-answer mt-2">{{ q.answer }}</div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
         <form method="post" action="{% url 'learning:mark_progress' %}">
             {% csrf_token %}
             <input type="hidden" name="lesson_id" value="{{ lesson.id }}">
