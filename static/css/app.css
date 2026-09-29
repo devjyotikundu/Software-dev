@@ -908,3 +908,13 @@ a { text-underline-offset: 3px; }
 }
 .lx-ai-answer.is-error { background: var(--lx-warning-50); border-color: #F8DDB6; color: var(--lx-warning); }
 .lx-ai-summary { margin-bottom: 1.5rem; }
+
+/* ---------- 22. Phase 15: notifications ---------- */
+.lx-nav-item--icon { position: relative; padding-inline: .6rem; }
+.lx-nav-item--icon .lx-count { position: absolute; top: -.1rem; right: -.2rem; }
+.lx-note { align-items: flex-start; flex-wrap: nowrap; }
+.lx-note.is-unread { background: var(--lx-primary-50); }
+.lx-note__link { flex: 1; display: grid; gap: .1rem; text-decoration: none; color: inherit; }
+.lx-note__link:hover .lx-note__title { text-decoration: underline; }
+.lx-note__title { font-weight: 600; color: var(--lx-ink); }
+.lx-note__dot { flex: none; width: .55rem; height: .55rem; margin-top: .5rem; border-radius: 50%; background: var(--lx-primary-600); }

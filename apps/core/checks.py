@@ -26,3 +26,4 @@ def static_manifest_exists(app_configs=None, **kwargs):
              "uses (e.g. --settings=config.settings.production) during the build.",
         id="core.E001",
     )]
+

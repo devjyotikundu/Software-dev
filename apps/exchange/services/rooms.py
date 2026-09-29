@@ -11,9 +11,11 @@ from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
 from django.db import IntegrityError, transaction
 from django.db.models import Q
+from django.urls import reverse
 from django.utils import timezone
 
 from apps.matching.models import Match
+from apps.notifications.services import Kind, notify, notify_new_message
 
 from ..models import ExchangeRoom, ExchangeSession, Message
 from .config import exchange_setting
@@ -121,6 +123,9 @@ def end_session(user, room_id):
     session.save(update_fields=["status", "ended_at"])
     transaction.on_commit(lambda: broadcast(
         room.pk, "session.changed", {"type": "session", "action": "ended", "by": user.pk}))
+    notify(partner_of(room, user), Kind.FEEDBACK_REQUEST, "How was your session?",
+           body=f"Tell us how practising with {user.profile.display_name} went. It takes 20 seconds.",
+           link=reverse("feedback:session", kwargs={"session_id": session.pk}), actor=user)
     return session
 
 
@@ -143,6 +148,7 @@ def post_message(user, room_id, body):
     language_id = session_state(session).language_id if session else None
     message = Message.objects.create(room=room, sender=user, body=body, language_id=language_id)
     broadcast(room.pk, "chat.message", message_payload(message, user))
+    notify_new_message(room, user, partner_of(room, user))
     return message
 
 

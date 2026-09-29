@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Notifications | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-form">
+    <header class="lx-page-header lx-page-header--split">
+      <div class="d-flex align-items-center gap-3">
+        <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-bell" aria-hidden="true"></i></span>
+        <div><h1>Notifications</h1><p>Requests, partners, messages and reminders.</p></div>
+      </div>
+      {% if unread_notification_count %}
+      <form method="post" action="{% url 'notifications:read_all' %}">{% csrf_token %}
+        <button type="submit" class="btn btn-secondary-lx btn-sm"><i class="bi bi-check2-all" aria-hidden="true"></i>Mark all as read</button>
+      </form>
+      {% endif %}
+    </header>
+
+    {% if notes %}
+    <div class="lx-card"><ul class="lx-list">
+      {% for note in notes %}
+      <li class="lx-list__item lx-note{% if not note.is_read %} is-unread{% endif %}">
+        <span class="lx-icon-badge" aria-hidden="true"><i class="bi {% if note.kind == 'match_request' %}bi-person-plus{% elif note.kind == 'match_accepted' %}bi-person-check{% elif note.kind == 'new_message' %}bi-chat-dots{% elif note.kind == 'session_reminder' %}bi-alarm{% else %}bi-star{% endif %}"></i></span>
+        <a class="lx-note__link" href="{% url 'notifications:open' pk=note.pk %}">
+          <span class="lx-note__title">{% if not note.is_read %}<span class="visually-hidden">Unread: </span>{% endif %}{{ note.title }}</span>
+          {% if note.body %}<span class="lx-list__meta">{{ note.body }}</span>{% endif %}
+          <span class="lx-list__meta"><time datetime="{{ note.created_at|date:'c' }}">{{ note.created_at|timesince }} ago</time></span>
+        </a>
+        {% if not note.is_read %}<span class="lx-note__dot" aria-hidden="true"></span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul></div>
+    {% else %}
+    <div class="lx-card lx-empty-state">
+      <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-bell-slash" aria-hidden="true"></i></span>
+      <h2>Nothing yet</h2>
+      <p class="lx-muted mb-0">You'll see requests, new partners, messages and practice reminders here.</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

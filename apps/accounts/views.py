@@ -3,6 +3,9 @@ from django.contrib.auth import views as auth_views
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views.generic import FormView
+from django.utils.decorators import method_decorator
+
+from apps.core.ratelimit import rate_limited
 
 from .forms import (
     EmailLoginForm, RegistrationForm, StyledPasswordChangeForm,
@@ -13,6 +16,7 @@ from .services import register_user
 BACKEND = "apps.accounts.backends.EmailOrUsernameBackend"
 
 
+@method_decorator(rate_limited("register", redirect_to="accounts:register", message="Too many sign-ups from your network. Try again in an hour."), name="post")
 class RegisterView(FormView):
     template_name = "accounts/register.html"
     form_class = RegistrationForm
@@ -51,6 +55,7 @@ class PasswordChangeDoneView(auth_views.PasswordChangeDoneView):
     template_name = "accounts/password_change_done.html"
 
 
+@method_decorator(rate_limited("password_reset", redirect_to="accounts:password_reset", message="Too many reset requests. Try again in an hour."), name="post")
 class PasswordResetView(auth_views.PasswordResetView):
     """Always shows the same confirmation, so it never reveals whether an email is registered."""
 

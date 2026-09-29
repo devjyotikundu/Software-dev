@@ -16,6 +16,7 @@ from collections import deque
 from asgiref.sync import async_to_sync
 from channels.generic.websocket import JsonWebsocketConsumer
 
+from . import presence
 from .services import rooms
 from .services.config import exchange_setting
 
@@ -53,12 +54,15 @@ class RoomConsumer(JsonWebsocketConsumer):
         self.typing_limiter = RateLimiter(1, 2)
         async_to_sync(self.channel_layer.group_add)(self.group, self.channel_name)
         self.accept()
+        presence.mark_present(self.room_id, user.pk)
 
     def disconnect(self, code):
         if hasattr(self, "group"):
             async_to_sync(self.channel_layer.group_discard)(self.group, self.channel_name)
+            presence.mark_absent(self.room_id, self.user.pk)
 
     def receive_json(self, content, **kwargs):
+        presence.mark_present(self.room_id, self.user.pk)  # still here
         kind = content.get("type") if isinstance(content, dict) else None
         if kind == "message":
             if not self.limiter.allow():

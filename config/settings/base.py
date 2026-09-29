@@ -65,6 +65,7 @@ MIDDLEWARE = [
     "apps.profiles.middleware.OnboardingRequiredMiddleware",
     "apps.profiles.middleware.ActivityMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "apps.core.security.SecurityHeadersMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -83,6 +84,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "apps.core.context_processors.site",
                 "apps.matching.context_processors.partner_requests",
+                "apps.notifications.context_processors.notifications",
             ],
         },
     },
@@ -349,3 +351,63 @@ AI = {
     "MAX_INPUT_CHARS": 500,
     "REQUESTS_PER_HOUR": 30,          # per user, for room assistance
 }
+
+# --------------------------------------------------------------------------
+# Cache: shared through Redis when available (presence, rate limits),
+# otherwise in-process memory for local development.
+# --------------------------------------------------------------------------
+if REDIS_URL:
+    CACHES = {"default": {"BACKEND": "django.core.cache.backends.redis.RedisCache", "LOCATION": REDIS_URL}}
+else:
+    CACHES = {"default": {"BACKEND": "django.core.cache.backends.locmem.LocMemCache"}}
+
+# --------------------------------------------------------------------------
+# Background jobs (Celery). With REDIS_URL, tasks go to a worker and the
+# beat scheduler runs periodic jobs. Without it (local development), tasks
+# run inline, so nothing else needs to be running.
+# --------------------------------------------------------------------------
+CELERY_BROKER_URL = REDIS_URL or "memory://"
+CELERY_TASK_ALWAYS_EAGER = not REDIS_URL
+CELERY_TASK_IGNORE_RESULT = True
+CELERY_TIMEZONE = "UTC"
+CELERY_BEAT_SCHEDULE = {
+    "session-reminders": {"task": "apps.notifications.tasks.send_session_reminders", "schedule": 5 * 60},
+    "refresh-match-suggestions": {"task": "apps.matching.tasks.refresh_all_suggestions", "schedule": 60 * 60},
+}
+
+# Absolute site address for links in emails, e.g. https://example.onrender.com
+SITE_URL = env("SITE_URL", default="").rstrip("/")
+
+NOTIFICATIONS = {
+    # Kinds that also send an email (the rest are in-app only).
+    "EMAIL_KINDS": ["match_request", "match_accepted", "session_reminder"],
+    "REMINDER_MINUTES_BEFORE": 15,    # remind this long before a shared free window starts
+    "REMINDER_DEDUPE_HOURS": 12,      # at most one reminder per pair in this period
+    "PRESENCE_SECONDS": 90,           # someone counts as "in the room" this long after activity
+    "PAGE_SIZE": 50,
+}
+
+# --------------------------------------------------------------------------
+# Security hardening (Phase 16)
+# --------------------------------------------------------------------------
+# Rate limits: name -> (attempts, window in seconds). Stored in the cache.
+RATE_LIMITS = {
+    "login_failures": (5, 15 * 60),     # per account + IP, then locked for the rest of the window
+    "register": (10, 60 * 60),          # per IP
+    "password_reset": (5, 60 * 60),     # per IP
+    "match_request": (30, 60 * 60),     # per user
+    "report": (10, 24 * 60 * 60),       # per user
+    "room_message_post": (30, 60),      # per user (the no-JavaScript chat fallback)
+}
+# Proxies in front of the app that append to X-Forwarded-For (Render: 1).
+NUM_PROXIES = env.int("NUM_PROXIES", default=0)
+
+# Content Security Policy: where the browser may load code, styles and fonts from.
+CSP_SOURCES = {
+    "scripts": ["https://cdn.jsdelivr.net"],
+    "styles": ["https://cdn.jsdelivr.net", "https://fonts.googleapis.com"],
+    "fonts": ["https://cdn.jsdelivr.net", "https://fonts.gstatic.com"],
+}
+CSP_REPORT_ONLY = env.bool("CSP_REPORT_ONLY", default=False)
+
+SESSION_COOKIE_AGE = 14 * 24 * 60 * 60   # two weeks

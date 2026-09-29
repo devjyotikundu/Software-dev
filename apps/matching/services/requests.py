@@ -9,9 +9,11 @@ from decimal import Decimal
 
 from django.db import IntegrityError, transaction
 from django.db.models import Q
+from django.urls import reverse
 from django.utils import timezone
 
 from apps.exchange.models import ExchangeRoom
+from apps.notifications.services import Kind, notify
 
 from ..models import Match, MatchRequest, MatchSuggestion
 from .candidates import candidate_ids
@@ -83,6 +85,9 @@ def send_request(sender, receiver, message=""):
             )
     except IntegrityError:
         raise RequestError("You've already sent this person a request.")
+    notify(receiver, Kind.MATCH_REQUEST, f"{sender.profile.display_name} wants to practise with you",
+           body=message[:200] or "Open the request to see why you match.",
+           link=reverse("partners:request_detail", kwargs={"pk": request.pk}), actor=sender)
     return SendResult(request=request, matched=False)
 
 
@@ -115,10 +120,13 @@ def accept_request(request, receiver):
         user_a=low, user_b=high, request=request,
         user_a_learning_language_id=languages[low.pk], user_b_learning_language_id=languages[high.pk],
     )
-    ExchangeRoom.objects.create(match=match)
+    room = ExchangeRoom.objects.create(match=match)
     # A request the other way round is no longer needed.
     pending_between(sender, receiver).exclude(pk=request.pk).update(
         status=MatchRequest.Status.CANCELLED, responded_at=now)
+    notify(sender, Kind.MATCH_ACCEPTED, f"{receiver.profile.display_name} accepted your request",
+           body="You're now partners. Your private exchange room is ready.",
+           link=reverse("exchange:room", kwargs={"room_id": room.pk}), actor=receiver)
     return match
 
 

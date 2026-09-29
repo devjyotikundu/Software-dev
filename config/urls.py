@@ -19,6 +19,7 @@ urlpatterns = [
     path("rooms/", include("apps.exchange.urls")),
     path("feedback/", include("apps.feedback.urls")),
     path("ai/", include("apps.ai_services.urls")),
+    path("notifications/", include("apps.notifications.urls")),
     path("", include("apps.core.urls")),
 ]
 

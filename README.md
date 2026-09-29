@@ -9,7 +9,7 @@ Bengali. Each helps the other. Practice quizzes estimate each user's level,
 the matching engine finds reciprocal partners and explains why they match, and
 feedback from real exchanges improves future recommendations.
 
-> Status: **Phase 14 (AI services) complete.** Features are added phase by
+> Status: **Phase 16 (security hardening) complete.** Features are added phase by
 > phase; see [Development phases](#development-phases).
 
 ## Technology stack
@@ -20,7 +20,7 @@ feedback from real exchanges improves future recommendations.
 | Database | PostgreSQL | Relational data with constraints and indexes |
 | Frontend | HTML, CSS, JavaScript, Bootstrap 5 | Server-rendered pages; no separate frontend build |
 | Real-time | Django Channels, WebSockets, Redis | Private exchange rooms |
-| Background jobs | Celery, Redis | Added in Phase 15 |
+| Background jobs | Celery, Redis | Emails, reminders, suggestion refresh |
 | AI | External LLM API, called only from the backend | Optional helper and question drafts |
 | Hosting | Render (portable to AWS/Azure/GCP) | Configured in Phases 19–20 |
 
@@ -465,6 +465,55 @@ works as normal.
   become a friendly "isn't available right now" message and a log entry.
   Practice never depends on AI, so the verified bank is always the fallback.
 
+## Notifications
+
+A bell in the header shows the unread count; `/notifications/` lists them,
+and opening one marks it read and goes to the related page.
+
+| Event | Who is told | Email |
+|---|---|---|
+| Match request | the receiver | yes |
+| Request accepted | the sender (links to the room) | yes |
+| New message | the partner, only if they don't have the room open; further messages update the same notice ("Asha sent you 3 messages") | no |
+| Session reminder | both partners, 15 minutes before their regular shared free time starts, at most once per 12 hours | yes |
+| Feedback request | the partner who didn't end the session | no |
+
+Reminders are based on the pair's overlapping weekly availability (the same
+time-zone maths as matching), since sessions aren't booked in advance.
+Notification links are always site-relative, so they can't redirect
+elsewhere.
+
+**Background jobs (Celery).** Emails are sent by a task after the database
+commits, and a failed email is logged, never shown as an error. Every 5
+minutes the beat scheduler sends session reminders, and every hour it
+refreshes stored match suggestions. With `REDIS_URL` set, tasks run on a
+worker (`celery -A config worker`) and the schedule on `celery -A config
+beat`; without it (local development) tasks run inline, so nothing extra
+needs to run. Redis also backs the shared cache used for room presence and
+rate limits. `SITE_URL` sets the address used in email links (on Render
+it's filled in automatically).
+
+## Security
+
+| Area | Protection |
+|---|---|
+| Passwords | Django's hashing (PBKDF2), at least 10 characters, common passwords refused |
+| Brute force | After 5 failed logins for one account from one IP, that pair is locked for 15 minutes, for the site and the admin (per account *and* IP, so nobody can lock a user out from everywhere) |
+| Abuse limits | Sign-ups and password-reset emails per IP; match requests, reports and chat posts per user; WebSocket messages and AI help per connection/user |
+| Client IP | Taken from Render's proxy entry in X-Forwarded-For (`NUM_PROXIES=1`), never from the spoofable leftmost value |
+| XSS | Autoescaping everywhere (no `\|safe`), live messages built with `textContent`, and a Content Security Policy that forbids inline scripts and only allows our site and the listed CDNs |
+| Clickjacking | `X-Frame-Options: DENY` and CSP `frame-ancestors 'none'` |
+| CDN files | Bootstrap and Bootstrap Icons checked with Subresource Integrity hashes |
+| HTTPS | Redirects, secure session and CSRF cookies, and HSTS for one year |
+| CSRF | Django's protection on every form; state changes are POST-only; WebSockets check the page's origin |
+| Authorisation | Every page and socket checks ownership or partnership; others get 404 |
+| Secrets | Only from environment variables; production refuses a weak or development `SECRET_KEY` |
+| Privacy | Email and full schedule never shown to others; feedback private; blocking, reporting, account deletion; uploaded photos re-encoded to strip location data |
+
+Rate limits live in `settings.RATE_LIMITS` and use the shared cache.
+`CSP_REPORT_ONLY=True` reports policy violations without blocking, useful
+when adding a new external resource.
+
 ## Deploying to Render
 
 **Web service**
@@ -596,8 +645,8 @@ remembering to protect each one.
 | 12 | Real-time exchange | Done |
 | 13 | Feedback | Done |
 | 14 | AI services | Done |
-| 15 | Notifications | |
-| 16 | Security hardening | |
+| 15 | Notifications | Done |
+| 16 | Security hardening | Done |
 | 17 | Testing | |
 | 18 | Performance optimisation | |
 | 19 | Production configuration | |

@@ -60,7 +60,16 @@ class EmailLoginForm(BootstrapFormMixin, AuthenticationForm):
     error_messages = {
         **AuthenticationForm.error_messages,
         "invalid_login": "Email or password is incorrect. Passwords are case-sensitive.",
+        "locked": "Too many unsuccessful attempts. Please wait 15 minutes, or reset your password.",
     }
+
+    def clean(self):
+        try:
+            return super().clean()
+        except forms.ValidationError:
+            if getattr(self.request, "login_locked", False):
+                raise forms.ValidationError(self.error_messages["locked"], code="locked")
+            raise
 
 
 class StyledPasswordChangeForm(BootstrapFormMixin, PasswordChangeForm):

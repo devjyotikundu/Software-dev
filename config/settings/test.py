@@ -31,3 +31,14 @@ STORAGES = {
     "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
     "staticfiles": {"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"},
 }
+
+CACHES = {"default": {"BACKEND": "django.core.cache.backends.locmem.LocMemCache"}}
+CELERY_BROKER_URL = "memory://"
+CELERY_TASK_ALWAYS_EAGER = True
+SITE_URL = "https://testserver"
+
+# Generous limits so the rest of the suite never trips them; the rate-limit
+# tests set their own low limits and clear the cache.
+RATE_LIMITS = {name: (10_000, 3600) for name in (
+    "login_failures", "register", "password_reset", "match_request", "report", "room_message_post")}
+NUM_PROXIES = 0

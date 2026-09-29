@@ -7,7 +7,9 @@ from django.shortcuts import redirect
 from django.utils import timezone
 from django.views import View
 from django.views.generic import TemplateView
+from django.utils.decorators import method_decorator
 
+from apps.core.ratelimit import rate_limited
 from apps.matching.services.profiles import load_profiles
 
 from apps.ai_services.assist import TASKS
@@ -48,6 +50,7 @@ class RoomView(LoginRequiredMixin, TemplateView):
         )
 
 
+@method_decorator(rate_limited("room_message_post", by="user", message="You're sending messages very quickly. Wait a moment."), name="post")
 class PostMessageView(LoginRequiredMixin, View):
     """Fallback for browsers without WebSockets: an ordinary form post."""
 

@@ -11,7 +11,9 @@ from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect
 from django.views import View
 from django.views.generic import FormView, TemplateView
+from django.utils.decorators import method_decorator
 
+from apps.core.ratelimit import rate_limited
 from apps.accounts.models import BlockedUser
 
 from .forms_partners import ReportForm, RequestForm
@@ -28,6 +30,7 @@ def _other(match, user):
 
 
 # -------------------------------------------------------------------- send
+@method_decorator(rate_limited("match_request", by="user", redirect_to="matching:discover", message="You've sent a lot of requests. Try again later."), name="post")
 class SendRequestView(LoginRequiredMixin, View):
     http_method_names = ["post"]
 
@@ -163,6 +166,7 @@ class BlockView(PersonMixin, TemplateView):
         return redirect("partners:blocked")
 
 
+@method_decorator(rate_limited("report", by="user", message="You've sent a lot of reports today. Our moderators will review them."), name="post")
 class ReportView(PersonMixin, FormView):
     template_name = "partners/report.html"
     form_class = ReportForm

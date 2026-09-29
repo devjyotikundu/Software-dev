@@ -14,6 +14,11 @@
     <a class="lx-nav-item{% if request.resolver_match.namespace == 'matching' %} is-active{% endif %}" href="{% url 'matching:discover' %}"{% if request.resolver_match.namespace == 'matching' %} aria-current="page"{% endif %}><i class="bi bi-people" aria-hidden="true"></i><span class="d-none d-md-inline">Discover</span><span class="visually-hidden d-md-none">Discover</span></a>
     <a class="lx-nav-item{% if request.resolver_match.namespace == 'partners' %} is-active{% endif %}" href="{% url 'partners:list' %}"{% if request.resolver_match.namespace == 'partners' %} aria-current="page"{% endif %}><i class="bi bi-person-hearts" aria-hidden="true"></i><span class="d-none d-md-inline">Partners</span><span class="visually-hidden d-md-none">Partners</span>{% if pending_request_count %}<span class="lx-count" aria-label="{{ pending_request_count }} new request{{ pending_request_count|pluralize }}">{{ pending_request_count }}</span>{% endif %}</a>
     {% endif %}
+    <a class="lx-nav-item lx-nav-item--icon{% if request.resolver_match.namespace == 'notifications' %} is-active{% endif %}" href="{% url 'notifications:list' %}"{% if request.resolver_match.namespace == 'notifications' %} aria-current="page"{% endif %}>
+      <i class="bi bi-bell" aria-hidden="true"></i>
+      <span class="visually-hidden">Notifications{% if unread_notification_count %}, {{ unread_notification_count }} unread{% endif %}</span>
+      {% if unread_notification_count %}<span class="lx-count" aria-hidden="true">{{ unread_notification_count }}</span>{% endif %}
+    </a>
     <div class="dropdown">
       <button class="lx-account-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         {% if user.profile %}{% include "profiles/_avatar.html" with profile=user.profile %}
