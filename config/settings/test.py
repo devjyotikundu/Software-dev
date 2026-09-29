@@ -25,3 +25,9 @@ CHANNEL_LAYERS = {"default": {"BACKEND": "channels.layers.InMemoryChannelLayer"}
 # Tests never call a real AI provider.
 AI = {"PROVIDER": "", "API_KEY": "", "MODEL": "", "BASE_URL": "", "TIMEOUT_SECONDS": 1,
       "MAX_INPUT_CHARS": 500, "REQUESTS_PER_HOUR": 30}
+
+# Tests render templates without running collectstatic.
+STORAGES = {
+    "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+    "staticfiles": {"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"},
+}

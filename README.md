@@ -475,18 +475,17 @@ works as normal.
   added automatically), optionally `DJANGO_SUPERUSER_USERNAME`,
   `DJANGO_SUPERUSER_EMAIL`, `DJANGO_SUPERUSER_PASSWORD` and the `AI_*` values.
 
-`build.sh` runs every step with the production settings. This matters:
-`manage.py` defaults to development settings, and a `collectstatic` run
-with those doesn't write the static-files manifest that production needs,
-which shows up as "Missing staticfiles manifest entry for 'img/logo.svg'".
-The build finishes with `check --deploy`, which fails the build if the
-manifest is missing, so the problem can't reach the live site.
+Static files use `CompressedManifestStaticFilesStorage` in every settings
+module (tests aside), so any `collectstatic` run writes the
+`staticfiles.json` manifest production needs; otherwise pages fail with
+"Missing staticfiles manifest entry for 'img/logo.svg'". `build.sh` still
+passes the production settings explicitly and ends with `check --deploy`,
+which fails the build if the manifest is missing.
 
-`seed_data` is safe on every deploy: reference data is only added once, and
-the admin account from `DJANGO_SUPERUSER_*` is created the first time and
-left alone after that (its password is only reset with `--update`). Don't
-use `createsuperuser --noinput` in the build: it fails with "That username is
-already taken" on every deploy after the first.
+Re-running setup on every deploy is safe: `seed_data` only adds reference
+data once and creates the `DJANGO_SUPERUSER_*` admin the first time, and
+`createsuperuser --noinput` skips a username that already exists instead of
+failing with "That username is already taken".
 
 ## Design system
 

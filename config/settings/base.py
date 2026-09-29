@@ -25,6 +25,7 @@ DEBUG = False
 # --------------------------------------------------------------------------
 DJANGO_APPS = [
     "daphne",  # must come first: makes runserver serve WebSockets too
+    "apps.core",  # before django.contrib.auth: its idempotent createsuperuser takes precedence
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -40,7 +41,6 @@ THIRD_PARTY_APPS = [
 
 # Each app owns one area of the product. Most are empty until their phase.
 LOCAL_APPS = [
-    "apps.core",           # shared pages, health check, error pages
     "apps.accounts",       # custom user model, authentication
     "apps.languages",      # languages and proficiency reference data
     "apps.profiles",       # profile, goals, interests, availability
@@ -130,9 +130,13 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
+# Manifest storage everywhere (compressed, cache-busted file names), so every
+# `collectstatic` run writes staticfiles.json, whichever settings module it
+# used. With DEBUG=True (runserver) Django serves unhashed names, so local
+# development doesn't need collectstatic. Test settings use plain storage.
 STORAGES = {
     "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
-    "staticfiles": {"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"},
+    "staticfiles": {"BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage"},
 }
 
 # --------------------------------------------------------------------------

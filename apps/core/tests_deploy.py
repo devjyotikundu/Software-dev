@@ -88,3 +88,47 @@ class AdminSeedTests(TestCase):
         output = self.seed(env={"DJANGO_SUPERUSER_USERNAME": "", "DJANGO_SUPERUSER_PASSWORD": ""})
         self.assertIn("not configured", output)
         self.assertFalse(get_user_model().objects.filter(is_superuser=True).exists())
+
+
+class CollectstaticTests(TestCase):
+    """A real collectstatic run with the production storage backend."""
+
+    def test_collectstatic_writes_a_manifest_with_the_logo(self):
+        import json
+        with tempfile.TemporaryDirectory() as root, \
+                override_settings(STORAGES=MANIFEST_STORAGES, STATIC_ROOT=root):
+            call_command("collectstatic", "--noinput", verbosity=0)
+            manifest = json.loads(Path(root, "staticfiles.json").read_text())["paths"]
+            self.assertIn("img/logo.svg", manifest)
+            self.assertTrue(Path(root, manifest["img/logo.svg"]).exists())
+            self.assertEqual(static_manifest_exists(), [])
+
+    def test_base_settings_use_manifest_storage(self):
+        from config.settings import base
+        self.assertEqual(base.STORAGES["staticfiles"]["BACKEND"],
+                         "whitenoise.storage.CompressedManifestStaticFilesStorage")
+
+
+class CreateSuperuserTests(TestCase):
+    def test_noinput_is_idempotent(self):
+        env = {"DJANGO_SUPERUSER_PASSWORD": "a-strong-pass-123"}
+        with mock.patch.dict(os.environ, env):
+            call_command("createsuperuser", "--noinput", "--username", "boss", "--email", "boss@example.com",
+                         stdout=StringIO())
+            out = StringIO()
+            call_command("createsuperuser", "--noinput", "--username", "boss", "--email", "boss@example.com",
+                         stdout=out)  # second deploy: no "That username is already taken"
+        self.assertIn("already exists", out.getvalue())
+        self.assertEqual(get_user_model().objects.filter(username="boss", is_superuser=True).count(), 1)
+
+    def test_username_from_environment(self):
+        env = {"DJANGO_SUPERUSER_USERNAME": "envboss", "DJANGO_SUPERUSER_PASSWORD": "a-strong-pass-123",
+               "DJANGO_SUPERUSER_EMAIL": "envboss@example.com"}
+        with mock.patch.dict(os.environ, env):
+            call_command("createsuperuser", "--noinput", stdout=StringIO())
+            call_command("createsuperuser", "--noinput", stdout=StringIO())
+        self.assertEqual(get_user_model().objects.filter(username="envboss").count(), 1)
+
+    def test_our_command_is_the_one_django_uses(self):
+        from django.core.management import get_commands
+        self.assertEqual(get_commands()["createsuperuser"], "apps.core")
