@@ -31,6 +31,40 @@ class Lesson(models.Model):
         return f'{self.language.name} #{self.lesson_order}: {self.title}'
 
 
+class VocabularyItem(models.Model):
+    """
+    A single word/phrase pair shown to the learner during a lesson.
+    Displayed as the term ABOVE its translation (not side-by-side columns).
+    """
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='vocabulary_items')
+    order = models.PositiveIntegerField(default=1)
+    term = models.CharField(max_length=100, help_text='The word/phrase in the language being learned.')
+    translation = models.CharField(max_length=150, help_text='The English meaning.')
+
+    class Meta:
+        ordering = ['lesson', 'order']
+
+    def __str__(self):
+        return f'{self.term} = {self.translation}'
+
+
+class QuizQuestion(models.Model):
+    """
+    A short end-of-lesson quiz question. Displayed as the question ABOVE
+    its answer (the answer is revealed below, not shown side-by-side).
+    """
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='quiz_questions')
+    order = models.PositiveIntegerField(default=1)
+    question = models.CharField(max_length=255)
+    answer = models.CharField(max_length=255)
+
+    class Meta:
+        ordering = ['lesson', 'order']
+
+    def __str__(self):
+        return f'Q{self.order}: {self.question}'
+
+
 class LearningProfile(models.Model):
     """
     LearningProfile: ProfileID (PK), UserID (FK), LanguageID (FK),

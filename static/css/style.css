@@ -22,3 +22,24 @@ textarea {
 #result-text {
     min-height: 3rem;
 }
+
+/* Vocab and quiz cards: term/question stacked ABOVE translation/answer,
+   never side-by-side. */
+.vocab-card .vocab-term,
+.quiz-card .quiz-question {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.vocab-card .vocab-translation {
+    display: block;
+    color: #6c757d;
+    margin-top: 0.15rem;
+}
+
+.quiz-card .quiz-answer {
+    color: #198754;
+    font-weight: 500;
+    border-top: 1px dashed #dee2e6;
+    padding-top: 0.5rem;
+}

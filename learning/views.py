@@ -90,14 +90,28 @@ def next_lesson(request):
             return JsonResponse({'message': 'Course complete'}, status=200)
         return render(request, 'learning/course_complete.html', {'language': profile.language})
 
+    vocabulary_items = lesson.vocabulary_items.all()
+    quiz_questions = lesson.quiz_questions.all()
+
     if _wants_json(request):
         return JsonResponse({
             'lesson_id': lesson.id,
             'title': lesson.title,
             'lesson_order': lesson.lesson_order,
             'contents': lesson.contents,
+            'vocabulary': [
+                {'term': v.term, 'translation': v.translation} for v in vocabulary_items
+            ],
+            'quiz': [
+                {'question': q.question, 'answer': q.answer} for q in quiz_questions
+            ],
         }, status=200)
-    return render(request, 'learning/lesson.html', {'lesson': lesson, 'language': profile.language})
+    return render(request, 'learning/lesson.html', {
+        'lesson': lesson,
+        'language': profile.language,
+        'vocabulary_items': vocabulary_items,
+        'quiz_questions': quiz_questions,
+    })
 
 
 @login_required
