@@ -1,0 +1,19 @@
+{# "Why this level?" — built from the adaptive plan's real numbers. #}
+{% if plan %}
+<details class="lx-why">
+  <summary><i class="bi bi-info-circle" aria-hidden="true"></i>Why this level?</summary>
+  <div class="lx-why__body">
+    <ul class="lx-why__reasons">
+      {% for reason in plan.reasons %}<li>{{ reason }}</li>{% empty %}<li>Staying at your current level.</li>{% endfor %}
+    </ul>
+    <p class="lx-why__label">Question mix</p>
+    <ul class="lx-chip-list">
+      {% for label, count in plan_mix %}<li class="lx-chip{% if label == main_label %} lx-chip--primary{% endif %}">{{ label }} × {{ count }}</li>{% endfor %}
+    </ul>
+    {% if plan.strong_categories %}
+    <p class="lx-why__label mt-3">Going well</p>
+    <p class="mb-0">{% for c in plan.strong_categories %}{{ c.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+    {% endif %}
+  </div>
+</details>
+{% endif %}

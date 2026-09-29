@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="lx-auth">
+  <div class="container">
+    <div class="lx-auth__panel">
+      <div class="lx-auth__head">
+        <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi {% block icon %}bi-person{% endblock %}" aria-hidden="true"></i></span>
+        <h1 class="lx-auth__title">{% block heading %}{% endblock %}</h1>
+        {% block intro %}{% endblock %}
+      </div>
+      <div class="lx-card lx-card--raised">
+        <div class="lx-card__body">{% block panel %}{% endblock %}</div>
+      </div>
+      {% block after_panel %}{% endblock %}
+    </div>
+  </div>
+</section>
+{% endblock %}

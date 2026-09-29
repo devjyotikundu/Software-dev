@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Session results | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-form">
+    <div class="lx-card lx-card--raised lx-results">
+      <div class="lx-card__body text-center">
+        <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-trophy" aria-hidden="true"></i></span>
+        <h1 class="lx-results__title">{{ summary.band }}</h1>
+        <p class="lx-muted">{{ session.language.name }} practice, {{ session.completed_at|date:"j M Y" }}</p>
+
+        <dl class="lx-results__stats">
+          <div><dt>Score</dt><dd>{{ session.correct_count }}/{{ session.question_count }}</dd></div>
+          <div><dt>Accuracy</dt><dd>{{ summary.accuracy_percent }}%</dd></div>
+          <div><dt>XP earned</dt><dd class="lx-results__xp">+{{ session.xp_earned }}</dd></div>
+        </dl>
+
+        <p class="lx-results__note">
+          {% if summary.level %}You answered {{ session.correct_count }} of {{ session.question_count }} questions at {{ summary.level.label }}.{% endif %}
+          {% if recommended %}<br>Suggested for next time: <strong>{{ recommended.label }}</strong>.{% endif %}
+        </p>
+        <p class="lx-help">Levels 1–10 are game difficulty, not CEFR levels.</p>
+
+        <div class="lx-estimate text-start">
+          <p class="lx-why__label mb-1">Estimated proficiency in {{ session.language.name }}</p>
+          {% if estimate %}
+          <p class="lx-estimate__level">{{ learning_row.current_level.code }}, {{ learning_row.current_level.name }}
+            <span class="lx-badge lx-badge--neutral">{% widthratio estimate.confidence 1 100 %}% confidence</span></p>
+          <ul class="lx-why__reasons mb-0">{% for reason in estimate.reasons %}<li>{{ reason }}</li>{% endfor %}</ul>
+          {% else %}
+          <p class="mb-0">After {{ min_answers }} practice answers we'll add an estimate from practice. Until then your self-declared level ({{ learning_row.self_declared_level.code }}) is used.</p>
+          {% endif %}
+        </div>
+        <div class="text-start">{% include "practice/_why_level.html" with main_label=recommended.label %}</div>
+
+        <div class="lx-results__actions">
+          <form method="post" action="{% url 'practice:start' %}">
+            {% csrf_token %}
+            <input type="hidden" name="language" value="{{ session.language.code }}">
+            <button type="submit" class="btn btn-primary btn-lg">Practise again</button>
+          </form>
+          <a class="btn btn-secondary-lx btn-lg" href="{% url 'practice:home' %}">Back to practice</a>
+        </div>
+      </div>
+    </div>
+
+    <details class="lx-card lx-review mt-4">
+      <summary class="lx-review__summary"><span>Review your answers</span><i class="bi bi-chevron-down" aria-hidden="true"></i></summary>
+      <ol class="lx-list">
+        {% for item in answers %}
+        <li class="lx-list__item lx-review__item">
+          <span class="lx-review__mark {% if item.is_correct %}is-correct{% else %}is-wrong{% endif %}">
+            <i class="bi {% if item.is_correct %}bi-check-lg{% else %}bi-x-lg{% endif %}" aria-hidden="true"></i>
+            <span class="visually-hidden">{% if item.is_correct %}Correct{% else %}Incorrect{% endif %}</span>
+          </span>
+          <div class="lx-list__main">
+            <span lang="{{ session.language.code }}">{{ item.question.question_text|truncatechars:90 }}</span>
+            <span class="lx-list__meta">
+              {% if item.is_correct %}Your answer {{ item.selected_option }}{% elif item.selected_option %}You chose {{ item.selected_option }}; correct was {{ item.question.correct_option }}{% else %}Not answered{% endif %}
+              ({{ item.difficulty.label }})
+            </span>
+          </div>
+          <a class="lx-edit-link" href="{% url 'practice:feedback' pk=session.pk position=item.position %}">Details<span class="visually-hidden"> for question {{ item.position }}</span></a>
+        </li>
+        {% endfor %}
+      </ol>
+    </details>
+  </div>
+</section>
+{% endblock %}

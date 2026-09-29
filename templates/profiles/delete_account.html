@@ -1,0 +1,19 @@
+{% extends "accounts/_auth_layout.html" %}
+{% block title %}Delete account | {{ site_name }}{% endblock %}
+{% block icon %}bi-exclamation-triangle{% endblock %}
+{% block heading %}Delete your account?{% endblock %}
+{% block intro %}<p class="lx-muted mb-0">This can't be undone.</p>{% endblock %}
+{% block panel %}
+<ul class="lx-consequences">
+  <li><i class="bi bi-x-circle" aria-hidden="true"></i>Your profile, photo, languages and practice history are deleted.</li>
+  <li><i class="bi bi-x-circle" aria-hidden="true"></i>Your matches, exchange rooms and messages are deleted.</li>
+  <li><i class="bi bi-info-circle" aria-hidden="true"></i>Feedback and safety reports you wrote about others are kept without your name.</li>
+</ul>
+<form method="post" novalidate>
+  {% csrf_token %}
+  {% include "partials/_form_errors.html" %}
+  {% for field in form %}{% include "partials/_field.html" %}{% endfor %}
+  <button type="submit" class="btn btn-danger-solid btn-lg w-100">Permanently delete my account</button>
+</form>
+{% endblock %}
+{% block after_panel %}<p class="lx-auth__alt"><a href="{% url 'profiles:detail' %}">Keep my account</a></p>{% endblock %}

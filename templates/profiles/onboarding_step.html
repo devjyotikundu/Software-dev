@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{{ step.title }} | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-onboarding">
+  <div class="container">
+    <div class="lx-onboarding__panel">
+      <nav aria-label="Setup progress">
+        <ol class="lx-stepper">
+          {% for item in stepper %}
+          <li class="lx-stepper__item is-{{ item.state }}"{% if item.state == "current" %} aria-current="step"{% endif %}>
+            <span class="lx-stepper__dot" title="{{ item.step.short_title }}">
+              <i class="bi {% if item.state == 'done' %}bi-check-lg{% else %}bi-{{ item.step.icon }}{% endif %}" aria-hidden="true"></i>
+              <span class="visually-hidden">{{ item.step.short_title }}{% if item.state == "done" %} (done){% endif %}</span>
+            </span>
+            {% if not forloop.last %}<span class="lx-stepper__line" aria-hidden="true"></span>{% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+        <p class="lx-step-count">Step {{ step_number }} of {{ total_steps }}: {{ step.short_title }}</p>
+      </nav>
+
+      <div class="lx-card lx-card--raised mt-4">
+        <div class="lx-card__body">
+          <h1 class="lx-onboarding__title mt-0">{{ step.title }}</h1>
+          <p class="lx-muted mb-4">{{ step.intro }}</p>
+
+          <form method="post" novalidate>
+            {% csrf_token %}
+            {% include "partials/_form_errors.html" %}
+            {% for field in form %}{% include "partials/_field.html" %}{% endfor %}
+
+            <div class="lx-onboarding__actions">
+              {% if previous_step %}
+              <a class="lx-link-button" href="{% url 'onboarding:step' step=previous_step.slug %}"><i class="bi bi-arrow-left" aria-hidden="true"></i>Back</a>
+              {% else %}<span></span>{% endif %}
+              <button type="submit" class="btn btn-primary btn-lg">
+                {% if is_last_step %}Finish setup<i class="bi bi-check-lg" aria-hidden="true"></i>{% else %}Continue<i class="bi bi-arrow-right" aria-hidden="true"></i>{% endif %}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}<script src="{% static 'js/timezone.js' %}" defer></script>{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Your profile | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-narrow">
+    <header class="lx-page-header">
+      {% include "profiles/_avatar.html" with size="lg" %}
+      <div>
+        <h1>{{ profile.display_name }}</h1>
+        <p>This is how your profile is used to find and introduce partners.</p>
+      </div>
+    </header>
+
+    {% include "profiles/_summary.html" %}
+
+    <div class="lx-danger-zone">
+      <div>
+        <h2>Delete account</h2>
+        <p>Permanently remove your account, profile and practice history.</p>
+      </div>
+      <a class="btn btn-danger-lx" href="{% url 'profiles:delete_account' %}">Delete account</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

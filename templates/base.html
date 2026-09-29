@@ -1,0 +1,39 @@
+{% load static %}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2446A6">
+  <title>{% block title %}{{ site_name|default:"Language Exchange Matcher" }}{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}Find a partner who speaks the language you are learning and wants to learn yours.{% endblock %}">
+  <link rel="icon" href="{% static 'img/logo.svg' %}" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+  <a class="lx-skip-link" href="#main">Skip to main content</a>
+
+  {% include "partials/_header.html" %}
+
+  <main id="main" tabindex="-1">
+    {% include "partials/_messages.html" %}
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include "partials/_footer.html" %}
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous" defer></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

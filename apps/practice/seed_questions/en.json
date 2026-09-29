@@ -1,0 +1,1505 @@
+{
+ "language": "en",
+ "questions": [
+  {
+   "difficulty": "A1",
+   "category": "vocabulary",
+   "question_text": "What is the opposite of “hot”?",
+   "options": {
+    "A": "big",
+    "B": "warm",
+    "C": "cold",
+    "D": "wet"
+   },
+   "correct_option": "C",
+   "english_meaning": "The opposite of hot is cold.",
+   "english_explanation": "“Cold” means having a low temperature, the opposite of “hot”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A1",
+   "category": "vocabulary",
+   "question_text": "Which of these words is a colour?",
+   "options": {
+    "A": "table",
+    "B": "blue",
+    "C": "run",
+    "D": "happy"
+   },
+   "correct_option": "B",
+   "english_meaning": "Blue is a colour.",
+   "english_explanation": "Blue is a colour; the other words are a thing, an action and a feeling.",
+   "verified": true
+  },
+  {
+   "difficulty": "A1",
+   "category": "grammar",
+   "question_text": "I ___ a student.",
+   "options": {
+    "A": "am",
+    "B": "be",
+    "C": "are",
+    "D": "is"
+   },
+   "correct_option": "A",
+   "english_meaning": "I am a student.",
+   "english_explanation": "With “I”, the verb “to be” is always “am”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A1",
+   "category": "grammar",
+   "question_text": "She ___ two brothers.",
+   "options": {
+    "A": "haves",
+    "B": "have",
+    "C": "having",
+    "D": "has"
+   },
+   "correct_option": "D",
+   "english_meaning": "She has two brothers.",
+   "english_explanation": "With he, she or it, use “has”; with I, you, we and they, use “have”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A1",
+   "category": "sentence-completion",
+   "question_text": "Good ___! How are you today?",
+   "options": {
+    "A": "sleep",
+    "B": "morning",
+    "C": "please",
+    "D": "yes"
+   },
+   "correct_option": "B",
+   "english_meaning": "Good morning! How are you today?",
+   "english_explanation": "“Good morning” is a greeting used before midday.",
+   "verified": true
+  },
+  {
+   "difficulty": "A1",
+   "category": "sentence-completion",
+   "question_text": "There are seven days in a ___.",
+   "options": {
+    "A": "week",
+    "B": "month",
+    "C": "minute",
+    "D": "year"
+   },
+   "correct_option": "A",
+   "english_meaning": "There are seven days in a week.",
+   "english_explanation": "A week has seven days, from Monday to Sunday.",
+   "verified": true
+  },
+  {
+   "difficulty": "A1",
+   "category": "context",
+   "question_text": "You meet someone for the first time. What do you say?",
+   "options": {
+    "A": "Nice to meet you.",
+    "B": "Welcome back.",
+    "C": "Good night.",
+    "D": "See you again."
+   },
+   "correct_option": "A",
+   "english_meaning": "Nice to meet you.",
+   "english_explanation": "“Nice to meet you” is the polite phrase for a first meeting.",
+   "verified": true
+  },
+  {
+   "difficulty": "A1",
+   "category": "reading-comprehension",
+   "question_text": "Tom has a dog. The dog is black. What colour is Tom's dog?",
+   "options": {
+    "A": "Brown",
+    "B": "White",
+    "C": "Black",
+    "D": "Grey"
+   },
+   "correct_option": "C",
+   "english_meaning": "Tom's dog is black.",
+   "english_explanation": "The text says “The dog is black.”",
+   "verified": true
+  },
+  {
+   "difficulty": "A1",
+   "category": "everyday-expressions",
+   "question_text": "How do you ask someone their name?",
+   "options": {
+    "A": "Where are you?",
+    "B": "What is your name?",
+    "C": "How old are you?",
+    "D": "What is this?"
+   },
+   "correct_option": "B",
+   "english_meaning": "What is your name?",
+   "english_explanation": "“What is your name?” asks for a person's name.",
+   "verified": true
+  },
+  {
+   "difficulty": "A1",
+   "category": "everyday-expressions",
+   "question_text": "Someone says “Thank you.” What is a polite reply?",
+   "options": {
+    "A": "Goodbye.",
+    "B": "Excuse me.",
+    "C": "I'm sorry.",
+    "D": "You're welcome."
+   },
+   "correct_option": "D",
+   "english_meaning": "You're welcome.",
+   "english_explanation": "“You're welcome” is the usual reply to “thank you”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A2",
+   "category": "vocabulary",
+   "question_text": "A person who teaches in a school is a ___.",
+   "options": {
+    "A": "farmer",
+    "B": "driver",
+    "C": "doctor",
+    "D": "teacher"
+   },
+   "correct_option": "D",
+   "english_meaning": "A person who teaches in a school is a teacher.",
+   "english_explanation": "A teacher teaches; a doctor treats patients, a driver drives and a farmer farms.",
+   "verified": true
+  },
+  {
+   "difficulty": "A2",
+   "category": "vocabulary",
+   "question_text": "Which word means “very big”?",
+   "options": {
+    "A": "short",
+    "B": "tiny",
+    "C": "thin",
+    "D": "huge"
+   },
+   "correct_option": "D",
+   "english_meaning": "Huge means very big.",
+   "english_explanation": "“Huge” means extremely large; “tiny” means very small.",
+   "verified": true
+  },
+  {
+   "difficulty": "A2",
+   "category": "grammar",
+   "question_text": "Yesterday I ___ to the market.",
+   "options": {
+    "A": "goes",
+    "B": "went",
+    "C": "go",
+    "D": "going"
+   },
+   "correct_option": "B",
+   "english_meaning": "Yesterday I went to the market.",
+   "english_explanation": "“Yesterday” needs the past tense. The past of “go” is irregular: “went”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A2",
+   "category": "grammar",
+   "question_text": "There ___ many people at the station last night.",
+   "options": {
+    "A": "were",
+    "B": "is",
+    "C": "be",
+    "D": "was"
+   },
+   "correct_option": "A",
+   "english_meaning": "There were many people at the station last night.",
+   "english_explanation": "“Many people” is plural and “last night” is past, so use “were”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A2",
+   "category": "sentence-completion",
+   "question_text": "I am hungry. I want to ___ something.",
+   "options": {
+    "A": "wear",
+    "B": "eat",
+    "C": "sleep",
+    "D": "read"
+   },
+   "correct_option": "B",
+   "english_meaning": "I am hungry. I want to eat something.",
+   "english_explanation": "When you are hungry, you eat.",
+   "verified": true
+  },
+  {
+   "difficulty": "A2",
+   "category": "sentence-completion",
+   "question_text": "My birthday is ___ June.",
+   "options": {
+    "A": "to",
+    "B": "at",
+    "C": "in",
+    "D": "on"
+   },
+   "correct_option": "C",
+   "english_meaning": "My birthday is in June.",
+   "english_explanation": "Use “in” with months, “on” with days and dates, and “at” with times.",
+   "verified": true
+  },
+  {
+   "difficulty": "A2",
+   "category": "context",
+   "question_text": "It is raining outside. What should you take with you?",
+   "options": {
+    "A": "a fan",
+    "B": "sunglasses",
+    "C": "an umbrella",
+    "D": "sandals"
+   },
+   "correct_option": "C",
+   "english_meaning": "You should take an umbrella.",
+   "english_explanation": "An umbrella keeps you dry in the rain.",
+   "verified": true
+  },
+  {
+   "difficulty": "A2",
+   "category": "reading-comprehension",
+   "question_text": "Riya gets up at 6. She has breakfast at 7 and leaves for school at 7:30. When does Riya have breakfast?",
+   "options": {
+    "A": "At 7:30",
+    "B": "At 8",
+    "C": "At 7",
+    "D": "At 6"
+   },
+   "correct_option": "C",
+   "english_meaning": "Riya has breakfast at 7.",
+   "english_explanation": "The text says “She has breakfast at 7.”",
+   "verified": true
+  },
+  {
+   "difficulty": "A2",
+   "category": "everyday-expressions",
+   "question_text": "How do you ask the price of something in a shop?",
+   "options": {
+    "A": "How much is this?",
+    "B": "How many is this?",
+    "C": "Where is this?",
+    "D": "What time is it?"
+   },
+   "correct_option": "A",
+   "english_meaning": "How much is this?",
+   "english_explanation": "“How much is this?” asks about price; “how many” is for counting.",
+   "verified": true
+  },
+  {
+   "difficulty": "A2",
+   "category": "everyday-expressions",
+   "question_text": "What does “See you later” mean?",
+   "options": {
+    "A": "Please wait",
+    "B": "I am late",
+    "C": "Hello",
+    "D": "Goodbye for now"
+   },
+   "correct_option": "D",
+   "english_meaning": "Goodbye for now.",
+   "english_explanation": "“See you later” is an informal way to say goodbye.",
+   "verified": true
+  },
+  {
+   "difficulty": "A3",
+   "category": "vocabulary",
+   "question_text": "Choose the word closest in meaning to “begin”.",
+   "options": {
+    "A": "finish",
+    "B": "start",
+    "C": "keep",
+    "D": "stop"
+   },
+   "correct_option": "B",
+   "english_meaning": "Begin means start.",
+   "english_explanation": "“Begin” and “start” are synonyms.",
+   "verified": true
+  },
+  {
+   "difficulty": "A3",
+   "category": "vocabulary",
+   "question_text": "The place where you catch a train is a ___.",
+   "options": {
+    "A": "airport",
+    "B": "station",
+    "C": "garage",
+    "D": "harbour"
+   },
+   "correct_option": "B",
+   "english_meaning": "You catch a train at a station.",
+   "english_explanation": "Trains stop at stations; planes use airports and ships use harbours.",
+   "verified": true
+  },
+  {
+   "difficulty": "A3",
+   "category": "grammar",
+   "question_text": "He ___ TV when I called him.",
+   "options": {
+    "A": "watches",
+    "B": "is watching",
+    "C": "watched",
+    "D": "was watching"
+   },
+   "correct_option": "D",
+   "english_meaning": "He was watching TV when I called him.",
+   "english_explanation": "Use the past continuous for an action in progress when another past action interrupted it.",
+   "verified": true
+  },
+  {
+   "difficulty": "A3",
+   "category": "grammar",
+   "question_text": "This bag is ___ than that one.",
+   "options": {
+    "A": "heavier",
+    "B": "heavy",
+    "C": "heaviest",
+    "D": "more heavy"
+   },
+   "correct_option": "A",
+   "english_meaning": "This bag is heavier than that one.",
+   "english_explanation": "Short adjectives take “-er” in comparisons; “heavy” becomes “heavier”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A3",
+   "category": "sentence-completion",
+   "question_text": "I have lived here ___ 2019.",
+   "options": {
+    "A": "during",
+    "B": "for",
+    "C": "since",
+    "D": "from"
+   },
+   "correct_option": "C",
+   "english_meaning": "I have lived here since 2019.",
+   "english_explanation": "Use “since” with a starting point in time and “for” with a length of time.",
+   "verified": true
+  },
+  {
+   "difficulty": "A3",
+   "category": "sentence-completion",
+   "question_text": "Could you ___ me the salt, please?",
+   "options": {
+    "A": "keep",
+    "B": "borrow",
+    "C": "receive",
+    "D": "pass"
+   },
+   "correct_option": "D",
+   "english_meaning": "Could you pass me the salt, please?",
+   "english_explanation": "At the table, you ask someone to “pass” you something.",
+   "verified": true
+  },
+  {
+   "difficulty": "A3",
+   "category": "context",
+   "question_text": "Your friend looks sad. What is the kindest thing to say?",
+   "options": {
+    "A": "I don't care.",
+    "B": "You look terrible.",
+    "C": "Is everything okay?",
+    "D": "Stop being sad."
+   },
+   "correct_option": "C",
+   "english_meaning": "Is everything okay?",
+   "english_explanation": "Asking gently shows care without judging.",
+   "verified": true
+  },
+  {
+   "difficulty": "A3",
+   "category": "reading-comprehension",
+   "question_text": "The shop opens at 10 a.m. and closes at 8 p.m., except on Sundays, when it is closed. Can you shop there on Sunday afternoon?",
+   "options": {
+    "A": "No, it is closed on Sundays.",
+    "B": "Only after 10 p.m.",
+    "C": "Yes, until 8 p.m.",
+    "D": "Yes, but only in the morning."
+   },
+   "correct_option": "A",
+   "english_meaning": "No, it is closed on Sundays.",
+   "english_explanation": "The text says the shop is closed on Sundays.",
+   "verified": true
+  },
+  {
+   "difficulty": "A3",
+   "category": "everyday-expressions",
+   "question_text": "What does “I'm running late” mean?",
+   "options": {
+    "A": "I will arrive later than planned.",
+    "B": "I am running fast.",
+    "C": "I am tired.",
+    "D": "I finished early."
+   },
+   "correct_option": "A",
+   "english_meaning": "I will arrive later than planned.",
+   "english_explanation": "“Running late” means you are behind schedule.",
+   "verified": true
+  },
+  {
+   "difficulty": "A3",
+   "category": "everyday-expressions",
+   "question_text": "Which is the most polite way to ask for help?",
+   "options": {
+    "A": "Give me help now.",
+    "B": "Could you help me, please?",
+    "C": "You must help me.",
+    "D": "Help me."
+   },
+   "correct_option": "B",
+   "english_meaning": "Could you help me, please?",
+   "english_explanation": "“Could you… please?” is a polite request form.",
+   "verified": true
+  },
+  {
+   "difficulty": "A4",
+   "category": "vocabulary",
+   "question_text": "Something that happens once every year is ___.",
+   "options": {
+    "A": "weekly",
+    "B": "monthly",
+    "C": "annual",
+    "D": "daily"
+   },
+   "correct_option": "C",
+   "english_meaning": "Something that happens once every year is annual.",
+   "english_explanation": "“Annual” means yearly.",
+   "verified": true
+  },
+  {
+   "difficulty": "A4",
+   "category": "vocabulary",
+   "question_text": "To “postpone” a meeting means to ___.",
+   "options": {
+    "A": "move it to a later time",
+    "B": "start it early",
+    "C": "make it longer",
+    "D": "cancel it forever"
+   },
+   "correct_option": "A",
+   "english_meaning": "To postpone a meeting means to move it to a later time.",
+   "english_explanation": "“Postpone” means delay until later, not cancel.",
+   "verified": true
+  },
+  {
+   "difficulty": "A4",
+   "category": "grammar",
+   "question_text": "If it rains tomorrow, we ___ at home.",
+   "options": {
+    "A": "staying",
+    "B": "stayed",
+    "C": "would have stayed",
+    "D": "will stay"
+   },
+   "correct_option": "D",
+   "english_meaning": "If it rains tomorrow, we will stay at home.",
+   "english_explanation": "First conditional: if + present, will + verb, for a real future possibility.",
+   "verified": true
+  },
+  {
+   "difficulty": "A4",
+   "category": "grammar",
+   "question_text": "She has ___ finished her homework.",
+   "options": {
+    "A": "ever",
+    "B": "yet",
+    "C": "already",
+    "D": "still"
+   },
+   "correct_option": "C",
+   "english_meaning": "She has already finished her homework.",
+   "english_explanation": "“Already” in a positive sentence means sooner than expected; “yet” is used in questions and negatives.",
+   "verified": true
+  },
+  {
+   "difficulty": "A4",
+   "category": "sentence-completion",
+   "question_text": "I'm not used to ___ up so early.",
+   "options": {
+    "A": "get",
+    "B": "getting",
+    "C": "gets",
+    "D": "got"
+   },
+   "correct_option": "B",
+   "english_meaning": "I'm not used to getting up so early.",
+   "english_explanation": "After “be used to”, use the -ing form of the verb.",
+   "verified": true
+  },
+  {
+   "difficulty": "A4",
+   "category": "sentence-completion",
+   "question_text": "The film was so boring that I fell ___.",
+   "options": {
+    "A": "slept",
+    "B": "sleep",
+    "C": "sleeping",
+    "D": "asleep"
+   },
+   "correct_option": "D",
+   "english_meaning": "The film was so boring that I fell asleep.",
+   "english_explanation": "The fixed phrase is “fall asleep”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A4",
+   "category": "context",
+   "question_text": "A colleague says, “Can you keep an eye on my bag?” What do they want?",
+   "options": {
+    "A": "You to watch their bag for a while",
+    "B": "You to carry the bag home",
+    "C": "You to look inside their bag",
+    "D": "You to buy them a new bag"
+   },
+   "correct_option": "A",
+   "english_meaning": "They want you to watch their bag for a while.",
+   "english_explanation": "“Keep an eye on” means watch or look after.",
+   "verified": true
+  },
+  {
+   "difficulty": "A4",
+   "category": "reading-comprehension",
+   "question_text": "Arjun wanted the blue shirt, but it was too expensive, so he bought a cheaper white one instead. Which shirt did Arjun buy?",
+   "options": {
+    "A": "The blue shirt",
+    "B": "Both shirts",
+    "C": "Neither shirt",
+    "D": "The white shirt"
+   },
+   "correct_option": "D",
+   "english_meaning": "Arjun bought the white shirt.",
+   "english_explanation": "“Instead” shows he bought the white shirt in place of the blue one.",
+   "verified": true
+  },
+  {
+   "difficulty": "A4",
+   "category": "everyday-expressions",
+   "question_text": "“Make yourself at home” means ___.",
+   "options": {
+    "A": "clean the house",
+    "B": "go home now",
+    "C": "relax and feel comfortable here",
+    "D": "build your own house"
+   },
+   "correct_option": "C",
+   "english_meaning": "Relax and feel comfortable here.",
+   "english_explanation": "Hosts say this to make guests feel welcome.",
+   "verified": true
+  },
+  {
+   "difficulty": "A4",
+   "category": "everyday-expressions",
+   "question_text": "What does “I'll get back to you” mean?",
+   "options": {
+    "A": "I'll return your money.",
+    "B": "I'll reply to you later.",
+    "C": "I'll come to your house.",
+    "D": "I'll walk behind you."
+   },
+   "correct_option": "B",
+   "english_meaning": "I'll reply to you later.",
+   "english_explanation": "“Get back to someone” means respond later.",
+   "verified": true
+  },
+  {
+   "difficulty": "A5",
+   "category": "vocabulary",
+   "question_text": "A person who is “reluctant” is ___.",
+   "options": {
+    "A": "unwilling",
+    "B": "confident",
+    "C": "excited",
+    "D": "careful"
+   },
+   "correct_option": "A",
+   "english_meaning": "A reluctant person is unwilling.",
+   "english_explanation": "“Reluctant” means not wanting to do something.",
+   "verified": true
+  },
+  {
+   "difficulty": "A5",
+   "category": "vocabulary",
+   "question_text": "Which word means “to make pain or a problem less severe”?",
+   "options": {
+    "A": "aggravate",
+    "B": "accelerate",
+    "C": "abandon",
+    "D": "alleviate"
+   },
+   "correct_option": "D",
+   "english_meaning": "Alleviate means to make something less severe.",
+   "english_explanation": "“Alleviate” reduces a problem; “aggravate” makes it worse.",
+   "verified": true
+  },
+  {
+   "difficulty": "A5",
+   "category": "grammar",
+   "question_text": "By the time we arrived, the film ___.",
+   "options": {
+    "A": "already started",
+    "B": "had already started",
+    "C": "has already started",
+    "D": "was already start"
+   },
+   "correct_option": "B",
+   "english_meaning": "By the time we arrived, the film had already started.",
+   "english_explanation": "Past perfect shows an action completed before another past moment.",
+   "verified": true
+  },
+  {
+   "difficulty": "A5",
+   "category": "grammar",
+   "question_text": "The report ___ by the manager yesterday.",
+   "options": {
+    "A": "wrote",
+    "B": "was written",
+    "C": "has written",
+    "D": "is writing"
+   },
+   "correct_option": "B",
+   "english_meaning": "The report was written by the manager yesterday.",
+   "english_explanation": "Passive voice in the past: was/were + past participle.",
+   "verified": true
+  },
+  {
+   "difficulty": "A5",
+   "category": "sentence-completion",
+   "question_text": "He apologised ___ being late.",
+   "options": {
+    "A": "for",
+    "B": "to",
+    "C": "of",
+    "D": "about"
+   },
+   "correct_option": "A",
+   "english_meaning": "He apologised for being late.",
+   "english_explanation": "You apologise to a person for something.",
+   "verified": true
+  },
+  {
+   "difficulty": "A5",
+   "category": "sentence-completion",
+   "question_text": "I wish I ___ more time to travel.",
+   "options": {
+    "A": "have",
+    "B": "am having",
+    "C": "had",
+    "D": "will have"
+   },
+   "correct_option": "C",
+   "english_meaning": "I wish I had more time to travel.",
+   "english_explanation": "“I wish” about the present takes the past tense to show it is not true now.",
+   "verified": true
+  },
+  {
+   "difficulty": "A5",
+   "category": "context",
+   "question_text": "Your boss says, “Let's touch base next week.” What does she mean?",
+   "options": {
+    "A": "Let's play a sport.",
+    "B": "Let's talk briefly next week.",
+    "C": "Let's visit the office base.",
+    "D": "Let's end the project."
+   },
+   "correct_option": "B",
+   "english_meaning": "Let's talk briefly next week.",
+   "english_explanation": "“Touch base” is workplace English for a short check-in.",
+   "verified": true
+  },
+  {
+   "difficulty": "A5",
+   "category": "reading-comprehension",
+   "question_text": "Although the restaurant had excellent reviews, the service that evening was slow and the food arrived cold. Meera decided not to go back. Why did Meera decide not to go back?",
+   "options": {
+    "A": "The restaurant was closed.",
+    "B": "The food was too expensive.",
+    "C": "The reviews were bad.",
+    "D": "Her experience that evening was poor."
+   },
+   "correct_option": "D",
+   "english_meaning": "Her experience that evening was poor.",
+   "english_explanation": "“Although” contrasts the good reviews with her bad experience.",
+   "verified": true
+  },
+  {
+   "difficulty": "A5",
+   "category": "everyday-expressions",
+   "question_text": "“It's not my cup of tea” means ___.",
+   "options": {
+    "A": "I don't particularly like it.",
+    "B": "It's someone else's drink.",
+    "C": "I prefer coffee.",
+    "D": "It's too hot."
+   },
+   "correct_option": "A",
+   "english_meaning": "I don't particularly like it.",
+   "english_explanation": "A polite way to say something isn't to your taste.",
+   "verified": true
+  },
+  {
+   "difficulty": "A5",
+   "category": "everyday-expressions",
+   "question_text": "What does “Let's call it a day” mean?",
+   "options": {
+    "A": "Let's phone someone.",
+    "B": "Let's name the day.",
+    "C": "Let's stop working for now.",
+    "D": "Let's start early."
+   },
+   "correct_option": "C",
+   "english_meaning": "Let's stop working for now.",
+   "english_explanation": "Said when finishing work for the day.",
+   "verified": true
+  },
+  {
+   "difficulty": "A6",
+   "category": "vocabulary",
+   "question_text": "A “thorough” check is one that is ___.",
+   "options": {
+    "A": "quick and rough",
+    "B": "done too late",
+    "C": "complete and careful",
+    "D": "unnecessary"
+   },
+   "correct_option": "C",
+   "english_meaning": "A thorough check is complete and careful.",
+   "english_explanation": "“Thorough” means detailed and leaving nothing out.",
+   "verified": true
+  },
+  {
+   "difficulty": "A6",
+   "category": "vocabulary",
+   "question_text": "Which word means “finding something good by lucky chance”?",
+   "options": {
+    "A": "monotony",
+    "B": "inevitability",
+    "C": "deliberation",
+    "D": "serendipity"
+   },
+   "correct_option": "D",
+   "english_meaning": "Serendipity means a lucky, unplanned discovery.",
+   "english_explanation": "“Serendipity” describes happy accidents.",
+   "verified": true
+  },
+  {
+   "difficulty": "A6",
+   "category": "grammar",
+   "question_text": "She suggested that we ___ earlier.",
+   "options": {
+    "A": "leaving",
+    "B": "left",
+    "C": "leave",
+    "D": "to leave"
+   },
+   "correct_option": "C",
+   "english_meaning": "She suggested that we leave earlier.",
+   "english_explanation": "After “suggest that”, formal English uses the base form (subjunctive); “should leave” is also common in British English.",
+   "verified": true
+  },
+  {
+   "difficulty": "A6",
+   "category": "grammar",
+   "question_text": "Not only ___ late, but he also forgot the tickets.",
+   "options": {
+    "A": "was he",
+    "B": "he was",
+    "C": "he is",
+    "D": "did he was"
+   },
+   "correct_option": "A",
+   "english_meaning": "Not only was he late, but he also forgot the tickets.",
+   "english_explanation": "After “not only” at the start of a sentence, the subject and verb are inverted.",
+   "verified": true
+  },
+  {
+   "difficulty": "A6",
+   "category": "sentence-completion",
+   "question_text": "The new policy will come ___ effect next month.",
+   "options": {
+    "A": "into",
+    "B": "in",
+    "C": "on",
+    "D": "to"
+   },
+   "correct_option": "A",
+   "english_meaning": "The new policy will come into effect next month.",
+   "english_explanation": "The fixed phrase is “come into effect”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A6",
+   "category": "sentence-completion",
+   "question_text": "We need to look ___ the causes of the problem.",
+   "options": {
+    "A": "up",
+    "B": "after",
+    "C": "into",
+    "D": "out"
+   },
+   "correct_option": "C",
+   "english_meaning": "We need to look into the causes of the problem.",
+   "english_explanation": "“Look into” means investigate.",
+   "verified": true
+  },
+  {
+   "difficulty": "A6",
+   "category": "context",
+   "question_text": "In a meeting someone says, “Let's not beat around the bush.” They want people to ___.",
+   "options": {
+    "A": "avoid the topic",
+    "B": "speak directly",
+    "C": "speak more slowly",
+    "D": "go outside"
+   },
+   "correct_option": "B",
+   "english_meaning": "They want people to speak directly.",
+   "english_explanation": "“Beat around the bush” means avoid the main point.",
+   "verified": true
+  },
+  {
+   "difficulty": "A6",
+   "category": "reading-comprehension",
+   "question_text": "The museum, which reopened last spring after a two-year renovation, now attracts twice as many visitors as before. What happened to visitor numbers after the renovation?",
+   "options": {
+    "A": "The museum closed.",
+    "B": "They doubled.",
+    "C": "They stayed the same.",
+    "D": "They halved."
+   },
+   "correct_option": "B",
+   "english_meaning": "Visitor numbers doubled.",
+   "english_explanation": "“Twice as many visitors” means the number doubled.",
+   "verified": true
+  },
+  {
+   "difficulty": "A6",
+   "category": "everyday-expressions",
+   "question_text": "“I'm on the fence about it” means ___.",
+   "options": {
+    "A": "I strongly agree.",
+    "B": "I'm outdoors.",
+    "C": "I'm annoyed.",
+    "D": "I haven't decided yet."
+   },
+   "correct_option": "D",
+   "english_meaning": "I haven't decided yet.",
+   "english_explanation": "Being “on the fence” means undecided.",
+   "verified": true
+  },
+  {
+   "difficulty": "A6",
+   "category": "everyday-expressions",
+   "question_text": "What does “Break a leg!” mean before a performance?",
+   "options": {
+    "A": "Stop now!",
+    "B": "Hurry up!",
+    "C": "Be careful!",
+    "D": "Good luck!"
+   },
+   "correct_option": "D",
+   "english_meaning": "Good luck!",
+   "english_explanation": "A theatre expression wishing a performer success.",
+   "verified": true
+  },
+  {
+   "difficulty": "A7",
+   "category": "vocabulary",
+   "question_text": "Something “ubiquitous” is ___.",
+   "options": {
+    "A": "extremely rare",
+    "B": "found everywhere",
+    "C": "easy to break",
+    "D": "very old"
+   },
+   "correct_option": "B",
+   "english_meaning": "Something ubiquitous is found everywhere.",
+   "english_explanation": "“Ubiquitous” means present everywhere.",
+   "verified": true
+  },
+  {
+   "difficulty": "A7",
+   "category": "vocabulary",
+   "question_text": "To “mitigate” a risk is to ___.",
+   "options": {
+    "A": "measure it",
+    "B": "ignore it",
+    "C": "reduce it",
+    "D": "increase it"
+   },
+   "correct_option": "C",
+   "english_meaning": "To mitigate a risk is to reduce it.",
+   "english_explanation": "“Mitigate” means make less serious.",
+   "verified": true
+  },
+  {
+   "difficulty": "A7",
+   "category": "grammar",
+   "question_text": "He said that he ___ the email the day before.",
+   "options": {
+    "A": "had sent",
+    "B": "sends",
+    "C": "was send",
+    "D": "has sent"
+   },
+   "correct_option": "A",
+   "english_meaning": "He said that he had sent the email the day before.",
+   "english_explanation": "In reported speech, the past simple usually shifts back to the past perfect.",
+   "verified": true
+  },
+  {
+   "difficulty": "A7",
+   "category": "grammar",
+   "question_text": "Had I known about the traffic, I ___ earlier.",
+   "options": {
+    "A": "will leave",
+    "B": "would have left",
+    "C": "had left",
+    "D": "would leave"
+   },
+   "correct_option": "B",
+   "english_meaning": "If I had known about the traffic, I would have left earlier.",
+   "english_explanation": "Third conditional (here with inversion): had + past participle, would have + past participle.",
+   "verified": true
+  },
+  {
+   "difficulty": "A7",
+   "category": "sentence-completion",
+   "question_text": "She has been working here ___ over a decade.",
+   "options": {
+    "A": "for",
+    "B": "during",
+    "C": "since",
+    "D": "from"
+   },
+   "correct_option": "A",
+   "english_meaning": "She has been working here for over a decade.",
+   "english_explanation": "“For” goes with a length of time such as a decade.",
+   "verified": true
+  },
+  {
+   "difficulty": "A7",
+   "category": "sentence-completion",
+   "question_text": "The results were ___ better than we had expected.",
+   "options": {
+    "A": "so",
+    "B": "too",
+    "C": "far",
+    "D": "very"
+   },
+   "correct_option": "C",
+   "english_meaning": "The results were far better than we had expected.",
+   "english_explanation": "Comparatives are intensified with “far” or “much”, not “very”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A7",
+   "category": "context",
+   "question_text": "A reviewer calls a novel “a page-turner”. This means the book is ___.",
+   "options": {
+    "A": "exciting and hard to put down",
+    "B": "badly printed",
+    "C": "very long",
+    "D": "boring"
+   },
+   "correct_option": "A",
+   "english_meaning": "The book is exciting and hard to put down.",
+   "english_explanation": "A page-turner keeps you reading.",
+   "verified": true
+  },
+  {
+   "difficulty": "A7",
+   "category": "reading-comprehension",
+   "question_text": "Despite repeated warnings from engineers, the council postponed repairs to the bridge to save money. Months later, the bridge had to be closed completely, and the final repair bill was three times the original estimate. What does the passage suggest?",
+   "options": {
+    "A": "The engineers were wrong.",
+    "B": "The bridge was never repaired.",
+    "C": "The council saved money.",
+    "D": "Delaying the repairs cost more in the end."
+   },
+   "correct_option": "D",
+   "english_meaning": "Delaying the repairs cost more in the end.",
+   "english_explanation": "The final bill was three times the estimate, so the delay did not save money.",
+   "verified": true
+  },
+  {
+   "difficulty": "A7",
+   "category": "everyday-expressions",
+   "question_text": "“Let's not jump the gun” means ___.",
+   "options": {
+    "A": "let's start immediately",
+    "B": "let's run quickly",
+    "C": "let's not use weapons",
+    "D": "let's not act too soon"
+   },
+   "correct_option": "D",
+   "english_meaning": "Let's not act too soon.",
+   "english_explanation": "“Jump the gun” means start before the right time.",
+   "verified": true
+  },
+  {
+   "difficulty": "A7",
+   "category": "everyday-expressions",
+   "question_text": "If someone says “That rings a bell”, they mean ___.",
+   "options": {
+    "A": "they disagree",
+    "B": "it sounds familiar",
+    "C": "it's time to go",
+    "D": "they hear a bell"
+   },
+   "correct_option": "B",
+   "english_meaning": "It sounds familiar.",
+   "english_explanation": "Something that “rings a bell” seems vaguely familiar.",
+   "verified": true
+  },
+  {
+   "difficulty": "A8",
+   "category": "vocabulary",
+   "question_text": "A “meticulous” person is ___.",
+   "options": {
+    "A": "easily angered",
+    "B": "very generous",
+    "C": "extremely careful about detail",
+    "D": "careless"
+   },
+   "correct_option": "C",
+   "english_meaning": "A meticulous person is extremely careful about detail.",
+   "english_explanation": "“Meticulous” means showing great attention to detail.",
+   "verified": true
+  },
+  {
+   "difficulty": "A8",
+   "category": "vocabulary",
+   "question_text": "Which word means “to express strong disapproval of”?",
+   "options": {
+    "A": "condone",
+    "B": "concede",
+    "C": "contemplate",
+    "D": "condemn"
+   },
+   "correct_option": "D",
+   "english_meaning": "Condemn means to express strong disapproval.",
+   "english_explanation": "“Condemn” criticises; “condone” accepts wrongdoing.",
+   "verified": true
+  },
+  {
+   "difficulty": "A8",
+   "category": "grammar",
+   "question_text": "It's high time we ___ a decision.",
+   "options": {
+    "A": "have made",
+    "B": "make",
+    "C": "will make",
+    "D": "made"
+   },
+   "correct_option": "D",
+   "english_meaning": "It's high time we made a decision.",
+   "english_explanation": "“It's (high) time + subject” takes the past tense with present meaning.",
+   "verified": true
+  },
+  {
+   "difficulty": "A8",
+   "category": "grammar",
+   "question_text": "Scarcely had the meeting begun ___ the power went out.",
+   "options": {
+    "A": "then",
+    "B": "than",
+    "C": "that",
+    "D": "when"
+   },
+   "correct_option": "D",
+   "english_meaning": "Scarcely had the meeting begun when the power went out.",
+   "english_explanation": "“Scarcely/Hardly… when” (but “No sooner… than”).",
+   "verified": true
+  },
+  {
+   "difficulty": "A8",
+   "category": "sentence-completion",
+   "question_text": "She was accused ___ leaking confidential documents.",
+   "options": {
+    "A": "of",
+    "B": "with",
+    "C": "for",
+    "D": "about"
+   },
+   "correct_option": "A",
+   "english_meaning": "She was accused of leaking confidential documents.",
+   "english_explanation": "The verb pattern is “accuse someone of something”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A8",
+   "category": "sentence-completion",
+   "question_text": "Were the proposal ___, we would begin next week.",
+   "options": {
+    "A": "approving",
+    "B": "approved",
+    "C": "to approve",
+    "D": "approves"
+   },
+   "correct_option": "B",
+   "english_meaning": "If the proposal were approved, we would begin next week.",
+   "english_explanation": "Inverted conditional: “Were + subject + past participle” replaces “If… were”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A8",
+   "category": "context",
+   "question_text": "An editor says a draft is “riddled with errors”. The draft ___.",
+   "options": {
+    "A": "is almost perfect",
+    "B": "is full of mistakes",
+    "C": "has a few mistakes",
+    "D": "is a puzzle"
+   },
+   "correct_option": "B",
+   "english_meaning": "The draft is full of mistakes.",
+   "english_explanation": "“Riddled with” means full of something bad.",
+   "verified": true
+  },
+  {
+   "difficulty": "A8",
+   "category": "reading-comprehension",
+   "question_text": "Critics praised the director's restraint: rather than explaining the characters' motives, the film leaves the audience to draw its own conclusions. What did the critics admire?",
+   "options": {
+    "A": "The film does not over-explain.",
+    "B": "The film has no characters.",
+    "C": "The characters explain everything.",
+    "D": "The film is very short."
+   },
+   "correct_option": "A",
+   "english_meaning": "The film does not over-explain.",
+   "english_explanation": "“Restraint” here means holding back from explaining.",
+   "verified": true
+  },
+  {
+   "difficulty": "A8",
+   "category": "everyday-expressions",
+   "question_text": "“To play devil's advocate” means ___.",
+   "options": {
+    "A": "to defend a criminal in court",
+    "B": "to agree with everyone",
+    "C": "to argue the opposite view to test an idea",
+    "D": "to behave badly on purpose"
+   },
+   "correct_option": "C",
+   "english_meaning": "To argue the opposite view to test an idea.",
+   "english_explanation": "You argue a side you may not believe, to test the argument.",
+   "verified": true
+  },
+  {
+   "difficulty": "A8",
+   "category": "everyday-expressions",
+   "question_text": "“It's a long shot” means ___.",
+   "options": {
+    "A": "it takes a long time",
+    "B": "it is a great distance",
+    "C": "it is unlikely to succeed",
+    "D": "it is certain"
+   },
+   "correct_option": "C",
+   "english_meaning": "It is unlikely to succeed.",
+   "english_explanation": "A long shot has a small chance of success.",
+   "verified": true
+  },
+  {
+   "difficulty": "A9",
+   "category": "vocabulary",
+   "question_text": "“Obfuscate” most nearly means ___.",
+   "options": {
+    "A": "celebrate",
+    "B": "make unclear",
+    "C": "explain simply",
+    "D": "delay"
+   },
+   "correct_option": "B",
+   "english_meaning": "Obfuscate means to make unclear.",
+   "english_explanation": "To obfuscate is to make something confusing, often deliberately.",
+   "verified": true
+  },
+  {
+   "difficulty": "A9",
+   "category": "vocabulary",
+   "question_text": "A “sycophant” is someone who ___.",
+   "options": {
+    "A": "prefers to live alone",
+    "B": "speaks bluntly",
+    "C": "flatters powerful people for advantage",
+    "D": "criticises everyone"
+   },
+   "correct_option": "C",
+   "english_meaning": "A sycophant flatters powerful people for advantage.",
+   "english_explanation": "Sycophants praise insincerely to gain favour.",
+   "verified": true
+  },
+  {
+   "difficulty": "A9",
+   "category": "grammar",
+   "question_text": "Little ___ that the decision would change everything.",
+   "options": {
+    "A": "realised they",
+    "B": "they did realise",
+    "C": "they realised",
+    "D": "did they realise"
+   },
+   "correct_option": "D",
+   "english_meaning": "They did not realise at all that the decision would change everything.",
+   "english_explanation": "Negative adverbials like “little” at the start trigger inversion with “did”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A9",
+   "category": "grammar",
+   "question_text": "The committee insisted that the chairman ___ present at every meeting.",
+   "options": {
+    "A": "being",
+    "B": "be",
+    "C": "is",
+    "D": "was"
+   },
+   "correct_option": "B",
+   "english_meaning": "The committee insisted that the chairman be present at every meeting.",
+   "english_explanation": "The subjunctive after “insist that” uses the base form “be”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A9",
+   "category": "sentence-completion",
+   "question_text": "The evidence, ___ compelling, was not enough to convict him.",
+   "options": {
+    "A": "whereas",
+    "B": "despite",
+    "C": "although of",
+    "D": "albeit"
+   },
+   "correct_option": "D",
+   "english_meaning": "The evidence, although compelling, was not enough to convict him.",
+   "english_explanation": "“Albeit” means “although” and can be followed by an adjective.",
+   "verified": true
+  },
+  {
+   "difficulty": "A9",
+   "category": "sentence-completion",
+   "question_text": "His explanation did little to ___ our fears.",
+   "options": {
+    "A": "allay",
+    "B": "alloy",
+    "C": "ally",
+    "D": "allot"
+   },
+   "correct_option": "A",
+   "english_meaning": "His explanation did little to calm our fears.",
+   "english_explanation": "“Allay” means to reduce fear or doubt; the others are similar-looking words.",
+   "verified": true
+  },
+  {
+   "difficulty": "A9",
+   "category": "context",
+   "question_text": "A journalist describes a politician's answer as “equivocal”. The answer was ___.",
+   "options": {
+    "A": "very clear",
+    "B": "very short",
+    "C": "deliberately vague",
+    "D": "angry"
+   },
+   "correct_option": "C",
+   "english_meaning": "The answer was deliberately vague.",
+   "english_explanation": "“Equivocal” means open to more than one interpretation, often to avoid commitment.",
+   "verified": true
+  },
+  {
+   "difficulty": "A9",
+   "category": "reading-comprehension",
+   "question_text": "The author concedes that the reform had some merit, yet maintains that its hasty implementation undermined the very goals it sought to achieve. What is the author's overall view?",
+   "options": {
+    "A": "The way the reform was carried out defeated its purpose.",
+    "B": "The reform achieved all its goals.",
+    "C": "The reform was introduced too slowly.",
+    "D": "The reform had no merit at all."
+   },
+   "correct_option": "A",
+   "english_meaning": "The way the reform was carried out defeated its purpose.",
+   "english_explanation": "“Concedes… yet maintains” shows a partial admission followed by the main criticism.",
+   "verified": true
+  },
+  {
+   "difficulty": "A9",
+   "category": "everyday-expressions",
+   "question_text": "“To throw someone under the bus” means ___.",
+   "options": {
+    "A": "to forgive someone",
+    "B": "to sacrifice someone to protect yourself",
+    "C": "to push someone gently",
+    "D": "to help someone travel"
+   },
+   "correct_option": "B",
+   "english_meaning": "To sacrifice someone to protect yourself.",
+   "english_explanation": "Blaming someone else, often unfairly, to save yourself.",
+   "verified": true
+  },
+  {
+   "difficulty": "A9",
+   "category": "everyday-expressions",
+   "question_text": "“The ball is in your court” means ___.",
+   "options": {
+    "A": "it's your turn to decide or act",
+    "B": "you should play sport",
+    "C": "you have lost",
+    "D": "you have won"
+   },
+   "correct_option": "A",
+   "english_meaning": "It's your turn to decide or act.",
+   "english_explanation": "From tennis: the next move is yours.",
+   "verified": true
+  },
+  {
+   "difficulty": "A10",
+   "category": "vocabulary",
+   "question_text": "“Pusillanimous” means ___.",
+   "options": {
+    "A": "talkative",
+    "B": "extremely proud",
+    "C": "lacking courage",
+    "D": "generous"
+   },
+   "correct_option": "C",
+   "english_meaning": "Pusillanimous means lacking courage.",
+   "english_explanation": "A rare formal word for timid or cowardly.",
+   "verified": true
+  },
+  {
+   "difficulty": "A10",
+   "category": "vocabulary",
+   "question_text": "A mild word used in place of a harsh one is called a ___.",
+   "options": {
+    "A": "onomatopoeia",
+    "B": "hyperbole",
+    "C": "oxymoron",
+    "D": "euphemism"
+   },
+   "correct_option": "D",
+   "english_meaning": "It is called a euphemism.",
+   "english_explanation": "For example, “passed away” instead of “died”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A10",
+   "category": "grammar",
+   "question_text": "Which sentence is grammatically correct?",
+   "options": {
+    "A": "Neither the manager nor the employees was informed.",
+    "B": "Neither the manager nor the employees were informed.",
+    "C": "Neither of the manager nor employees were informed.",
+    "D": "Neither the manager or the employees were informed."
+   },
+   "correct_option": "B",
+   "english_meaning": "Neither the manager nor the employees were informed.",
+   "english_explanation": "With “neither… nor”, the verb agrees with the nearer subject (“employees” → “were”).",
+   "verified": true
+  },
+  {
+   "difficulty": "A10",
+   "category": "grammar",
+   "question_text": "So ___ that the ferry was cancelled.",
+   "options": {
+    "A": "severely was the storm",
+    "B": "the storm was severe",
+    "C": "severe was the storm",
+    "D": "severe did the storm"
+   },
+   "correct_option": "C",
+   "english_meaning": "The storm was so severe that the ferry was cancelled.",
+   "english_explanation": "Fronting “so + adjective” requires inversion: “So severe was the storm…”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A10",
+   "category": "sentence-completion",
+   "question_text": "Far from ___ the crisis, the new measures made it worse.",
+   "options": {
+    "A": "resolving",
+    "B": "to resolve",
+    "C": "resolved",
+    "D": "resolve"
+   },
+   "correct_option": "A",
+   "english_meaning": "Far from resolving the crisis, the new measures made it worse.",
+   "english_explanation": "“Far from” is followed by the -ing form.",
+   "verified": true
+  },
+  {
+   "difficulty": "A10",
+   "category": "sentence-completion",
+   "question_text": "She spoke with such ___ that even her critics were persuaded.",
+   "options": {
+    "A": "eloquently",
+    "B": "eloquence",
+    "C": "eloquent",
+    "D": "eloquentness"
+   },
+   "correct_option": "B",
+   "english_meaning": "She spoke with such eloquence that even her critics were persuaded.",
+   "english_explanation": "After “such” here we need a noun: “eloquence”.",
+   "verified": true
+  },
+  {
+   "difficulty": "A10",
+   "category": "context",
+   "question_text": "A critic calls a speech “sesquipedalian”. The speech used ___.",
+   "options": {
+    "A": "many long, complicated words",
+    "B": "very few words",
+    "C": "a lot of humour",
+    "D": "a quiet voice"
+   },
+   "correct_option": "A",
+   "english_meaning": "The speech used many long, complicated words.",
+   "english_explanation": "“Sesquipedalian” humorously describes long words.",
+   "verified": true
+  },
+  {
+   "difficulty": "A10",
+   "category": "reading-comprehension",
+   "question_text": "Paradoxically, the town's efforts to preserve its “authentic” character by banning new construction have pushed rents so high that the families who embodied that character can no longer afford to live there. What is the paradox?",
+   "options": {
+    "A": "Families moved in to protect the town.",
+    "B": "Rents fell after the ban.",
+    "C": "Efforts to preserve the town are pushing out the people they meant to protect.",
+    "D": "New construction has ruined the town."
+   },
+   "correct_option": "C",
+   "english_meaning": "Efforts to preserve the town are pushing out the people they meant to protect.",
+   "english_explanation": "The policy undermines the very character it aims to save.",
+   "verified": true
+  },
+  {
+   "difficulty": "A10",
+   "category": "everyday-expressions",
+   "question_text": "“To damn with faint praise” means ___.",
+   "options": {
+    "A": "to praise very enthusiastically",
+    "B": "to swear quietly",
+    "C": "to criticise loudly",
+    "D": "to criticise by praising only weakly"
+   },
+   "correct_option": "D",
+   "english_meaning": "To criticise by praising only weakly.",
+   "english_explanation": "Weak praise can imply that something is not good.",
+   "verified": true
+  },
+  {
+   "difficulty": "A10",
+   "category": "everyday-expressions",
+   "question_text": "A “Pyrrhic victory” is a win that ___.",
+   "options": {
+    "A": "everyone celebrates",
+    "B": "comes very easily",
+    "C": "happens by accident",
+    "D": "costs so much it is hardly worth it"
+   },
+   "correct_option": "D",
+   "english_meaning": "A win that costs so much it is hardly worth it.",
+   "english_explanation": "Named after King Pyrrhus, whose victories caused him huge losses.",
+   "verified": true
+  }
+ ]
+}

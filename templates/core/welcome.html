@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Home | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-narrow">
+    <header class="lx-page-header lx-page-header--split">
+      <div class="d-flex align-items-center gap-3">
+        {% include "profiles/_avatar.html" with size="lg" %}
+        <div>
+          <h1>Welcome, {{ profile.display_name }}.</h1>
+          <p>Practise to sharpen your level, then find a partner to exchange with.</p>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-secondary-lx" href="{% url 'practice:home' %}"><i class="bi bi-lightning-charge" aria-hidden="true"></i>Practice</a>
+        <a class="btn btn-primary" href="{% url 'matching:discover' %}"><i class="bi bi-people" aria-hidden="true"></i>Discover partners</a>
+      </div>
+    </header>
+
+    <div class="lx-dashboard">
+      <section class="lx-card" aria-labelledby="learning-title">
+        <div class="lx-card__body">
+          <div class="lx-panel-title">
+            <span class="lx-icon-badge"><i class="bi bi-translate" aria-hidden="true"></i></span>
+            <h2 id="learning-title">You're learning</h2>
+          </div>
+          {% for item in learning %}
+          <div class="lx-dash-lang">
+            <div>
+              <p class="lx-dash-lang__name"><span lang="{{ item.row.language.code }}">{{ item.row.language.native_name }}</span>
+                {% if item.row.language.native_name != item.row.language.name %}<small>{{ item.row.language.name }}</small>{% endif %}</p>
+              {% if item.row.current_level %}
+              <p class="mb-0"><span class="lx-badge">Estimated {{ item.row.current_level.code }}, {{ item.row.current_level.name }}</span>
+                {% if item.row.level_source == "self-declared" %}<span class="lx-badge lx-badge--neutral">self-declared</span>
+                {% elif item.row.level_source == "both" %}<span class="lx-badge lx-badge--neutral">practice + self-declared</span>
+                {% else %}<span class="lx-badge lx-badge--neutral">from practice</span>{% endif %}</p>
+              {% endif %}
+            </div>
+            <div class="lx-dash-lang__xp">
+              <span class="lx-xp-chip"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>{{ item.progress.xp|default:0 }} XP</span>
+              {% if item.progress.accuracy is not None %}<span class="lx-muted">{{ item.progress.accuracy }}% accuracy</span>{% endif %}
+            </div>
+          </div>
+          {% endfor %}
+          {% if last_session %}
+          <p class="lx-dash-recent"><i class="bi bi-clock-history" aria-hidden="true"></i>Last practice: {{ last_session.language.name }}, {{ last_session.correct_count }}/{{ last_session.question_count }} correct, {{ last_session.completed_at|timesince }} ago. <a href="{% url 'practice:results' pk=last_session.pk %}">Review</a></p>
+          {% else %}
+          <p class="lx-dash-recent"><i class="bi bi-lightning-charge" aria-hidden="true"></i>No practice yet. A 10-question session takes about five minutes.</p>
+          {% endif %}
+        </div>
+      </section>
+
+      <section class="lx-card" aria-labelledby="partners-title">
+        <div class="lx-card__body">
+          <div class="lx-panel-title">
+            <span class="lx-icon-badge lx-icon-badge--accent"><i class="bi bi-people" aria-hidden="true"></i></span>
+            <h2 id="partners-title">Suggested partners</h2>
+            {% if partners %}<a class="lx-edit-link" href="{% url 'matching:discover' %}">See all</a>{% endif %}
+          </div>
+          {% for card in partners %}
+          <a class="lx-mini-partner" href="{% url 'matching:detail' user_id=card.profile.user_id %}">
+            {% include "profiles/_avatar.html" with profile=card.profile %}
+            <span class="lx-mini-partner__who"><strong>{{ card.profile.display_name }}</strong>
+              <span>Speaks {{ card.they_speak }}, learning {{ card.they_learn }}</span></span>
+            <span class="lx-mini-partner__pct">{{ card.percent }}%</span>
+          </a>
+          {% empty %}
+          <p class="lx-empty mb-0">No suggestions yet. We'll show partners here as soon as someone compatible joins.</p>
+          {% endfor %}
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+{% endblock %}

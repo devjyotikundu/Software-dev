@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}AI helper | {{ site_name }}{% endblock %}
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-form">
+    <div class="lx-card lx-card--raised"><div class="lx-card__body">
+      <div class="lx-panel-title"><span class="lx-icon-badge"><i class="bi bi-stars" aria-hidden="true"></i></span><h1 class="lx-form-title">AI helper</h1></div>
+      {% if ok %}<p class="lx-ai-answer">{{ text|linebreaksbr }}</p>
+      {% else %}<div class="lx-alert lx-alert--warning"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i><div class="lx-alert__body">{{ text }}</div></div>{% endif %}
+      <p class="lx-help">AI answers can be wrong. Check with your partner.</p>
+      <a class="btn btn-primary" href="{{ back_url }}">Back</a>
+    </div></div>
+  </div>
+</section>
+{% endblock %}

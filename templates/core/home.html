@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="lx-hero" aria-labelledby="hero-title">
+  <div class="container lx-hero__grid">
+    <div>
+      <h1 id="hero-title">Learn a language with someone who is learning yours.</h1>
+      <p class="lx-lead lx-hero__lead">
+        We match you with a partner whose native language is the one you are learning,
+        and who wants to learn the one you speak. You help each other.
+      </p>
+      <div class="lx-hero__actions">
+        <a class="btn btn-primary btn-lg" href="{% url 'accounts:register' %}">Create a free account</a>
+        <a class="btn btn-secondary-lx btn-lg" href="{% url 'accounts:login' %}">Log in</a>
+      </div>
+      <p class="lx-hero__note"><i class="bi bi-translate" aria-hidden="true"></i>English, Bengali and Hindi to start. More languages to follow.</p>
+    </div>
+
+    {# Illustration of an exchange, not real user data. #}
+    <figure class="lx-exchange lx-card lx-card--raised m-0" role="img"
+            aria-label="Illustration: two partners greeting each other in Bengali, English and Hindi, taking turns in each language.">
+      <div class="lx-exchange__head">
+        <div class="lx-exchange__people" aria-hidden="true">
+          <span class="lx-avatar"><i class="bi bi-person"></i></span>
+          <span class="lx-avatar"><i class="bi bi-person"></i></span>
+        </div>
+        <div>
+          <div class="lx-exchange__title">Language exchange</div>
+          <div class="lx-exchange__meta">Taking turns, helping each other</div>
+        </div>
+      </div>
+      <div class="lx-exchange__thread">
+        {% for greeting in greetings %}
+        <p class="lx-bubble {% cycle 'lx-bubble--accent' 'lx-bubble--you' 'lx-bubble--them' %} m-0">
+          <span lang="{{ greeting.code }}">{{ greeting.word }}</span>
+          <small>{{ greeting.language }}</small>
+        </p>
+        {% endfor %}
+      </div>
+      <div class="lx-exchange__turns">
+        <div class="lx-turns" aria-hidden="true"><span></span><span></span></div>
+        <div class="lx-turns__labels"><span>10 min English</span><span>10 min Bengali</span></div>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="lx-section lx-section--surface" aria-labelledby="how-title">
+  <div class="container">
+    <div class="lx-section__intro">
+      <h2 id="how-title">How it works</h2>
+      <p class="lx-lead mb-0">Four steps from signing up to practising with a real person.</p>
+    </div>
+    <ol class="lx-steps">
+      <li class="lx-step lx-card">
+        <div class="lx-step__top"><span class="lx-icon-badge"><i class="bi bi-clipboard-check" aria-hidden="true"></i></span><span class="lx-step__number"></span></div>
+        <h3>Check your level</h3>
+        <p>Answer short practice questions. Your results give an estimated proficiency, not a certificate.</p>
+      </li>
+      <li class="lx-step lx-card">
+        <div class="lx-step__top"><span class="lx-icon-badge"><i class="bi bi-people" aria-hidden="true"></i></span><span class="lx-step__number"></span></div>
+        <h3>Meet a compatible partner</h3>
+        <p>See people whose languages, goals and schedule fit yours, and why each one is a good match.</p>
+      </li>
+      <li class="lx-step lx-card">
+        <div class="lx-step__top"><span class="lx-icon-badge lx-icon-badge--accent"><i class="bi bi-chat-dots" aria-hidden="true"></i></span><span class="lx-step__number"></span></div>
+        <h3>Practise together</h3>
+        <p>Chat in a private room and take turns, so each of you gets time in the language you are learning.</p>
+      </li>
+      <li class="lx-step lx-card">
+        <div class="lx-step__top"><span class="lx-icon-badge"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></span><span class="lx-step__number"></span></div>
+        <h3>Get better matches</h3>
+        <p>Your practice results and session feedback shape who we suggest next.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="lx-section" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="lx-card lx-cta">
+      <div>
+        <h2 id="cta-title">Ready to find a partner?</h2>
+        <p>Setting up takes about two minutes.</p>
+      </div>
+      <a class="btn btn-primary btn-lg" href="{% url 'accounts:register' %}">Create a free account</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

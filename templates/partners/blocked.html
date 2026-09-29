@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Blocked people | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-form">
+    <a class="lx-back-link" href="{% url 'profiles:detail' %}"><i class="bi bi-arrow-left" aria-hidden="true"></i>Back to profile</a>
+    <header class="lx-page-header mt-3">
+      <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-slash-circle" aria-hidden="true"></i></span>
+      <div><h1>Blocked people</h1><p>You and they can't see each other anywhere in the app.</p></div>
+    </header>
+    {% if blocked %}
+    <div class="lx-card"><ul class="lx-list">
+      {% for item in blocked %}
+      <li class="lx-list__item">
+        {% include "profiles/_avatar.html" with profile=item.blocked.profile %}
+        <div class="lx-list__main"><span class="fw-semibold">{{ item.blocked.profile.display_name }}</span>
+          <span class="lx-list__meta">Blocked {{ item.created_at|date:"j M Y" }}</span></div>
+        <form method="post" action="{% url 'partners:unblock' user_id=item.blocked_id %}">{% csrf_token %}
+          <button type="submit" class="btn btn-secondary-lx btn-sm">Unblock<span class="visually-hidden"> {{ item.blocked.profile.display_name }}</span></button></form>
+      </li>
+      {% endfor %}
+    </ul></div>
+    {% else %}<p class="lx-empty">You haven't blocked anyone.</p>{% endif %}
+  </div>
+</section>
+{% endblock %}

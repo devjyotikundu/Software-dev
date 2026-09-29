@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ other.profile.display_name }} | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-narrow">
+    <div class="d-flex justify-content-between align-items-center">
+      <a class="lx-back-link" href="{% url 'partners:list' %}"><i class="bi bi-arrow-left" aria-hidden="true"></i>All partners</a>
+      {% include "partners/_safety_menu.html" with person_id=other.pk name=other.profile.display_name %}
+    </div>
+    {% if card %}
+    {% include "matching/_person_hero.html" %}
+    <div class="lx-alert lx-alert--success mt-4" role="status">
+      <i class="bi bi-check-circle" aria-hidden="true"></i>
+      <div class="lx-alert__body">You're partners since {{ match.created_at|date:"j M Y" }}. Your private exchange room is set up.</div>
+    </div>
+    {% if match.room.is_active %}<a class="btn btn-primary btn-lg w-100 mt-3" href="{% url 'exchange:room' room_id=match.room.pk %}"><i class="bi bi-chat-dots" aria-hidden="true"></i>Open exchange room</a>{% endif %}
+    {% include "matching/_why_match.html" %}
+    {% else %}
+    <div class="lx-card lx-empty-state mt-3">
+      <h1 class="h3">{{ other.profile.display_name }}</h1>
+      <p class="lx-muted mb-0">Your languages no longer line up, so we can't show a match breakdown. You're still partners.</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

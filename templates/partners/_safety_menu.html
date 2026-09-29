@@ -1,0 +1,10 @@
+{# Secondary safety actions for a person. Needs person_id and name. #}
+<div class="dropdown">
+  <button class="lx-icon-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-three-dots" aria-hidden="true"></i><span class="visually-hidden">More options for {{ name }}</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><a class="dropdown-item" href="{% url 'partners:report' user_id=person_id %}"><i class="bi bi-flag" aria-hidden="true"></i>Report</a></li>
+    <li><a class="dropdown-item" href="{% url 'partners:block' user_id=person_id %}"><i class="bi bi-slash-circle" aria-hidden="true"></i>Block</a></li>
+  </ul>
+</div>

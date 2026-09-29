@@ -1,0 +1,1505 @@
+{
+ "language": "bn",
+ "questions": [
+  {
+   "difficulty": "A1",
+   "category": "vocabulary",
+   "question_text": "‘জল’ শব্দের মানে কী?",
+   "options": {
+    "A": "water",
+    "B": "fire",
+    "C": "rice",
+    "D": "air"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does ‘jol’ mean?",
+   "english_explanation": "জল (jol) means water. In Bangladesh, পানি (pani) is also common.",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "vocabulary",
+   "question_text": "‘মা’ শব্দের মানে কী?",
+   "options": {
+    "A": "sister",
+    "B": "father",
+    "C": "mother",
+    "D": "friend"
+   },
+   "correct_option": "C",
+   "english_meaning": "What does ‘ma’ mean?",
+   "english_explanation": "মা (ma) means mother.",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "grammar",
+   "question_text": "আমি ভাত ___ ।",
+   "options": {
+    "A": "খাও",
+    "B": "খান",
+    "C": "খায়",
+    "D": "খাই"
+   },
+   "correct_option": "D",
+   "english_meaning": "I eat rice.",
+   "english_explanation": "With আমি (I), the present-tense ending is -ই: খাই (khai).",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "grammar",
+   "question_text": "তুমি কেমন ___?",
+   "options": {
+    "A": "আছি",
+    "B": "আছ",
+    "C": "আছে",
+    "D": "আছেন"
+   },
+   "correct_option": "B",
+   "english_meaning": "How are you?",
+   "english_explanation": "With তুমি (informal ‘you’), the verb form is আছ (achho).",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "sentence-completion",
+   "question_text": "এক, দুই, তিন, ___",
+   "options": {
+    "A": "চার",
+    "B": "পাঁচ",
+    "C": "সাত",
+    "D": "দশ"
+   },
+   "correct_option": "A",
+   "english_meaning": "One, two, three, ___",
+   "english_explanation": "After তিন (three) comes চার (char, four).",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "sentence-completion",
+   "question_text": "সূর্য ___ দিকে ওঠে।",
+   "options": {
+    "A": "পশ্চিম",
+    "B": "পূর্ব",
+    "C": "দক্ষিণ",
+    "D": "উত্তর"
+   },
+   "correct_option": "B",
+   "english_meaning": "The sun rises in the ___.",
+   "english_explanation": "The sun rises in the east: পূর্ব (purbo).",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "context",
+   "question_text": "প্রথমবার কারও সঙ্গে দেখা হলে ভদ্রভাবে কী বলবেন?",
+   "options": {
+    "A": "দুঃখিত",
+    "B": "চুপ করো",
+    "C": "বিদায়",
+    "D": "নমস্কার"
+   },
+   "correct_option": "D",
+   "english_meaning": "What do you say politely when meeting someone for the first time?",
+   "english_explanation": "নমস্কার (nomoshkar) is a respectful greeting.",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "reading-comprehension",
+   "question_text": "রিনার একটা বিড়াল আছে। বিড়ালটা সাদা। রিনার বিড়ালের রং কী?",
+   "options": {
+    "A": "সাদা",
+    "B": "হলুদ",
+    "C": "লাল",
+    "D": "কালো"
+   },
+   "correct_option": "A",
+   "english_meaning": "Rina has a cat. The cat is white. What colour is Rina's cat?",
+   "english_explanation": "The text says বিড়ালটা সাদা: the cat is white (shada).",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "everyday-expressions",
+   "question_text": "‘ধন্যবাদ’ মানে কী?",
+   "options": {
+    "A": "Sorry",
+    "B": "Thank you",
+    "C": "Please",
+    "D": "Hello"
+   },
+   "correct_option": "B",
+   "english_meaning": "What does ‘dhonnobad’ mean?",
+   "english_explanation": "ধন্যবাদ (dhonnobad) means thank you.",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "everyday-expressions",
+   "question_text": "কারও নাম জানতে কী জিজ্ঞেস করবেন?",
+   "options": {
+    "A": "এটার দাম কত?",
+    "B": "আপনি কোথায় থাকেন?",
+    "C": "আপনার নাম কী?",
+    "D": "এটা কী?"
+   },
+   "correct_option": "C",
+   "english_meaning": "What do you ask to find out someone's name?",
+   "english_explanation": "আপনার নাম কী? (apnar nam ki?) means ‘What is your name?’",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "vocabulary",
+   "question_text": "‘বাজার’ শব্দের মানে কী?",
+   "options": {
+    "A": "market",
+    "B": "river",
+    "C": "hospital",
+    "D": "school"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does ‘bajar’ mean?",
+   "english_explanation": "বাজার (bajar) means market.",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "vocabulary",
+   "question_text": "‘বড়’ শব্দের বিপরীত শব্দ কোনটি?",
+   "options": {
+    "A": "মোটা",
+    "B": "ভালো",
+    "C": "লম্বা",
+    "D": "ছোট"
+   },
+   "correct_option": "D",
+   "english_meaning": "Which word is the opposite of ‘boro’ (big)?",
+   "english_explanation": "The opposite of বড় (big) is ছোট (chhoto, small).",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "grammar",
+   "question_text": "গতকাল আমি স্কুলে ___ ।",
+   "options": {
+    "A": "যাচ্ছি",
+    "B": "যাই",
+    "C": "গিয়েছিলাম",
+    "D": "যাব"
+   },
+   "correct_option": "C",
+   "english_meaning": "Yesterday I went to school.",
+   "english_explanation": "গতকাল (yesterday) needs a past form: গিয়েছিলাম (giyechhilam). Colloquial গেলাম is also past.",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "grammar",
+   "question_text": "ওরা মাঠে ফুটবল ___ ।",
+   "options": {
+    "A": "খেলছ",
+    "B": "খেলছি",
+    "C": "খেলছে",
+    "D": "খেলছেন"
+   },
+   "correct_option": "C",
+   "english_meaning": "They are playing football in the field.",
+   "english_explanation": "With ওরা (they, informal), the present continuous form is খেলছে (khelchhe).",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "sentence-completion",
+   "question_text": "খুব তেষ্টা পেয়েছে, এক গ্লাস ___ দাও।",
+   "options": {
+    "A": "জামা",
+    "B": "জল",
+    "C": "ভাত",
+    "D": "বই"
+   },
+   "correct_option": "B",
+   "english_meaning": "I'm very thirsty, give me a glass of ___.",
+   "english_explanation": "When thirsty you ask for জল (water).",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "sentence-completion",
+   "question_text": "এক সপ্তাহে ___ দিন থাকে।",
+   "options": {
+    "A": "দশ",
+    "B": "সাত",
+    "C": "ছয়",
+    "D": "পাঁচ"
+   },
+   "correct_option": "B",
+   "english_meaning": "A week has ___ days.",
+   "english_explanation": "A week has সাত (shat, seven) days.",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "context",
+   "question_text": "বাইরে বৃষ্টি পড়ছে। বেরোনোর সময় কী সঙ্গে নেবেন?",
+   "options": {
+    "A": "পাখা",
+    "B": "বল",
+    "C": "রোদচশমা",
+    "D": "ছাতা"
+   },
+   "correct_option": "D",
+   "english_meaning": "It is raining outside. What will you take when you go out?",
+   "english_explanation": "ছাতা (chhata) means umbrella.",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "reading-comprehension",
+   "question_text": "অমিত রোজ সকাল সাতটায় ঘুম থেকে ওঠে আর আটটায় অফিসে যায়। অমিত ক'টায় অফিসে যায়?",
+   "options": {
+    "A": "সাতটায়",
+    "B": "ন'টায়",
+    "C": "আটটায়",
+    "D": "ছ'টায়"
+   },
+   "correct_option": "C",
+   "english_meaning": "Amit gets up at seven every morning and goes to the office at eight. At what time does Amit go to the office?",
+   "english_explanation": "The text says আটটায় অফিসে যায়: at eight.",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "everyday-expressions",
+   "question_text": "দোকানে কোনো জিনিসের দাম জানতে কী বলবেন?",
+   "options": {
+    "A": "আপনি কে?",
+    "B": "ক'টা বাজে?",
+    "C": "এটা কোথায়?",
+    "D": "এটার দাম কত?"
+   },
+   "correct_option": "D",
+   "english_meaning": "What do you say to find out the price of something in a shop?",
+   "english_explanation": "এটার দাম কত? (etar dam koto?) means ‘How much is this?’",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "everyday-expressions",
+   "question_text": "‘আবার দেখা হবে’ মানে কী?",
+   "options": {
+    "A": "See you again",
+    "B": "Well done",
+    "C": "Excuse me",
+    "D": "Welcome"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does ‘abar dekha hobe’ mean?",
+   "english_explanation": "It literally means ‘we will meet again’: see you again.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "vocabulary",
+   "question_text": "‘শুরু’ শব্দের বিপরীত শব্দ কোনটি?",
+   "options": {
+    "A": "আরম্ভ",
+    "B": "শেষ",
+    "C": "আগে",
+    "D": "মাঝখান"
+   },
+   "correct_option": "B",
+   "english_meaning": "Which word is the opposite of ‘shuru’ (start)?",
+   "english_explanation": "The opposite is শেষ (shesh, end). আরম্ভ is a synonym of শুরু.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "vocabulary",
+   "question_text": "যেখান থেকে ট্রেন ধরা হয় তাকে কী বলে?",
+   "options": {
+    "A": "বিমানবন্দর",
+    "B": "হাসপাতাল",
+    "C": "ডাকঘর",
+    "D": "স্টেশন"
+   },
+   "correct_option": "D",
+   "english_meaning": "What is the place where you catch a train called?",
+   "english_explanation": "Trains are caught at a স্টেশন (station).",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "grammar",
+   "question_text": "আগামীকাল আমি তোমার বাড়ি ___ ।",
+   "options": {
+    "A": "যাব",
+    "B": "গিয়েছি",
+    "C": "যাচ্ছিলাম",
+    "D": "গেলাম"
+   },
+   "correct_option": "A",
+   "english_meaning": "Tomorrow I will go to your house.",
+   "english_explanation": "আগামীকাল (tomorrow) needs the future: যাব (jabo). Note: কাল alone can mean yesterday or tomorrow; the verb tense decides.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "grammar",
+   "question_text": "আমার দুটো ___ আছে।",
+   "options": {
+    "A": "বই",
+    "B": "বইগুলো",
+    "C": "বইয়েরা",
+    "D": "বইটা"
+   },
+   "correct_option": "A",
+   "english_meaning": "I have two books.",
+   "english_explanation": "After a number with a classifier (দুটো), the noun stays plain: দুটো বই. Don't add plural -গুলো.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "sentence-completion",
+   "question_text": "আমি পাঁচ বছর ___ কলকাতায় আছি।",
+   "options": {
+    "A": "ওপরে",
+    "B": "দিয়ে",
+    "C": "কাছে",
+    "D": "ধরে"
+   },
+   "correct_option": "D",
+   "english_meaning": "I have been in Kolkata for five years.",
+   "english_explanation": "ধরে (dhore) after a length of time means ‘for’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "sentence-completion",
+   "question_text": "নুনটা একটু ___ দেবেন?",
+   "options": {
+    "A": "এগিয়ে",
+    "B": "পিছিয়ে",
+    "C": "লুকিয়ে",
+    "D": "ফেলে"
+   },
+   "correct_option": "A",
+   "english_meaning": "Could you pass the salt, please?",
+   "english_explanation": "এগিয়ে দেওয়া (egiye dewa) means pass something across.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "context",
+   "question_text": "অফিসে প্রথমবার বড়কর্তার সঙ্গে কথা বলছেন। কোন সর্বনাম ব্যবহার করা উচিত?",
+   "options": {
+    "A": "তুমি",
+    "B": "আপনি",
+    "C": "ও",
+    "D": "তুই"
+   },
+   "correct_option": "B",
+   "english_meaning": "You are speaking to your senior boss for the first time. Which pronoun should you use?",
+   "english_explanation": "আপনি (apni) is the respectful ‘you’; তুমি is familiar and তুই very intimate.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "reading-comprehension",
+   "question_text": "টুম্পা সকালে চা খায়, দুপুরে ভাত আর রাতে রুটি খায়। টুম্পা রাতে কী খায়?",
+   "options": {
+    "A": "ভাত",
+    "B": "রুটি",
+    "C": "মাছ",
+    "D": "চা"
+   },
+   "correct_option": "B",
+   "english_meaning": "Tumpa has tea in the morning, rice at noon and roti at night. What does Tumpa eat at night?",
+   "english_explanation": "The text says রাতে রুটি: roti at night.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "everyday-expressions",
+   "question_text": "‘কী খবর?’ কথাটা সাধারণত কী বোঝাতে বলা হয়?",
+   "options": {
+    "A": "Where are you going?",
+    "B": "What did you eat?",
+    "C": "How are things?",
+    "D": "What is on the TV news?"
+   },
+   "correct_option": "C",
+   "english_meaning": "What is ‘ki khobor?’ usually said to mean?",
+   "english_explanation": "Literally ‘what news?’; used casually for ‘how are things?’",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "everyday-expressions",
+   "question_text": "কেউ ‘ধন্যবাদ’ বললে ভদ্র উত্তর কোনটি?",
+   "options": {
+    "A": "আবার বলো",
+    "B": "দুঃখিত",
+    "C": "কোনো ব্যাপার না",
+    "D": "চলে যাও"
+   },
+   "correct_option": "C",
+   "english_meaning": "If someone says ‘thank you’, which is a polite reply?",
+   "english_explanation": "কোনো ব্যাপার না (kono byapar na) means ‘no problem’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "vocabulary",
+   "question_text": "‘বার্ষিক’ অনুষ্ঠান কত দিন পর পর হয়?",
+   "options": {
+    "A": "প্রতিদিন",
+    "B": "মাসে একবার",
+    "C": "সপ্তাহে একবার",
+    "D": "বছরে একবার"
+   },
+   "correct_option": "D",
+   "english_meaning": "How often does a ‘barshik’ (annual) event happen?",
+   "english_explanation": "বার্ষিক comes from বর্ষ (year): once a year.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "vocabulary",
+   "question_text": "কোনো সভা ‘স্থগিত’ রাখা মানে কী?",
+   "options": {
+    "A": "চিরকালের জন্য বাতিল করা",
+    "B": "তাড়াতাড়ি শুরু করা",
+    "C": "পরে করার জন্য পিছিয়ে দেওয়া",
+    "D": "আরও লম্বা করা"
+   },
+   "correct_option": "C",
+   "english_meaning": "What does it mean to keep a meeting ‘sthogito’?",
+   "english_explanation": "স্থগিত means postponed, not cancelled.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "grammar",
+   "question_text": "যদি কাল বৃষ্টি হয়, তাহলে আমরা বাড়িতেই ___ ।",
+   "options": {
+    "A": "থাকছিলাম",
+    "B": "থাকলাম",
+    "C": "থাকব",
+    "D": "থেকেছিলাম"
+   },
+   "correct_option": "C",
+   "english_meaning": "If it rains tomorrow, we will stay at home.",
+   "english_explanation": "A যদি… তাহলে (if… then) sentence about the future takes the future: থাকব (thakbo).",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "grammar",
+   "question_text": "সে এর মধ্যেই বাড়ির কাজ শেষ ___ ।",
+   "options": {
+    "A": "করবার",
+    "B": "করুক",
+    "C": "করে ফেলেছে",
+    "D": "করতে"
+   },
+   "correct_option": "C",
+   "english_meaning": "She has already finished her homework.",
+   "english_explanation": "The compound verb করে ফেলা stresses completion; করে ফেলেছে = has (already) finished.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "sentence-completion",
+   "question_text": "সিনেমাটা এত একঘেয়ে ছিল যে আমি ___ পড়লাম।",
+   "options": {
+    "A": "ঘুমিয়ে",
+    "B": "দৌড়ে",
+    "C": "খেয়ে",
+    "D": "হেসে"
+   },
+   "correct_option": "A",
+   "english_meaning": "The film was so boring that I fell asleep.",
+   "english_explanation": "ঘুমিয়ে পড়া (ghumiye pora) means fall asleep.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "sentence-completion",
+   "question_text": "খাওয়ার ___ হাত ধুয়ে নাও, নইলে জীবাণু পেটে যাবে।",
+   "options": {
+    "A": "মধ্যে",
+    "B": "পরে",
+    "C": "বদলে",
+    "D": "আগে"
+   },
+   "correct_option": "D",
+   "english_meaning": "Wash your hands before eating, otherwise germs will get into your stomach.",
+   "english_explanation": "আগে (age) means before; the reason given makes ‘before’ the only sensible choice.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "context",
+   "question_text": "সহকর্মী বলল, ‘আমার ব্যাগটার দিকে একটু খেয়াল রেখো।’ সে কী চায়?",
+   "options": {
+    "A": "ব্যাগের ভেতরটা দেখা হোক",
+    "B": "কিছুক্ষণ ব্যাগটা নজরে রাখা হোক",
+    "C": "ব্যাগটা বাড়ি নিয়ে যাওয়া হোক",
+    "D": "নতুন ব্যাগ কেনা হোক"
+   },
+   "correct_option": "B",
+   "english_meaning": "A colleague said, ‘Keep an eye on my bag.’ What do they want?",
+   "english_explanation": "খেয়াল রাখা means keep watch over.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "reading-comprehension",
+   "question_text": "মিঠু মাছ কিনতে বাজারে গিয়েছিল, কিন্তু মাছ ফুরিয়ে গিয়েছিল। তাই সে ডিম নিয়ে বাড়ি ফিরল। মিঠু কী নিয়ে ফিরল?",
+   "options": {
+    "A": "কিছুই না",
+    "B": "সবজি",
+    "C": "মাছ",
+    "D": "ডিম"
+   },
+   "correct_option": "D",
+   "english_meaning": "Mithu went to the market to buy fish, but the fish had run out, so she came home with eggs. What did Mithu bring back?",
+   "english_explanation": "ডিম নিয়ে বাড়ি ফিরল: she returned with eggs.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "everyday-expressions",
+   "question_text": "অতিথিকে ‘নিজের বাড়ি মনে করে থাকো’ বলা হলে তার মানে কী?",
+   "options": {
+    "A": "স্বচ্ছন্দে আরাম করে থাকো",
+    "B": "বাড়িটা পরিষ্কার করো",
+    "C": "এখনই বাড়ি ফিরে যাও",
+    "D": "নিজের বাড়ি বানাও"
+   },
+   "correct_option": "A",
+   "english_meaning": "If a guest is told ‘treat this as your own home’, what does it mean?",
+   "english_explanation": "A host's way of saying: make yourself comfortable.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "everyday-expressions",
+   "question_text": "‘জল-টল খাবেন?’ — এখানে ‘টল’ যোগ করে কী বোঝানো হচ্ছে?",
+   "options": {
+    "A": "অনেকটা জল",
+    "B": "জল বা ওই জাতীয় কিছু",
+    "C": "ঠান্ডা জল",
+    "D": "জলের গ্লাস"
+   },
+   "correct_option": "B",
+   "english_meaning": "‘Will you have some water or something?’ What does adding ‘tol’ express?",
+   "english_explanation": "Echo words (জল-টল) mean ‘X or something like it’, a friendly, casual touch.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "vocabulary",
+   "question_text": "‘অনিচ্ছুক’ মানে কী?",
+   "options": {
+    "A": "যে কোনো কাজ করতে চায় না",
+    "B": "যে খুব আত্মবিশ্বাসী",
+    "C": "যে খুব সাবধানী",
+    "D": "যে খুব উৎসাহী"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does ‘onicchhuk’ mean?",
+   "english_explanation": "অনিচ্ছুক means reluctant: অ- (not) + ইচ্ছুক (willing).",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "vocabulary",
+   "question_text": "ব্যথা ‘উপশম’ হওয়া মানে কী?",
+   "options": {
+    "A": "ব্যথা মাপা",
+    "B": "ব্যথা লুকোনো",
+    "C": "ব্যথা কমে যাওয়া",
+    "D": "ব্যথা বেড়ে যাওয়া"
+   },
+   "correct_option": "C",
+   "english_meaning": "What does it mean when pain undergoes ‘uposhom’?",
+   "english_explanation": "উপশম means relief: the pain eases.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "grammar",
+   "question_text": "আমরা পৌঁছনোর আগেই সিনেমা ___ ।",
+   "options": {
+    "A": "শুরু হচ্ছে",
+    "B": "শুরু হোক",
+    "C": "শুরু হবে",
+    "D": "শুরু হয়ে গিয়েছিল"
+   },
+   "correct_option": "D",
+   "english_meaning": "The film had already started before we arrived.",
+   "english_explanation": "An action finished before another past action takes the past perfect: হয়ে গিয়েছিল.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "grammar",
+   "question_text": "চিঠিটা গতকাল ম্যানেজার ___ লেখা হয়েছিল।",
+   "options": {
+    "A": "সঙ্গে",
+    "B": "থেকে",
+    "C": "দ্বারা",
+    "D": "জন্য"
+   },
+   "correct_option": "C",
+   "english_meaning": "The letter was written by the manager yesterday.",
+   "english_explanation": "In the passive voice the agent is marked with দ্বারা (dara), ‘by’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "sentence-completion",
+   "question_text": "দেরি করে আসার ___ সে ক্ষমা চাইল।",
+   "options": {
+    "A": "জন্য",
+    "B": "সঙ্গে",
+    "C": "থেকে",
+    "D": "দিয়ে"
+   },
+   "correct_option": "A",
+   "english_meaning": "He apologised for coming late.",
+   "english_explanation": "জন্য (jonno) gives the reason: ‘for’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "sentence-completion",
+   "question_text": "ইস্‌, আমার যদি আরও একটু সময় ___ !",
+   "options": {
+    "A": "থাকবে",
+    "B": "থাকত",
+    "C": "থাকে",
+    "D": "আছে"
+   },
+   "correct_option": "B",
+   "english_meaning": "If only I had a little more time!",
+   "english_explanation": "Wishes about the present use the -ত form: থাকত (thakto).",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "context",
+   "question_text": "ডাক্তার বললেন, ‘ওষুধটা খালি পেটে খাবেন।’ এর মানে কী?",
+   "options": {
+    "A": "খাওয়ার পরে খেতে হবে",
+    "B": "ওষুধ খেতেই হবে না",
+    "C": "খাবারের সঙ্গে খেতে হবে",
+    "D": "কিছু খাওয়ার আগে ওষুধ খেতে হবে"
+   },
+   "correct_option": "D",
+   "english_meaning": "The doctor said, ‘Take the medicine on an empty stomach.’ What does this mean?",
+   "english_explanation": "খালি পেটে means on an empty stomach, before eating.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "reading-comprehension",
+   "question_text": "ঋতুর পরীক্ষা ছিল সোমবার, কিন্তু প্রবল বন্যার জন্য পরীক্ষা ঠিক এক সপ্তাহ পিছিয়ে গেল। ঋতুর পরীক্ষা কবে হবে?",
+   "options": {
+    "A": "এক মাস পরে",
+    "B": "পরের সোমবার",
+    "C": "এই সোমবার",
+    "D": "আর হবেই না"
+   },
+   "correct_option": "B",
+   "english_meaning": "Ritu's exam was on Monday, but due to severe floods it was postponed by exactly one week. When will Ritu's exam be?",
+   "english_explanation": "One week after a Monday is the next Monday.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "everyday-expressions",
+   "question_text": "‘মাথায় আকাশ ভেঙে পড়া’ কথাটার মানে কী?",
+   "options": {
+    "A": "হঠাৎ বড় বিপদে পড়া",
+    "B": "মাথাব্যথা করা",
+    "C": "বৃষ্টিতে ভেজা",
+    "D": "খুব আনন্দ পাওয়া"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does ‘the sky falling on one's head’ mean?",
+   "english_explanation": "An idiom for being suddenly hit by a great disaster.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "everyday-expressions",
+   "question_text": "‘আজ এই পর্যন্তই থাক’ মানে কী?",
+   "options": {
+    "A": "এখানে দাঁড়িয়ে থাকো",
+    "B": "আজকের মতো এখানেই শেষ",
+    "C": "আজ থেকে শুরু",
+    "D": "কাল আবার এসো না"
+   },
+   "correct_option": "B",
+   "english_meaning": "What does ‘let's leave it here for today’ mean?",
+   "english_explanation": "Said to stop working for the day.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "vocabulary",
+   "question_text": "‘পুঙ্খানুপুঙ্খ’ পরীক্ষা মানে কেমন পরীক্ষা?",
+   "options": {
+    "A": "অপ্রয়োজনীয় পরীক্ষা",
+    "B": "দেরিতে হওয়া পরীক্ষা",
+    "C": "খুঁটিনাটি সহ সম্পূর্ণ পরীক্ষা",
+    "D": "তাড়াহুড়ো করা পরীক্ষা"
+   },
+   "correct_option": "C",
+   "english_meaning": "What kind of examination is a ‘pungkhanupungkho’ one?",
+   "english_explanation": "পুঙ্খানুপুঙ্খ means thorough, down to every detail.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "vocabulary",
+   "question_text": "‘অনিবার্য’ শব্দের অর্থ কী?",
+   "options": {
+    "A": "যা এড়ানো যায় না",
+    "B": "যা খুব দুর্লভ",
+    "C": "যা খুব সহজ",
+    "D": "যা খুব দ্রুত"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does ‘onibarjo’ mean?",
+   "english_explanation": "অনিবার্য means inevitable, impossible to avoid.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "grammar",
+   "question_text": "চলিত ভাষায় সাধু রূপ ‘করিতেছি’-কে কী বলা হয়?",
+   "options": {
+    "A": "করছি",
+    "B": "করতাম",
+    "C": "করেছি",
+    "D": "করব"
+   },
+   "correct_option": "A",
+   "english_meaning": "In colloquial (cholito) Bengali, what is the literary (sadhu) form ‘koritechhi’?",
+   "english_explanation": "করিতেছি (sadhu) = করছি (cholito): ‘I am doing’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "grammar",
+   "question_text": "কোন বাক্যটি সঠিক?",
+   "options": {
+    "A": "তিনি আসব বলে আমরা অপেক্ষা করছি।",
+    "B": "তিনি আসবে বলে আমরা অপেক্ষা করছি।",
+    "C": "তিনি আসবি বলে আমরা অপেক্ষা করছি।",
+    "D": "তিনি আসবেন বলে আমরা অপেক্ষা করছি।"
+   },
+   "correct_option": "D",
+   "english_meaning": "Which sentence is correct? (We are waiting because he/she is coming.)",
+   "english_explanation": "The honorific pronoun তিনি takes the honorific verb ending: আসবেন.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "sentence-completion",
+   "question_text": "নতুন নিয়মটা আগামী মাস থেকে ___ হবে।",
+   "options": {
+    "A": "পরিশ্রমী",
+    "B": "কার্যকর",
+    "C": "বিস্মিত",
+    "D": "অভিমানী"
+   },
+   "correct_option": "B",
+   "english_meaning": "The new rule will come into effect from next month.",
+   "english_explanation": "কার্যকর হওয়া means come into effect.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "sentence-completion",
+   "question_text": "সমস্যার কারণটা আমাদের ভালো করে ___ দেখতে হবে।",
+   "options": {
+    "A": "সরিয়ে",
+    "B": "ভুলে",
+    "C": "চেপে",
+    "D": "খতিয়ে"
+   },
+   "correct_option": "D",
+   "english_meaning": "We need to look into the cause of the problem carefully.",
+   "english_explanation": "খতিয়ে দেখা (khotiye dekha) means examine closely.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "context",
+   "question_text": "মিটিংয়ে কেউ বললেন, ‘ভণিতা না করে আসল কথায় আসুন।’ তিনি কী চান?",
+   "options": {
+    "A": "বিষয়টা এড়িয়ে যাওয়া হোক",
+    "B": "আরও আস্তে বলা হোক",
+    "C": "সোজাসুজি মূল কথা বলা হোক",
+    "D": "সবাই বাইরে যাক"
+   },
+   "correct_option": "C",
+   "english_meaning": "In a meeting someone said, ‘Stop the preamble and come to the point.’ What do they want?",
+   "english_explanation": "ভণিতা means roundabout preamble; they want directness.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "reading-comprehension",
+   "question_text": "গ্রামের পুকুরটা সংস্কার করার পর সেখানে আবার মাছ চাষ শুরু হয়েছে। আগে বছরে দু'বার মাছ ধরা হত, এখন চারবার ধরা হয়। এখন বছরে কতবার মাছ ধরা হয়?",
+   "options": {
+    "A": "দু'বার",
+    "B": "ছ'বার",
+    "C": "চারবার",
+    "D": "একবার"
+   },
+   "correct_option": "C",
+   "english_meaning": "After the village pond was restored, fish farming restarted. Fish used to be caught twice a year; now they are caught four times. How many times a year are fish caught now?",
+   "english_explanation": "এখন চারবার: now four times.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "everyday-expressions",
+   "question_text": "‘দোটানায় পড়া’ মানে কী?",
+   "options": {
+    "A": "খুব রেগে যাওয়া",
+    "B": "খুব খুশি হওয়া",
+    "C": "দুটো জিনিস টেনে আনা",
+    "D": "কোনটা করবে ঠিক করতে না পারা"
+   },
+   "correct_option": "D",
+   "english_meaning": "What does ‘being caught in a dotana’ mean?",
+   "english_explanation": "দোটানা is a pull in two directions: being unable to decide.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "everyday-expressions",
+   "question_text": "‘হাতের পাঁচ’ বলতে কী বোঝায়?",
+   "options": {
+    "A": "পাঁচ জন বন্ধু",
+    "B": "শেষ ভরসা বা সম্বল",
+    "C": "পাঁচ টাকা",
+    "D": "হাতের পাঁচটা আঙুল"
+   },
+   "correct_option": "B",
+   "english_meaning": "What does ‘the five in hand’ refer to?",
+   "english_explanation": "An idiom for one's last resort or remaining support.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "vocabulary",
+   "question_text": "‘সর্বব্যাপী’ মানে কী?",
+   "options": {
+    "A": "সব জায়গায় ছড়িয়ে আছে এমন",
+    "B": "খুব পুরোনো",
+    "C": "সহজে ভাঙে এমন",
+    "D": "খুবই দুর্লভ"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does ‘sorbobyapi’ mean?",
+   "english_explanation": "সর্বব্যাপী means pervading everywhere (ubiquitous).",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "vocabulary",
+   "question_text": "ঝুঁকি ‘প্রশমিত’ করা মানে কী?",
+   "options": {
+    "A": "ঝুঁকি কমানো",
+    "B": "ঝুঁকি মাপা",
+    "C": "ঝুঁকি বাড়ানো",
+    "D": "ঝুঁকি উপেক্ষা করা"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does it mean to ‘proshomito’ a risk?",
+   "english_explanation": "প্রশমিত করা means to reduce or mitigate.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "grammar",
+   "question_text": "পরোক্ষ উক্তিতে বদলান: সে বলল, ‘আমি কাল আসব।’",
+   "options": {
+    "A": "সে বলল যে আমি কাল আসব।",
+    "B": "সে বলল যে তুমি কাল আসবে।",
+    "C": "সে বলল যে সে আগের দিন এসেছিল।",
+    "D": "সে বলল যে সে পরদিন আসবে।"
+   },
+   "correct_option": "D",
+   "english_meaning": "Change to indirect speech: He said, ‘I will come tomorrow.’",
+   "english_explanation": "In indirect speech, আমি becomes সে, and কাল (tomorrow) is usually reported as পরদিন (the next day).",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "grammar",
+   "question_text": "আগে জানলে আমি আরও আগে ___ ।",
+   "options": {
+    "A": "বেরিয়ে পড়তাম",
+    "B": "বেরিয়ে পড়েছি",
+    "C": "বেরিয়ে পড়ুক",
+    "D": "বেরিয়ে পড়ব"
+   },
+   "correct_option": "A",
+   "english_meaning": "Had I known earlier, I would have left earlier.",
+   "english_explanation": "Unreal past conditions use the -তাম form: পড়তাম.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "sentence-completion",
+   "question_text": "ফলাফল আমাদের প্রত্যাশার ___ অনেক ভালো হয়েছে।",
+   "options": {
+    "A": "দিকে",
+    "B": "পাশে",
+    "C": "চেয়ে",
+    "D": "হাতে"
+   },
+   "correct_option": "C",
+   "english_meaning": "The results were much better than our expectations.",
+   "english_explanation": "চেয়ে (cheye) marks comparison: ‘than’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "sentence-completion",
+   "question_text": "তিনি এক দশকেরও বেশি সময় ___ এখানে কাজ করছেন।",
+   "options": {
+    "A": "দ্বারা",
+    "B": "ধরে",
+    "C": "প্রতি",
+    "D": "বরং"
+   },
+   "correct_option": "B",
+   "english_meaning": "He has been working here for more than a decade.",
+   "english_explanation": "ধরে after a duration means ‘for’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "context",
+   "question_text": "সমালোচক লিখলেন, উপন্যাসটা ‘একবার ধরলে আর ছাড়া যায় না’। এর মানে কী?",
+   "options": {
+    "A": "বইটা খুব একঘেয়ে",
+    "B": "বইটা এত আকর্ষণীয় যে পড়া থামানো কঠিন",
+    "C": "বইটা খুব ভারী",
+    "D": "বইটার বাঁধাই খারাপ"
+   },
+   "correct_option": "B",
+   "english_meaning": "A critic wrote that once you pick up the novel you can't put it down. What does this mean?",
+   "english_explanation": "The book is gripping: a page-turner.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "reading-comprehension",
+   "question_text": "বর্ষার আগে ছাদের ফাটল সারাতে বাবা গড়িমসি করছিলেন। প্রথম বৃষ্টিতেই জল চুঁইয়ে ঘরের দেওয়াল নষ্ট হল, আর দেওয়াল সারাতে যা খরচ হল, তা ছাদ সারানোর খরচের চেয়ে অনেক বেশি। অনুচ্ছেদ থেকে কী শিক্ষা পাওয়া যায়?",
+   "options": {
+    "A": "দেওয়াল সারানো সস্তা",
+    "B": "ছোট সমস্যা সময়মতো না সারালে পরে বেশি খরচ হয়",
+    "C": "বর্ষাকালে ছাদ সারানো উচিত নয়",
+    "D": "বাবা আগেই ছাদ সারিয়েছিলেন"
+   },
+   "correct_option": "B",
+   "english_meaning": "Father kept putting off fixing the roof crack before the monsoon. At the first rain, water seeped in and damaged the walls, and repairing them cost much more than fixing the roof would have. What lesson does the passage give?",
+   "english_explanation": "Delaying a small repair led to a bigger cost.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "everyday-expressions",
+   "question_text": "‘কান পাতলা’ মানুষ কেমন?",
+   "options": {
+    "A": "যে খুব চুপচাপ",
+    "B": "যে কানে কম শোনে",
+    "C": "যে খুব গান ভালোবাসে",
+    "D": "যে সহজেই অন্যের কথায় বিশ্বাস করে"
+   },
+   "correct_option": "D",
+   "english_meaning": "What kind of person is ‘kan patla’ (thin-eared)?",
+   "english_explanation": "An idiom for someone easily swayed by what others say.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "everyday-expressions",
+   "question_text": "‘গায়ে পড়ে ঝগড়া করা’ মানে কী?",
+   "options": {
+    "A": "কাউকে জড়িয়ে ধরা",
+    "B": "ঝগড়া থামানো",
+    "C": "অকারণে নিজে থেকে ঝগড়া বাধানো",
+    "D": "পড়ে গিয়ে চোট পাওয়া"
+   },
+   "correct_option": "C",
+   "english_meaning": "What does ‘to fall on someone and quarrel’ mean?",
+   "english_explanation": "To pick a fight without any reason.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "vocabulary",
+   "question_text": "‘খুঁতখুঁতে’ মানুষ কেমন?",
+   "options": {
+    "A": "যে খুব উদার",
+    "B": "যে ছোটখাটো খুঁত নিয়েও অসন্তুষ্ট হয়",
+    "C": "যে খুব তাড়াতাড়ি রেগে যায়",
+    "D": "যে সব কিছুতে খুশি"
+   },
+   "correct_option": "B",
+   "english_meaning": "What kind of person is ‘khutkhute’?",
+   "english_explanation": "খুঁতখুঁতে describes a fussy perfectionist bothered by tiny flaws.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "vocabulary",
+   "question_text": "‘নিন্দা করা’-র বিপরীত কোনটি?",
+   "options": {
+    "A": "সমালোচনা করা",
+    "B": "উপেক্ষা করা",
+    "C": "অভিযোগ করা",
+    "D": "প্রশংসা করা"
+   },
+   "correct_option": "D",
+   "english_meaning": "What is the opposite of ‘ninda kora’ (to condemn)?",
+   "english_explanation": "The opposite of condemning is প্রশংসা করা (to praise).",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "grammar",
+   "question_text": "‘সূর্য + উদয়’ সন্ধি করলে কী হয়?",
+   "options": {
+    "A": "সূর্যউদয়",
+    "B": "সূর্যাদয়",
+    "C": "সূর্যোদয়",
+    "D": "সূর্যেদয়"
+   },
+   "correct_option": "C",
+   "english_meaning": "What does ‘surjo + udoy’ become when joined by sandhi?",
+   "english_explanation": "অ + উ = ও, so সূর্য + উদয় = সূর্যোদয় (sunrise).",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "grammar",
+   "question_text": "কোন বাক্যটি সাধু ভাষায় লেখা?",
+   "options": {
+    "A": "উনি বাড়ি ফিরে এলেন।",
+    "B": "তিনি বাড়ি ফিরলেন।",
+    "C": "তিনি গৃহে প্রত্যাবর্তন করিলেন।",
+    "D": "সে ঘরে ফিরল।"
+   },
+   "correct_option": "C",
+   "english_meaning": "Which sentence is written in sadhu (literary) Bengali?",
+   "english_explanation": "The -ইলেন verb ending (করিলেন) marks sadhu bhasha.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "sentence-completion",
+   "question_text": "গোপন নথি ফাঁস করার ___ তাকে অভিযুক্ত করা হয়েছে।",
+   "options": {
+    "A": "অভিযোগে",
+    "B": "প্রতি",
+    "C": "দিয়ে",
+    "D": "সঙ্গে"
+   },
+   "correct_option": "A",
+   "english_meaning": "He has been charged on the accusation of leaking confidential documents.",
+   "english_explanation": "…করার অভিযোগে means ‘on the charge of doing…’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "sentence-completion",
+   "question_text": "প্রস্তাবটা ___ হলে আমরা আগামী সপ্তাহেই কাজ শুরু করব।",
+   "options": {
+    "A": "অনুমোদক",
+    "B": "অনুমোদনীয়",
+    "C": "অনুমোদিত",
+    "D": "অনুমোদন"
+   },
+   "correct_option": "C",
+   "english_meaning": "If the proposal is approved, we will start work next week.",
+   "english_explanation": "অনুমোদিত হওয়া means to be approved; the others are the noun, agent and ‘approvable’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "context",
+   "question_text": "সম্পাদক বললেন, খসড়াটা ‘ভুলে ভরা’। খসড়াটা কেমন?",
+   "options": {
+    "A": "প্রচুর ভুল আছে",
+    "B": "একটা ধাঁধা",
+    "C": "প্রায় নিখুঁত",
+    "D": "দু-একটা ভুল আছে"
+   },
+   "correct_option": "A",
+   "english_meaning": "The editor said the draft is ‘full of errors’. What is the draft like?",
+   "english_explanation": "ভুলে ভরা means full of mistakes.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "reading-comprehension",
+   "question_text": "ঠাকুমার গল্পে রাজপুত্র কখনও সরাসরি জেতে না; বারবার হেরে, শেষে বুদ্ধি খাটিয়েই সে সমস্যার সমাধান করে। গল্পগুলো থেকে কোন বার্তাটি সবচেয়ে স্পষ্ট?",
+   "options": {
+    "A": "রাজপুত্ররা সবসময় হারে",
+    "B": "গল্পে কোনো সমস্যা থাকে না",
+    "C": "গায়ের জোরই আসল",
+    "D": "ধৈর্য আর বুদ্ধি দিয়ে জেতা যায়"
+   },
+   "correct_option": "D",
+   "english_meaning": "In grandmother's tales the prince never wins directly; after failing again and again, he finally solves the problem through cleverness. Which message is clearest?",
+   "english_explanation": "Repeated failure followed by a clever solution points to patience and wit.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "everyday-expressions",
+   "question_text": "‘সাপও মরবে, লাঠিও ভাঙবে না’ — প্রবাদটির অর্থ কী?",
+   "options": {
+    "A": "দুটো কাজই নষ্ট হওয়া",
+    "B": "কোনো ক্ষতি ছাড়াই কাজ হাসিল করা",
+    "C": "সাপ মারার উপায়",
+    "D": "লাঠি দিয়ে খেলা"
+   },
+   "correct_option": "B",
+   "english_meaning": "‘The snake dies and the stick doesn't break’: what does this proverb mean?",
+   "english_explanation": "Achieving a goal without any loss or cost.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "everyday-expressions",
+   "question_text": "‘ঘোড়ার ডিম’ কথাটা কী বোঝাতে ব্যবহার করা হয়?",
+   "options": {
+    "A": "একটা বড় ডিম",
+    "B": "খুব দামি জিনিস",
+    "C": "ঘোড়ার খাবার",
+    "D": "কিছুই না বা অবাস্তব জিনিস"
+   },
+   "correct_option": "D",
+   "english_meaning": "What is the phrase ‘a horse's egg’ used to mean?",
+   "english_explanation": "Horses lay no eggs: it means ‘nothing at all’ or nonsense.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "vocabulary",
+   "question_text": "‘দুর্বোধ্য’ মানে কী?",
+   "options": {
+    "A": "যা খুব মজার",
+    "B": "যা সহজে বোঝা যায় না",
+    "C": "যা খুব পুরোনো",
+    "D": "যা খুব সহজ"
+   },
+   "correct_option": "B",
+   "english_meaning": "What does ‘durbodhyo’ mean?",
+   "english_explanation": "দুর্বোধ্য means hard to understand (obscure).",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "vocabulary",
+   "question_text": "যে স্বার্থের জন্য তোষামোদ করে, তাকে কী বলে?",
+   "options": {
+    "A": "সমালোচক",
+    "B": "সন্ন্যাসী",
+    "C": "চাটুকার",
+    "D": "নির্ভীক"
+   },
+   "correct_option": "C",
+   "english_meaning": "What do you call someone who flatters for personal gain?",
+   "english_explanation": "চাটুকার (chatukar) means sycophant.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "grammar",
+   "question_text": "‘বিদ্যালয়’ শব্দটি কোন সমাস?",
+   "options": {
+    "A": "বহুব্রীহি",
+    "B": "দ্বিগু",
+    "C": "দ্বন্দ্ব",
+    "D": "ষষ্ঠী তৎপুরুষ"
+   },
+   "correct_option": "D",
+   "english_meaning": "Which samas (compound type) is ‘bidyaloy’?",
+   "english_explanation": "বিদ্যার আলয় (abode of learning): the possessive -র is dropped, so it is ষষ্ঠী তৎপুরুষ.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "grammar",
+   "question_text": "‘গাছে গাছে ফুল ফুটেছে’ — ‘গাছে গাছে’ কী প্রকাশ করছে?",
+   "options": {
+    "A": "ব্যাপ্তি: প্রায় প্রতিটি গাছে",
+    "B": "প্রশ্ন",
+    "C": "নিষেধ",
+    "D": "অতীত কাল"
+   },
+   "correct_option": "A",
+   "english_meaning": "‘Flowers have bloomed on tree after tree’: what does the repeated ‘gachhe gachhe’ express?",
+   "english_explanation": "Reduplication spreads the meaning across many: on every tree.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "sentence-completion",
+   "question_text": "প্রমাণ জোরালো ___, তাকে দোষী সাব্যস্ত করার পক্ষে তা যথেষ্ট ছিল না।",
+   "options": {
+    "A": "হলেও",
+    "B": "হয়ে",
+    "C": "হওয়ায়",
+    "D": "হলে"
+   },
+   "correct_option": "A",
+   "english_meaning": "Although the evidence was strong, it was not enough to convict him.",
+   "english_explanation": "হলেও (holeo) means ‘even though’; হলে = if, হওয়ায় = because.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "sentence-completion",
+   "question_text": "তাঁর ব্যাখ্যা আমাদের আশঙ্কা ___ পারেনি।",
+   "options": {
+    "A": "দূরত্বে",
+    "B": "দূরে গিয়ে",
+    "C": "দূর করতে",
+    "D": "দূর হয়ে"
+   },
+   "correct_option": "C",
+   "english_meaning": "His explanation could not dispel our fears.",
+   "english_explanation": "পারা needs the infinitive: দূর করতে পারেনি, ‘could not remove’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "context",
+   "question_text": "সাংবাদিক লিখলেন, নেতার উত্তরটা ছিল ‘ধরি মাছ না ছুঁই পানি’ গোছের। উত্তরটা কেমন ছিল?",
+   "options": {
+    "A": "খুব ছোট",
+    "B": "দায় এড়াতে ইচ্ছে করে অস্পষ্ট",
+    "C": "খুব স্পষ্ট",
+    "D": "রাগী"
+   },
+   "correct_option": "B",
+   "english_meaning": "A journalist wrote the leader's reply was of the ‘catch the fish without touching the water’ sort. What was the reply like?",
+   "english_explanation": "The idiom describes getting what you want while avoiding commitment: deliberately evasive.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "reading-comprehension",
+   "question_text": "প্রবন্ধকার লিখেছেন, যানজট কমাতে শহরের রাস্তা চওড়া করা হয়; কিন্তু চওড়া রাস্তা আরও বেশি গাড়িকে টেনে আনে, ফলে কয়েক বছরের মধ্যেই যানজট আগের অবস্থায় ফিরে যায়। প্রবন্ধকারের মূল বক্তব্য কী?",
+   "options": {
+    "A": "শুধু রাস্তা চওড়া করে যানজটের স্থায়ী সমাধান হয় না",
+    "B": "শহরে গাড়ি কমছে",
+    "C": "সব রাস্তা সরু করা উচিত",
+    "D": "রাস্তা চওড়া করলে যানজট চিরতরে কমে"
+   },
+   "correct_option": "A",
+   "english_meaning": "The essayist writes that roads are widened to reduce traffic jams, but wider roads attract more cars, so within a few years congestion returns. What is the main argument?",
+   "english_explanation": "Widening alone brings congestion back; it is not a lasting fix.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "everyday-expressions",
+   "question_text": "‘অরণ্যে রোদন’ কথাটার মানে কী?",
+   "options": {
+    "A": "খুব জোরে কাঁদা",
+    "B": "বনের পশুর ডাক",
+    "C": "জঙ্গলে কান্নাকাটি করা",
+    "D": "এমন আবেদন যা কেউ শোনে না"
+   },
+   "correct_option": "D",
+   "english_meaning": "What does ‘weeping in the forest’ mean?",
+   "english_explanation": "A plea that nobody hears or heeds: futile.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "everyday-expressions",
+   "question_text": "‘গোঁফখেজুরে’ লোক কেমন?",
+   "options": {
+    "A": "খুব পরিশ্রমী",
+    "B": "অত্যন্ত অলস",
+    "C": "খুব মিষ্টভাষী",
+    "D": "খুব লোভী"
+   },
+   "correct_option": "B",
+   "english_meaning": "What kind of person is ‘gonfkhejure’?",
+   "english_explanation": "Someone too lazy to even move a date from his moustache to his mouth: extremely lazy.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "vocabulary",
+   "question_text": "কাউকে ‘অকালকুষ্মাণ্ড’ বলে গাল দিলে তাকে কী বলা হয়?",
+   "options": {
+    "A": "খুব বুদ্ধিমান লোক",
+    "B": "খুব ভালো রাঁধুনি",
+    "C": "অপদার্থ, অকর্মণ্য লোক",
+    "D": "খুব সুন্দর লোক"
+   },
+   "correct_option": "C",
+   "english_meaning": "If someone is scolded as ‘akalkushmando’, what are they being called?",
+   "english_explanation": "Literally an out-of-season pumpkin; figuratively a useless good-for-nothing.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "vocabulary",
+   "question_text": "‘মারা যাওয়া’-র মার্জিত বা সম্মানজনক প্রকাশ কোনটি?",
+   "options": {
+    "A": "খুন হওয়া",
+    "B": "হারিয়ে যাওয়া",
+    "C": "ঘুমিয়ে থাকা",
+    "D": "প্রয়াত হওয়া"
+   },
+   "correct_option": "D",
+   "english_meaning": "Which is a refined, respectful way of saying ‘to die’?",
+   "english_explanation": "প্রয়াত হওয়া is the respectful euphemism (like ‘pass away’).",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "grammar",
+   "question_text": "‘নীলকণ্ঠ’ (শিব অর্থে) কোন সমাস?",
+   "options": {
+    "A": "দ্বিগু",
+    "B": "দ্বন্দ্ব",
+    "C": "বহুব্রীহি",
+    "D": "কর্মধারয়"
+   },
+   "correct_option": "C",
+   "english_meaning": "Which samas is ‘nilkontho’ when it means Shiva?",
+   "english_explanation": "নীল কণ্ঠ যাঁর (the one whose throat is blue) refers to someone else: বহুব্রীহি. As just ‘blue throat’ it would be কর্মধারয়.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "grammar",
+   "question_text": "কোন বাক্যটি ব্যাকরণগতভাবে শুদ্ধ?",
+   "options": {
+    "A": "সকল ছাত্রবৃন্দরা উপস্থিত ছিল।",
+    "B": "সকল ছাত্ররা উপস্থিত ছিল।",
+    "C": "সকল ছাত্রগণেরা উপস্থিত ছিল।",
+    "D": "সকল ছাত্র উপস্থিত ছিল।"
+   },
+   "correct_option": "D",
+   "english_meaning": "Which sentence is grammatically correct? (All the students were present.)",
+   "english_explanation": "সকল already marks plurality; adding -রা or -গণ creates a double plural.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "sentence-completion",
+   "question_text": "সংকট মেটানো ___, নতুন পদক্ষেপগুলো সমস্যাকে আরও জটিল করে তুলল।",
+   "options": {
+    "A": "কারণে",
+    "B": "ফলে",
+    "C": "সত্ত্বেও",
+    "D": "তো দূরের কথা"
+   },
+   "correct_option": "D",
+   "english_meaning": "Far from resolving the crisis, the new measures made the problem even more complicated.",
+   "english_explanation": "…তো দূরের কথা means ‘let alone / far from’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "sentence-completion",
+   "question_text": "তাঁর বক্তৃতায় এমন ___ ছিল যে সমালোচকেরাও মুগ্ধ হলেন।",
+   "options": {
+    "A": "বাগ্মিতা",
+    "B": "বাগ্মী",
+    "C": "বাচাল",
+    "D": "বাক্যবাগীশ"
+   },
+   "correct_option": "A",
+   "english_meaning": "His speech had such eloquence that even critics were charmed.",
+   "english_explanation": "The sentence needs the quality noun বাগ্মিতা (eloquence); বাগ্মী is an eloquent person, বাচাল a chatterbox.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "context",
+   "question_text": "কেউ বললেন, ‘এ যে দেখছি ঢাকের দায়ে মনসা বিকোনোর জোগাড়!’ তিনি কী বোঝাতে চাইছেন?",
+   "options": {
+    "A": "আনুষঙ্গিক খরচ মূল জিনিসের দামকেও ছাড়িয়ে যাচ্ছে",
+    "B": "মনসা পুজো খুব জাঁকজমক করে হচ্ছে",
+    "C": "ঢাক বাজানো বন্ধ করা উচিত",
+    "D": "জিনিসটা খুব সস্তায় বিক্রি হচ্ছে"
+   },
+   "correct_option": "A",
+   "english_meaning": "Someone said, ‘It looks like we'll have to sell the Manasa idol to pay the drummer!’ What do they mean?",
+   "english_explanation": "The proverb: side costs have grown so large they exceed the value of the main thing.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "reading-comprehension",
+   "question_text": "একটি পঙ্‌ক্তি: ‘যত বেশি জানি, তত বেশি বুঝি কত কম জানি।’ এই পঙ্‌ক্তির মূল ভাব কী?",
+   "options": {
+    "A": "লেখক খুব কম জানেন",
+    "B": "জ্ঞান বাড়লে নিজের অজ্ঞতা সম্পর্কে সচেতনতাও বাড়ে",
+    "C": "জ্ঞানের কোনো মূল্য নেই",
+    "D": "বেশি জানা ক্ষতিকর"
+   },
+   "correct_option": "B",
+   "english_meaning": "A line reads: ‘The more I know, the more I realise how little I know.’ What is its central idea?",
+   "english_explanation": "Greater knowledge brings greater awareness of one's ignorance.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "everyday-expressions",
+   "question_text": "‘কাকস্য পরিবেদনা’ কথাটার মানে কী?",
+   "options": {
+    "A": "খুব কষ্টের কাজ",
+    "B": "কাকের ডাক",
+    "C": "নিষ্ফল আক্ষেপ বা বৃথা চেষ্টা",
+    "D": "অমঙ্গলের লক্ষণ"
+   },
+   "correct_option": "C",
+   "english_meaning": "What does ‘kakasya paribedana’ (the crow's lament) mean?",
+   "english_explanation": "A Sanskrit-derived phrase for a pointless complaint or wasted effort.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "everyday-expressions",
+   "question_text": "‘ব্যাঙের ছাতার মতো গজিয়ে ওঠা’ বলতে কী বোঝায়?",
+   "options": {
+    "A": "বৃষ্টিতে ছাতা খোলা",
+    "B": "অল্প সময়ে যত্রতত্র প্রচুর সংখ্যায় গড়ে ওঠা",
+    "C": "খুব ধীরে ধীরে বেড়ে ওঠা",
+    "D": "ব্যাঙের মতো লাফানো"
+   },
+   "correct_option": "B",
+   "english_meaning": "What does ‘springing up like frogs' umbrellas (mushrooms)’ mean?",
+   "english_explanation": "Appearing everywhere in large numbers within a short time.",
+   "verified": false
+  }
+ ]
+}

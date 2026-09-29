@@ -1,0 +1,17 @@
+{% extends "accounts/_auth_layout.html" %}
+{% block title %}Block {{ person.profile.display_name }} | {{ site_name }}{% endblock %}
+{% block icon %}bi-slash-circle{% endblock %}
+{% block heading %}Block {{ person.profile.display_name }}?{% endblock %}
+{% block panel %}
+<ul class="lx-consequences">
+  <li><i class="bi bi-x-circle" aria-hidden="true"></i>You won't see each other in suggestions, requests or partners.</li>
+  <li><i class="bi bi-x-circle" aria-hidden="true"></i>Any request between you is withdrawn, and a partnership ends.</li>
+  <li><i class="bi bi-info-circle" aria-hidden="true"></i>They aren't told. You can unblock them later.</li>
+</ul>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger-solid btn-lg w-100">Block</button>
+</form>
+<p class="lx-auth__alt mb-0"><a href="{% url 'partners:report' user_id=person.pk %}">Report them to our moderators instead</a></p>
+{% endblock %}
+{% block after_panel %}<p class="lx-auth__alt"><a href="{% url 'partners:list' %}">Cancel</a></p>{% endblock %}

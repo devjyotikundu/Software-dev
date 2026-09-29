@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Requests | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-narrow">
+    <header class="lx-page-header">
+      <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-envelope-paper-heart" aria-hidden="true"></i></span>
+      <div><h1>Requests</h1><p>Nobody becomes a partner until both of you agree.</p></div>
+    </header>
+    {% include "partners/_tabs.html" with active="requests" %}
+
+    <section aria-labelledby="received-title">
+      <h2 class="lx-section-title" id="received-title">Received</h2>
+      {% if received %}
+      <div class="lx-card"><ul class="lx-list">
+        {% for r in received %}
+        <li class="lx-list__item lx-request">
+          {% include "profiles/_avatar.html" with profile=r.sender.profile size="lg" %}
+          <div class="lx-list__main">
+            <a class="fw-semibold" href="{% url 'partners:request_detail' pk=r.pk %}">{{ r.sender.profile.display_name }}</a>
+            <span class="lx-list__meta">Wants to practise {{ r.sender_learning_language.name }} and help you with {{ r.receiver_learning_language.name }}{% if r.score_at_request %}, {{ r.score_at_request|floatformat:0 }}% match{% endif %}. {{ r.created_at|timesince }} ago.</span>
+            {% if r.message %}<blockquote class="lx-request__note">{{ r.message }}</blockquote>{% endif %}
+          </div>
+          <div class="lx-list__actions">
+            <form method="post" action="{% url 'partners:decline' pk=r.pk %}">{% csrf_token %}<button type="submit" class="btn btn-secondary-lx btn-sm">Decline<span class="visually-hidden"> {{ r.sender.profile.display_name }}</span></button></form>
+            <form method="post" action="{% url 'partners:accept' pk=r.pk %}">{% csrf_token %}<button type="submit" class="btn btn-primary btn-sm">Accept<span class="visually-hidden"> {{ r.sender.profile.display_name }}</span></button></form>
+          </div>
+        </li>
+        {% endfor %}
+      </ul></div>
+      {% else %}<p class="lx-empty">No requests waiting for you.</p>{% endif %}
+    </section>
+
+    <section class="mt-5" aria-labelledby="sent-title">
+      <h2 class="lx-section-title" id="sent-title">Sent</h2>
+      {% if sent %}
+      <div class="lx-card"><ul class="lx-list">
+        {% for r in sent %}
+        <li class="lx-list__item">
+          {% include "profiles/_avatar.html" with profile=r.receiver.profile %}
+          <div class="lx-list__main">
+            <a class="fw-semibold" href="{% url 'partners:request_detail' pk=r.pk %}">{{ r.receiver.profile.display_name }}</a>
+            <span class="lx-list__meta">Waiting for a reply. Sent {{ r.created_at|timesince }} ago.</span>
+          </div>
+          <form method="post" action="{% url 'partners:cancel' pk=r.pk %}">{% csrf_token %}<button type="submit" class="btn btn-ghost-danger btn-sm">Withdraw<span class="visually-hidden"> request to {{ r.receiver.profile.display_name }}</span></button></form>
+        </li>
+        {% endfor %}
+      </ul></div>
+      {% else %}<p class="lx-empty">You haven't sent any requests. <a href="{% url 'matching:discover' %}">Discover partners</a></p>{% endif %}
+    </section>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Page not found | {{ site_name|default:"Language Exchange Matcher" }}{% endblock %}
+
+{% block content %}
+<section class="lx-error">
+  <div class="container">
+    <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-signpost-split" aria-hidden="true"></i></span>
+    <p class="lx-error__code">Error 404</p>
+    <h1>Page not found</h1>
+    <p class="lx-lead mt-3">The page you are looking for does not exist or has moved. Check the address, or start again from the home page.</p>
+    <a class="btn btn-primary btn-lg mt-3" href="{% url 'core:home' %}">Go to the home page</a>
+  </div>
+</section>
+{% endblock %}

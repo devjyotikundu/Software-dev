@@ -1,0 +1,13 @@
+{% if messages %}
+<div class="container pt-4" role="status" aria-live="polite">
+  {% for message in messages %}
+  {% with level=message.tags|default:"info" %}
+  <div class="lx-alert lx-alert--{% if level == 'error' %}danger{% elif level == 'debug' %}info{% else %}{{ level }}{% endif %} alert fade show mb-2" role="alert">
+    <i class="bi {% if level == 'success' %}bi-check-circle{% elif level == 'error' %}bi-exclamation-octagon{% elif level == 'warning' %}bi-exclamation-triangle{% else %}bi-info-circle{% endif %}" aria-hidden="true"></i>
+    <div class="lx-alert__body">{{ message }}</div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Dismiss"></button>
+  </div>
+  {% endwith %}
+  {% endfor %}
+</div>
+{% endif %}

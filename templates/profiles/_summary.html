@@ -1,0 +1,142 @@
+{# Profile summary cards. With editable=True each card links to its edit page. #}
+{% load static %}
+<div class="lx-grid lx-grid--2">
+  {% if editable %}
+  <section class="lx-card lx-grid__wide" aria-labelledby="about-title">
+    <div class="lx-card__body">
+      <div class="lx-panel-title">
+        <span class="lx-icon-badge"><i class="bi bi-person" aria-hidden="true"></i></span>
+        <h2 id="about-title">About you</h2>
+        <a class="lx-edit-link" href="{% url 'profiles:edit' section='about' %}"><i class="bi bi-pencil" aria-hidden="true"></i>Edit<span class="visually-hidden"> about you</span></a>
+      </div>
+      {% if profile.bio %}<p class="lx-bio mb-0">{{ profile.bio|linebreaksbr }}</p>
+      {% else %}<p class="lx-empty mb-0">Add a short bio so partners know a little about you.</p>{% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="lx-card lx-grid__wide" aria-labelledby="languages-title">
+    <div class="lx-card__body">
+      <div class="lx-panel-title">
+        <span class="lx-icon-badge"><i class="bi bi-translate" aria-hidden="true"></i></span>
+        <h2 id="languages-title">Languages</h2>
+        {% if editable %}<a class="lx-edit-link" href="{% url 'profiles:languages' %}"><i class="bi bi-pencil" aria-hidden="true"></i>Manage<span class="visually-hidden"> languages</span></a>{% endif %}
+      </div>
+      {% for item in user_languages %}
+      <div class="lx-lang-row">
+        <span class="lx-lang-row__role">{% if item.role == "native" %}You speak{% else %}You're learning{% endif %}</span>
+        <span class="lx-lang-row__name">
+          <span lang="{{ item.language.code }}">{{ item.language.native_name }}</span>
+          {% if item.language.native_name != item.language.name %}<small>{{ item.language.name }}</small>{% endif %}
+        </span>
+        {% if item.current_level %}
+        <span class="lx-lang-row__level">
+          <span class="lx-badge">Estimated level {{ item.current_level.code }}, {{ item.current_level.name }}</span>
+          {% if item.level_source == "self-declared" %}<span class="lx-badge lx-badge--neutral">self-declared</span>
+          {% elif item.level_source == "both" %}<span class="lx-badge lx-badge--neutral">practice + self-declared</span>
+          {% else %}<span class="lx-badge lx-badge--neutral">from practice</span>{% endif %}
+        </span>
+        {% endif %}
+      </div>
+      {% endfor %}
+      <details class="lx-why mt-3 mb-0">
+        <summary><i class="bi bi-info-circle" aria-hidden="true"></i>How is this estimated?</summary>
+        <div class="lx-why__body">
+          <p>We find the level that best explains your right and wrong practice answers, counting recent answers more. Harder questions answered correctly raise the estimate; easy ones missed lower it.</p>
+          <p class="mb-0">Until you've answered enough questions, your self-declared level counts for more. As your practice grows, the estimate from practice takes over. Levels are estimates for matching partners, not official CEFR certification.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="lx-card lx-grid__wide" aria-labelledby="progress-title">
+    <div class="lx-card__body">
+      <div class="lx-panel-title">
+        <span class="lx-icon-badge lx-icon-badge--accent"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></span>
+        <h2 id="progress-title">Learning progress</h2>
+        <a class="lx-edit-link" href="{% url 'practice:home' %}"><i class="bi bi-lightning-charge" aria-hidden="true"></i>Practise<span class="visually-hidden"> now</span></a>
+      </div>
+      {% for item in learning_progress %}
+      <div class="lx-progress-row">
+        <span class="lx-lang-row__name"><span lang="{{ item.language.code }}">{{ item.language.native_name }}</span>
+          {% if item.language.native_name != item.language.name %}<small>{{ item.language.name }}</small>{% endif %}</span>
+        {% if item.answered %}
+        <dl class="lx-mini-stats lx-mini-stats--inline">
+          <div><dt>XP</dt><dd>{{ item.xp }}</dd></div>
+          <div><dt>Accuracy</dt><dd>{{ item.accuracy }}%</dd></div>
+          <div><dt>Sessions</dt><dd>{{ item.sessions }}</dd></div>
+        </dl>
+        {% else %}
+        <span class="lx-empty">No practice yet</span>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="lx-card" aria-labelledby="goals-title">
+    <div class="lx-card__body">
+      <div class="lx-panel-title">
+        <span class="lx-icon-badge"><i class="bi bi-bullseye" aria-hidden="true"></i></span>
+        <h2 id="goals-title">Goals</h2>
+        {% if editable %}<a class="lx-edit-link" href="{% url 'profiles:edit' section='goals' %}"><i class="bi bi-pencil" aria-hidden="true"></i>Edit<span class="visually-hidden"> goals</span></a>{% endif %}
+      </div>
+      <ul class="lx-chip-list">{% for goal in goals %}<li class="lx-chip lx-chip--primary">{{ goal.name }}</li>{% endfor %}</ul>
+    </div>
+  </section>
+
+  <section class="lx-card" aria-labelledby="interests-title">
+    <div class="lx-card__body">
+      <div class="lx-panel-title">
+        <span class="lx-icon-badge lx-icon-badge--accent"><i class="bi bi-heart" aria-hidden="true"></i></span>
+        <h2 id="interests-title">Interests</h2>
+        {% if editable %}<a class="lx-edit-link" href="{% url 'profiles:edit' section='interests' %}"><i class="bi bi-pencil" aria-hidden="true"></i>Edit<span class="visually-hidden"> interests</span></a>{% endif %}
+      </div>
+      <ul class="lx-chip-list">{% for interest in interests %}<li class="lx-chip">{{ interest.name }}</li>{% endfor %}</ul>
+    </div>
+  </section>
+
+  <section class="lx-card" aria-labelledby="availability-title">
+    <div class="lx-card__body">
+      <div class="lx-panel-title">
+        <span class="lx-icon-badge"><i class="bi bi-calendar3" aria-hidden="true"></i></span>
+        <h2 id="availability-title">Availability</h2>
+        {% if editable %}<a class="lx-edit-link" href="{% url 'profiles:availability' %}"><i class="bi bi-pencil" aria-hidden="true"></i>Edit<span class="visually-hidden"> availability</span></a>{% endif %}
+      </div>
+      <ul class="lx-schedule">
+        {% for days, times in availability %}
+        <li><span class="lx-schedule__days">{{ days }}</span><span class="lx-schedule__time">{{ times }}</span></li>
+        {% endfor %}
+      </ul>
+      <p class="lx-help mb-0 mt-3"><i class="bi bi-globe2 me-1" aria-hidden="true"></i>Times in {{ profile.timezone }}</p>
+    </div>
+  </section>
+
+  <section class="lx-card" aria-labelledby="modes-title">
+    <div class="lx-card__body">
+      <div class="lx-panel-title">
+        <span class="lx-icon-badge"><i class="bi bi-chat-dots" aria-hidden="true"></i></span>
+        <h2 id="modes-title">Practice style</h2>
+        {% if editable %}<a class="lx-edit-link" href="{% url 'profiles:edit' section='practice-style' %}"><i class="bi bi-pencil" aria-hidden="true"></i>Edit<span class="visually-hidden"> practice style</span></a>{% endif %}
+      </div>
+      <ul class="lx-chip-list">{% for mode in communication_modes %}<li class="lx-chip">{{ mode.name }}</li>{% endfor %}</ul>
+    </div>
+  </section>
+
+  {% if editable %}
+  <section class="lx-card lx-grid__wide" aria-labelledby="privacy-title">
+    <div class="lx-card__body">
+      <div class="lx-panel-title">
+        <span class="lx-icon-badge"><i class="bi bi-shield-lock" aria-hidden="true"></i></span>
+        <h2 id="privacy-title">Privacy</h2>
+        <a class="lx-edit-link" href="{% url 'profiles:edit' section='privacy' %}"><i class="bi bi-pencil" aria-hidden="true"></i>Edit<span class="visually-hidden"> privacy</span></a>
+      </div>
+      <p class="mb-1">
+        {% if profile.is_discoverable %}<i class="bi bi-eye me-1" aria-hidden="true"></i>Visible in partner suggestions
+        {% else %}<i class="bi bi-eye-slash me-1" aria-hidden="true"></i>Hidden from partner suggestions{% endif %}
+      </p>
+      <p class="lx-help mb-0">Your email is never shown to other users. <a href="{% url 'partners:blocked' %}">Blocked people</a></p>
+    </div>
+  </section>
+  {% endif %}
+</div>

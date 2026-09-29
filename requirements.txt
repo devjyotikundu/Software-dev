@@ -1,0 +1,22 @@
+# Core framework
+Django>=5.2,<5.3            # 5.2 is the current LTS release
+djangorestframework>=3.16,<3.17
+
+# Configuration and database
+django-environ>=0.12,<0.13  # reads .env and DATABASE_URL
+psycopg[binary]>=3.2,<4     # PostgreSQL driver
+
+# Images (profile pictures)
+Pillow>=11,<13
+
+# Real-time exchange rooms (Phase 12)
+channels>=4.2,<5
+channels-redis>=4.2,<5      # Redis channel layer (required in production)
+daphne>=4.1,<5              # ASGI server: runserver and production WebSockets
+
+# Serving
+whitenoise>=6.9,<7          # static files in production
+gunicorn>=23,<24            # production WSGI server (Linux/macOS)
+
+# Added in later phases, only when needed:
+#   celery + redis (Phase 15), LLM client (Phase 14)

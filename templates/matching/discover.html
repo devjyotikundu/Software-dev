@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Discover partners | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container">
+    <header class="lx-page-header">
+      <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-people" aria-hidden="true"></i></span>
+      <div>
+        <h1>Discover partners</h1>
+        <p>People who speak what you're learning, and are learning what you speak. Best matches first.</p>
+      </div>
+    </header>
+
+    {% if not profile.is_discoverable %}
+    <div class="lx-alert lx-alert--warning mb-4" role="status">
+      <i class="bi bi-eye-slash" aria-hidden="true"></i>
+      <div class="lx-alert__body">You're hidden from partner suggestions, so others can't find you. <a href="{% url 'profiles:edit' section='privacy' %}">Change privacy</a></div>
+    </div>
+    {% endif %}
+
+    {% if total %}
+    <form method="get" class="lx-filters" aria-label="Filter suggestions">
+      {% if form.show_language %}<div><label class="visually-hidden" for="{{ form.language.id_for_label }}">Language</label>{{ form.language }}</div>{% endif %}
+      <div><label class="visually-hidden" for="{{ form.goal.id_for_label }}">Goal</label>{{ form.goal }}</div>
+      <div><label class="visually-hidden" for="{{ form.mode.id_for_label }}">Practice style</label>{{ form.mode }}</div>
+      <div class="lx-filters__check">
+        <input type="checkbox" class="btn-check" name="overlap" id="{{ form.overlap.id_for_label }}"{% if form.overlap.value %} checked{% endif %}>
+        <label class="lx-choice lx-choice--sm" for="{{ form.overlap.id_for_label }}"><i class="bi bi-check-lg lx-choice__tick" aria-hidden="true"></i>Free when I am</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-sm">Apply</button>
+      {% if form.is_filtered %}<a class="lx-link-button" href="{% url 'matching:discover' %}">Clear</a>{% endif %}
+    </form>
+    <p class="lx-results-count" role="status">
+      {% if form.is_filtered %}Showing {{ shown }} of {{ total }} suggestions{% else %}{{ total }} suggestion{{ total|pluralize }}{% endif %}
+    </p>
+    {% endif %}
+
+    {% if page.object_list %}
+    <div class="lx-partner-grid">
+      {% for card in page.object_list %}{% include "matching/_partner_card.html" %}{% endfor %}
+    </div>
+
+    {% if page.has_other_pages %}
+    <nav class="lx-pager" aria-label="Pages">
+      {% if page.has_previous %}<a class="btn btn-secondary-lx btn-sm" href="?{% if filter_query %}{{ filter_query }}&amp;{% endif %}page={{ page.previous_page_number }}"><i class="bi bi-arrow-left" aria-hidden="true"></i>Previous</a>{% else %}<span></span>{% endif %}
+      <span class="lx-muted">Page {{ page.number }} of {{ page.paginator.num_pages }}</span>
+      {% if page.has_next %}<a class="btn btn-secondary-lx btn-sm" href="?{% if filter_query %}{{ filter_query }}&amp;{% endif %}page={{ page.next_page_number }}">Next<i class="bi bi-arrow-right" aria-hidden="true"></i></a>{% else %}<span></span>{% endif %}
+    </nav>
+    {% endif %}
+
+    {% elif total %}
+    <div class="lx-card lx-empty-state">
+      <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-funnel" aria-hidden="true"></i></span>
+      <h2>No one matches these filters</h2>
+      <p class="lx-muted">Try removing a filter to see all {{ total }} suggestions.</p>
+      <a class="btn btn-primary" href="{% url 'matching:discover' %}">Clear filters</a>
+    </div>
+
+    {% else %}
+    <div class="lx-card lx-empty-state">
+      <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-hourglass-split" aria-hidden="true"></i></span>
+      <h2>No partners to suggest yet</h2>
+      <p class="lx-muted">We only suggest people who can help with your language and want help with yours. As more learners join, they'll appear here.</p>
+      <p class="lx-muted mb-4">Adding more free times and interests on your profile widens your matches.</p>
+      <a class="btn btn-primary" href="{% url 'profiles:detail' %}">Review your profile</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

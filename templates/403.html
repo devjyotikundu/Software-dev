@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Access denied | {{ site_name|default:"Language Exchange Matcher" }}{% endblock %}
+
+{% block content %}
+<section class="lx-error">
+  <div class="container">
+    <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-shield-lock" aria-hidden="true"></i></span>
+    <p class="lx-error__code">Error 403</p>
+    <h1>Access denied</h1>
+    <p class="lx-lead mt-3">You do not have permission to view this page. If you think you should, sign in with the right account.</p>
+    <a class="btn btn-primary btn-lg mt-3" href="{% url 'core:home' %}">Go to the home page</a>
+  </div>
+</section>
+{% endblock %}
