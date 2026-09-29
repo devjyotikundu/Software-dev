@@ -465,6 +465,29 @@ works as normal.
   become a friendly "isn't available right now" message and a log entry.
   Practice never depends on AI, so the verified bank is always the fallback.
 
+## Deploying to Render
+
+**Web service**
+- Build command: `bash build.sh`
+- Start command: `daphne -b 0.0.0.0 -p $PORT config.asgi:application`
+- Environment: `DJANGO_SETTINGS_MODULE=config.settings.production`, `SECRET_KEY`,
+  `DATABASE_URL`, `REDIS_URL`, `ALLOWED_HOSTS` (Render's own hostname is
+  added automatically), optionally `DJANGO_SUPERUSER_USERNAME`,
+  `DJANGO_SUPERUSER_EMAIL`, `DJANGO_SUPERUSER_PASSWORD` and the `AI_*` values.
+
+`build.sh` runs every step with the production settings. This matters:
+`manage.py` defaults to development settings, and a `collectstatic` run
+with those doesn't write the static-files manifest that production needs,
+which shows up as "Missing staticfiles manifest entry for 'img/logo.svg'".
+The build finishes with `check --deploy`, which fails the build if the
+manifest is missing, so the problem can't reach the live site.
+
+`seed_data` is safe on every deploy: reference data is only added once, and
+the admin account from `DJANGO_SUPERUSER_*` is created the first time and
+left alone after that (its password is only reset with `--update`). Don't
+use `createsuperuser --noinput` in the build: it fails with "That username is
+already taken" on every deploy after the first.
+
 ## Design system
 
 All styling comes from one stylesheet, `static/css/app.css`, built on tokens

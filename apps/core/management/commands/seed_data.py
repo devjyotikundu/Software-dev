@@ -10,6 +10,7 @@ from django.db import transaction
 
 # Order matters: later seeders reference rows created by earlier ones.
 SEEDERS = (
+    "apps.accounts.seeds",       # optional admin from DJANGO_SUPERUSER_* (idempotent)
     "apps.languages.seeds",
     "apps.profiles.seeds",
     "apps.practice.seeds",
