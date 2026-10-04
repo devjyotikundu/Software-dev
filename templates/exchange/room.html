@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Room with {{ partner.profile.display_name }} | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-room" data-room
+         data-socket-path="/ws/rooms/{{ room.pk }}/" data-user-id="{{ user.pk }}"
+         data-partner-name="{{ partner.profile.display_name }}"
+         data-translate-url="{% url 'exchange:translate_message' room_id=room.pk message_id=0 %}"
+         data-romanize-url="{% url 'exchange:romanize_message' room_id=room.pk message_id=0 %}"
+         data-translate-enabled="{% if ai_enabled %}1{% endif %}"
+         data-languages="{{ pair_languages|join:',' }}" data-my-language="{{ my_native }}">
+  <div class="container">
+    <header class="lx-room__header">
+      <a class="lx-back-link" href="{% url 'partners:detail' match_id=room.match_id %}"><i class="bi bi-arrow-left" aria-hidden="true"></i><span class="visually-hidden">Back to partner</span></a>
+      {% include "profiles/_avatar.html" with profile=partner.profile %}
+      <div class="lx-room__who">
+        <h1>{{ partner.profile.display_name }}</h1>
+        <p>You practise {{ you_learn.name }}; {{ partner.profile.display_name }} practises {{ they_learn.name }}.</p>
+      </div>
+      <span class="lx-live" data-status aria-live="polite"><span class="lx-live__dot" aria-hidden="true"></span><span data-status-text>Connecting…</span></span>
+    </header>
+
+    {% if feedback_due %}
+    <div class="lx-alert lx-alert--info mb-3" role="status">
+      <i class="bi bi-star" aria-hidden="true"></i>
+      <div class="lx-alert__body"><strong>How did it go?</strong> Tell us about your session on {{ feedback_due.ended_at|date:"j M" }}. It takes 20 seconds and helps us suggest better partners.</div>
+      <a class="btn btn-primary btn-sm" href="{% url 'feedback:session' session_id=feedback_due.pk %}">Give feedback</a>
+    </div>
+    {% endif %}
+
+    <div class="lx-room__grid">
+      <aside class="lx-room__side" aria-label="Session">
+        <section class="lx-card">
+          <div class="lx-card__body">
+            {% if session %}
+            <div class="lx-timer" data-timer
+                 data-started="{{ session.started_at|date:'c' }}" data-minutes="{{ session.minutes_per_language }}"
+                 data-first="{{ session.first_language.name }}" data-second="{{ session.second_language.name }}"
+                 data-server-now="{{ server_now }}">
+              <p class="lx-why__label mb-1">Now practising</p>
+              <p class="lx-timer__language" data-timer-language>{% if state.phase == "first" %}{{ session.first_language.name }}{% else %}{{ session.second_language.name }}{% endif %}</p>
+              <p class="lx-timer__clock" data-timer-clock aria-live="off">{% widthratio state.remaining_seconds 60 1 %} min left</p>
+              <div class="lx-timer__track" aria-hidden="true"><span data-timer-bar></span></div>
+              <p class="lx-timer__next" data-timer-next>Then {{ session.second_language.name }} for {{ session.minutes_per_language }} minutes.</p>
+            </div>
+            <form method="post" action="{% url 'exchange:end_session' room_id=room.pk %}" class="mt-3">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-secondary-lx w-100"><i class="bi bi-stop-circle" aria-hidden="true"></i>End session</button>
+            </form>
+            {% else %}
+            <h2 class="lx-form-title mb-1">Start a session</h2>
+            <p class="lx-muted">Take turns: one language first, then the other. You help each other.</p>
+            <form method="post" action="{% url 'exchange:start_session' room_id=room.pk %}" novalidate>
+              {% csrf_token %}
+              {% for field in start_form %}{% include "partials/_field.html" %}{% endfor %}
+              <button type="submit" class="btn btn-primary w-100"><i class="bi bi-play-fill" aria-hidden="true"></i>Start session</button>
+            </form>
+            {% endif %}
+          </div>
+        </section>
+
+        {% if ai_enabled %}
+        <section class="lx-card mt-3" aria-labelledby="ai-title">
+          <div class="lx-card__body">
+            <div class="lx-panel-title mb-2">
+              <span class="lx-icon-badge"><i class="bi bi-stars" aria-hidden="true"></i></span>
+              <h2 id="ai-title">AI helper <span class="lx-badge lx-badge--neutral">optional</span></h2>
+            </div>
+            <p class="lx-help mt-0">Only you see the answers. Your partner is still your best teacher.</p>
+            <form method="post" action="{% url 'ai:assist' room_id=room.pk %}" data-ai-form>
+              {% csrf_token %}
+              <label class="visually-hidden" for="ai-task">What do you need?</label>
+              <select class="form-select form-select-sm mb-2" id="ai-task" name="task">
+                {% for key, label in ai_tasks %}<option value="{{ key }}">{{ label }}</option>{% endfor %}
+              </select>
+              <label class="visually-hidden" for="ai-text">Word or sentence</label>
+              <textarea class="form-control mb-2" id="ai-text" name="text" rows="2" maxlength="500" placeholder="A word or sentence"></textarea>
+              <button type="submit" class="btn btn-secondary-lx btn-sm w-100"><i class="bi bi-stars" aria-hidden="true"></i>Ask</button>
+            </form>
+            <div class="lx-ai-answer mt-3" data-ai-answer aria-live="polite" hidden></div>
+          </div>
+        </section>
+        {% endif %}
+
+        <section class="lx-card mt-3" aria-labelledby="starter-title">
+          <div class="lx-card__body">
+            <div class="lx-panel-title mb-2">
+              <span class="lx-icon-badge lx-icon-badge--accent"><i class="bi bi-chat-square-quote" aria-hidden="true"></i></span>
+              <h2 id="starter-title">Conversation idea</h2>
+            </div>
+            <ol class="lx-starters" data-starters>
+              {% for idea in starters %}<li{% if not forloop.first %} hidden{% endif %}>{{ idea }}</li>{% endfor %}
+            </ol>
+            <button type="button" class="lx-link-button" data-next-starter hidden><i class="bi bi-arrow-repeat" aria-hidden="true"></i>Another idea</button>
+          </div>
+        </section>
+      </aside>
+
+      <section class="lx-card lx-chat" aria-label="Conversation">
+        <ol class="lx-chat__messages" data-messages aria-live="polite" aria-relevant="additions">
+          {% for message in history %}{% include "exchange/_message.html" %}{% empty %}
+          <li class="lx-chat__empty" data-empty>Say hello to {{ partner.profile.display_name }}. Messages are private to the two of you.</li>
+          {% endfor %}
+        </ol>
+        <p class="lx-chat__typing" data-typing hidden>{{ partner.profile.display_name }} is typing…</p>
+        <p class="lx-error-text lx-chat__error" data-error role="alert" hidden></p>
+        <div class="lx-tr-settings" data-tr-settings hidden>
+          <p class="lx-tr-settings__title"><i class="bi bi-translate" aria-hidden="true"></i>Translation and speech</p>
+          <div class="lx-tr-settings__grid">
+            <label class="lx-tr-field" data-tr-ai-only>Translate messages to
+              <select class="form-select form-select-sm" data-tr-target></select></label>
+            <label class="lx-tr-field" data-tr-speech-only>I speak in
+              <select class="form-select form-select-sm" data-tr-speech-lang></select></label>
+          </div>
+          <label class="lx-tr-check" data-tr-ai-only><input type="checkbox" data-tr-auto> Automatically translate incoming messages</label>
+          <label class="lx-tr-check"><input type="checkbox" data-tr-learning> Learning mode (also show Roman letters)</label>
+          <p class="lx-help mb-0">The original message always stays visible. Settings are saved in this browser only.</p>
+        </div>
+        <p class="lx-tr-status" data-tr-status role="status" aria-live="polite" hidden></p>
+        <form class="lx-chat__composer" method="post" action="{% url 'exchange:post_message' room_id=room.pk %}" data-composer>
+          {% csrf_token %}
+          <button type="button" class="lx-composer-icon" data-tr-settings-toggle aria-expanded="false" hidden>
+            <i class="bi bi-translate" aria-hidden="true"></i><span class="visually-hidden">Translation settings</span>
+          </button>
+          <button type="button" class="lx-composer-icon" data-tr-mic aria-pressed="false" hidden>
+            <i class="bi bi-mic" aria-hidden="true"></i><span class="visually-hidden">Speak instead of typing</span>
+          </button>
+          <label class="visually-hidden" for="message-body">Message</label>
+          <textarea id="message-body" name="body" rows="1" maxlength="2000" required
+                    placeholder="Write a message{% if state %} in {% if state.phase == 'first' %}{{ session.first_language.name }}{% else %}{{ session.second_language.name }}{% endif %}{% endif %}…"
+                    data-input></textarea>
+          <button type="submit" class="btn btn-primary" aria-label="Send"><i class="bi bi-send-fill" aria-hidden="true"></i></button>
+        </form>
+      </section>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}<script src="{% static 'js/room.js' %}" defer></script><script src="{% static 'js/ai.js' %}" defer></script><script src="{% static 'js/translate.js' %}" defer></script>{% endblock %}

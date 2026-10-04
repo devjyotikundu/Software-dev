@@ -1,0 +1,9 @@
+<li class="lx-msg{% if message.sender_id == user.pk %} is-mine{% endif %}" data-id="{{ message.pk }}">
+  <div class="lx-msg__bubble">
+    <p class="lx-msg__body" {% if message.language %}lang="{{ message.language.code }}"{% endif %}>{{ message.body|linebreaksbr }}</p>
+    <p class="lx-msg__meta">
+      <span class="visually-hidden">{% if message.sender_id == user.pk %}You{% else %}{{ message.sender.profile.display_name }}{% endif %}, </span>
+      <time datetime="{{ message.created_at|date:'c' }}">{{ message.created_at|time:"H:i" }}</time>{% if message.language %}, {{ message.language.name }}{% endif %}
+    </p>
+  </div>
+</li>

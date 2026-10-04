@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Session feedback | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-form">
+    <a class="lx-back-link" href="{% url 'exchange:room' room_id=session.room_id %}"><i class="bi bi-arrow-left" aria-hidden="true"></i>Back to the room</a>
+
+    <div class="lx-card lx-card--raised mt-3">
+      <div class="lx-card__body">
+        <div class="lx-panel-title">
+          {% include "profiles/_avatar.html" with profile=partner.profile size="lg" %}
+          <div>
+            <h1 class="lx-form-title">How was your session with {{ partner.profile.display_name }}?</h1>
+            <p class="lx-muted mb-0">{{ session.ended_at|date:"j M Y" }}. Your answers are private.</p>
+          </div>
+        </div>
+
+        <dl class="lx-mini-stats lx-mini-stats--feedback">
+          <div><dt>Length</dt><dd>{{ summary.minutes }} min</dd></div>
+          <div><dt>Languages</dt><dd>{{ summary.first_language }}, then {{ summary.second_language }}</dd></div>
+          <div><dt>Messages</dt><dd>{% for name, n in summary.messages_by_language.items %}{{ n }} in {{ name }}{% if not forloop.last %}, {% endif %}{% empty %}None{% endfor %}</dd></div>
+        </dl>
+
+        {% if ai_enabled %}
+        <form method="post" action="{% url 'ai:summary' session_id=session.pk %}" class="lx-ai-summary" data-ai-form>
+          {% csrf_token %}
+          <button type="submit" class="lx-link-button"><i class="bi bi-stars" aria-hidden="true"></i>Summarise this session with AI (only you see it)</button>
+          <div class="lx-ai-answer mt-2" data-ai-answer aria-live="polite" hidden></div>
+        </form>
+        {% endif %}
+
+        <form method="post" novalidate>
+          {% csrf_token %}
+          {% include "partials/_form_errors.html" %}
+          {% for field in form %}{% include "partials/_field.html" %}{% endfor %}
+          <div class="lx-form-actions">
+            <a class="btn btn-secondary-lx" href="{% url 'exchange:room' room_id=session.room_id %}">Later</a>
+            <button type="submit" class="btn btn-primary">Send feedback</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}<script src="{% static 'js/ai.js' %}" defer></script>{% endblock %}

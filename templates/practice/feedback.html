@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}{% if answer.is_correct %}Correct{% else %}Not quite{% endif %} | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-quiz">
+  <div class="container lx-container-form">
+    {% include "practice/_progress.html" with number=answer.position total=total percent=progress_percent level_label=answer.difficulty.label %}
+
+    <div class="lx-card lx-card--raised">
+      <div class="lx-result lx-result--{% if answer.is_correct %}correct{% else %}incorrect{% endif %}" role="status">
+        <i class="bi {% if answer.is_correct %}bi-check-circle-fill{% else %}bi-x-circle-fill{% endif %}" aria-hidden="true"></i>
+        <div>
+          <p class="lx-result__title">{% if answer.is_correct %}Correct{% else %}Not quite{% endif %}</p>
+          <p class="lx-result__xp">
+            {% if answer.is_correct %}+{{ answer.xp_awarded }} XP{% if streak_bonus %} <span class="lx-streak"><i class="bi bi-fire" aria-hidden="true"></i>includes {{ streak_bonus }} XP streak bonus</span>{% endif %}
+            {% else %}No XP this time{% endif %}
+          </p>
+        </div>
+      </div>
+
+      <div class="lx-card__body">
+        <p class="lx-quiz__category">{{ question.category.name }}</p>
+        <h1 class="lx-quiz__question lx-quiz__question--small" lang="{{ question.language.code }}">{{ question.question_text|linebreaksbr }}</h1>
+
+        <ul class="lx-answers lx-answers--review">
+          {% for key, text in options.items %}
+          <li class="lx-answer is-static{% if key == question.correct_option %} is-correct{% elif key == answer.selected_option %} is-wrong{% endif %}">
+            <span class="lx-answer__key" aria-hidden="true">{{ key }}</span>
+            <span class="lx-answer__text" lang="{{ question.language.code }}">{{ text }}</span>
+            {% if key == question.correct_option %}<span class="lx-answer__tag"><i class="bi bi-check-lg" aria-hidden="true"></i>Correct answer</span>
+            {% elif key == answer.selected_option %}<span class="lx-answer__tag"><i class="bi bi-x-lg" aria-hidden="true"></i>Your answer</span>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+
+        <dl class="lx-explain">
+          <div><dt><i class="bi bi-translate" aria-hidden="true"></i>Meaning</dt><dd>{{ question.english_meaning }}</dd></div>
+          <div><dt><i class="bi bi-lightbulb" aria-hidden="true"></i>Why</dt><dd>{{ question.english_explanation }}</dd></div>
+        </dl>
+
+        <div class="lx-quiz__actions">
+          <span></span>
+          {% if is_last %}
+          <a class="btn btn-primary btn-lg" href="{% url 'practice:results' pk=session.pk %}" autofocus>See results<i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          {% else %}
+          <a class="btn btn-primary btn-lg" href="{% url 'practice:session' pk=session.pk %}" autofocus>Next question<i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

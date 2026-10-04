@@ -1,0 +1,6 @@
+{# Photo if uploaded, otherwise the first letter of the name. Pass size="lg" for large. #}
+{% if profile.avatar %}
+<img class="lx-avatar{% if size == 'lg' %} lx-avatar--lg{% endif %} lx-avatar--photo" src="{{ profile.avatar.url }}" alt="" width="{% if size == 'lg' %}56{% else %}32{% endif %}" height="{% if size == 'lg' %}56{% else %}32{% endif %}">
+{% else %}
+<span class="lx-avatar{% if size == 'lg' %} lx-avatar--lg{% endif %}" aria-hidden="true">{{ profile.display_name|slice:":1"|upper }}</span>
+{% endif %}

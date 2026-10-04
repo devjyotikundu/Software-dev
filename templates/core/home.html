@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% load static %}
+{# Landing page (signed-out visitors). Styles: section 25 of app.css. Script: static/js/landing.js. #}
+{% block body_class %}lx-landing{% endblock %}
+{% block ambient %}{% endblock %}{# the landing page has its own word sphere #}
+
+{% block content %}
+  <section class="ld-hero" aria-labelledby="hero-title">
+    <div class="ld-wrap ld-hero__grid">
+      <div>
+        <h1 id="hero-title">Language is better <span>when it’s shared.</span></h1>
+        <p>Meet someone who speaks the language you’re learning, and is learning yours. Practise together in English, Hindi and Bengali.</p>
+        <div class="ld-hero__actions">
+          <a class="ld-btn ld-btn--light" href="{% url 'accounts:register' %}">Find a partner</a>
+          <a class="ld-btn ld-btn--ghost" href="#how">See how it works</a>
+        </div>
+      </div>
+      <div class="ld-sphere-stage" data-sphere-stage>
+        <div class="ld-sphere" data-sphere role="img" aria-label="A slowly turning sphere of greetings in about forty languages, with English, Hindi and Bengali highlighted."></div>
+        <ul class="ld-legend" aria-hidden="true">
+          <li><i class="ld-en"></i>English</li><li><i class="ld-hi"></i>Hindi</li><li><i class="ld-bn"></i>Bengali</li><li><i class="ld-world"></i>Hello, around the world</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="ld-story" id="how" aria-labelledby="how-title">
+    <div class="ld-wrap">
+      <div class="ld-story__intro">
+        <h2 id="how-title">From your first answer to your first conversation</h2>
+        <p>Four steps, each one shaping the next.</p>
+      </div>
+      <div class="ld-story__grid">
+        <ol class="ld-steps" data-steps>
+          <li class="ld-step ld-is-active" data-step="0">
+            <h3>Check your level</h3>
+            <p>Ten short questions, written for each language rather than translated. Your answers give an estimated level and earn XP.</p>
+            <div class="ld-panel-inline" data-clone="0"></div>
+          </li>
+          <li class="ld-step" data-step="1">
+            <h3>Meet someone who fits</h3>
+            <p>We only suggest people who can help with your language and want help with theirs, and we show exactly why you match.</p>
+            <div class="ld-panel-inline" data-clone="1"></div>
+          </li>
+          <li class="ld-step" data-step="2">
+            <h3>Practise together</h3>
+            <p>A private room with a timer that switches languages halfway, plus translation inside the chat when a word escapes you.</p>
+            <div class="ld-panel-inline" data-clone="2"></div>
+          </li>
+          <li class="ld-step" data-step="3">
+            <h3>Watch your level move</h3>
+            <p>Every session and answer refines your estimated level, and your feedback improves who we suggest next.</p>
+            <div class="ld-panel-inline" data-clone="3"></div>
+          </li>
+        </ol>
+
+        <div class="ld-stage" aria-hidden="true">
+          <div class="ld-device" data-device>
+            <div class="ld-face" data-face="0">
+              <div class="ld-panel">
+                <div class="ld-panel__meta"><span>Question 4 of 10</span><span>Level 3</span></div>
+                <p class="ld-panel__q" lang="bn">‘জল’ শব্দের মানে কী?</p>
+                <ul class="ld-opts">
+                  <li><b>A</b>Fire</li><li class="ld-ok"><b>B</b>Water</li><li><b>C</b>Air</li><li><b>D</b>Earth</li>
+                </ul>
+                <span class="ld-xp">+15 XP</span>
+              </div>
+            </div>
+            <div class="ld-face" data-face="1">
+              <div class="ld-panel">
+                <div class="ld-match">
+                  <div class="ld-person"><div class="ld-avatar ld-avatar--a">A</div><strong>Asha</strong>Speaks Bengali</div>
+                  <div class="ld-ring"><span>94%</span></div>
+                  <div class="ld-person"><div class="ld-avatar ld-avatar--b">T</div><strong>Tom</strong>Speaks English</div>
+                </div>
+                <p class="ld-why">You’re learning English, which they speak natively; they’re learning Bengali, which you speak natively.</p>
+              </div>
+            </div>
+            <div class="ld-face" data-face="2">
+              <div class="ld-panel">
+                <div class="ld-timer"><span>Now practising</span><strong>Hindi</strong><span>6:12 left</span></div>
+                <div class="ld-chat">
+                  <p class="ld-bubble" lang="hi-Latn">kal milte hain?<small lang="en">Translated: See you tomorrow?</small></p>
+                  <p class="ld-bubble ld-me" lang="hi">हाँ, कल शाम को!</p>
+                  <p class="ld-bubble" lang="hi">बहुत अच्छा।<small lang="en">Romanized: bahut achchhaa</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="ld-face" data-face="3">
+              <div class="ld-panel">
+                <div class="ld-panel__meta"><span>Your language journey</span><span>English</span></div>
+                <ol class="ld-journey"><li class="ld-past">A1</li><li class="ld-past">A2</li><li class="ld-now">B1</li><li>B2</li><li>C1</li><li>C2</li></ol>
+                <p class="ld-why">Estimated from your practice answers, weighted towards the most recent.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ld-people" aria-labelledby="people-title">
+    <div class="ld-wrap ld-people__grid">
+      <figure class="ld-photo">
+        <img src="{% static 'img/people.webp' %}" width="1080" height="730" loading="lazy" decoding="async"
+             alt="A man in headphones at his desk at night, talking animatedly with a smiling woman on his laptop screen.">
+      </figure>
+      <div>
+        <h2 id="people-title">Real people, helping each other</h2>
+        <p class="ld-lead">Every partner is learning too. You explain your language, they explain theirs, and both of you leave the conversation knowing more than when you started.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ld-closing" id="join" aria-labelledby="join-title">
+    <div class="ld-wrap">
+      <h2 id="join-title">Say your first sentence <span class="ld-phrase" lang="hi">आज ही।</span></h2>
+      <p>Setting up takes about two minutes. Then we’ll find you someone to practise with.</p>
+      <a class="ld-btn ld-btn--light" href="{% url 'accounts:register' %}">Create a free account</a>
+    </div>
+  </section>
+{% endblock %}
+
+{% block extra_js %}<script src="{% static 'js/landing.js' %}" defer></script>{% endblock %}

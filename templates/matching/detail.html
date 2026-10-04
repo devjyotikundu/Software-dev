@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ card.profile.display_name }} | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-narrow">
+    <div class="d-flex justify-content-between align-items-center">
+      <a class="lx-back-link" href="{% url 'matching:discover' %}"><i class="bi bi-arrow-left" aria-hidden="true"></i>All suggestions</a>
+      {% include "partners/_safety_menu.html" with person_id=card.profile.user_id name=card.profile.display_name %}
+    </div>
+    {% include "matching/_person_hero.html" %}
+
+    <section class="lx-card lx-card--raised mt-4" aria-labelledby="request-title">
+      <div class="lx-card__body">
+        <h2 class="lx-form-title" id="request-title">Practise with {{ card.profile.display_name }}</h2>
+        <p class="lx-muted">If they accept, you'll both get a private room to practise in, taking turns in each language.</p>
+        <form method="post" action="{% url 'matching:request' user_id=card.profile.user_id %}" novalidate>
+          {% csrf_token %}
+          {% for field in request_form %}{% include "partials/_field.html" %}{% endfor %}
+          <div class="lx-form-actions"><button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-send" aria-hidden="true"></i>Send request</button></div>
+        </form>
+      </div>
+    </section>
+
+    {% include "matching/_why_match.html" %}
+  </div>
+</section>
+{% endblock %}

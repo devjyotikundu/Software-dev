@@ -1,0 +1,4 @@
+<nav class="lx-tabs" aria-label="Partners sections">
+  <a class="lx-tab{% if active == 'partners' %} is-active{% endif %}" href="{% url 'partners:list' %}"{% if active == 'partners' %} aria-current="page"{% endif %}>Partners</a>
+  <a class="lx-tab{% if active == 'requests' %} is-active{% endif %}" href="{% url 'partners:requests' %}"{% if active == 'requests' %} aria-current="page"{% endif %}>Requests{% if pending_request_count %}<span class="lx-count">{{ pending_request_count }}</span>{% endif %}</a>
+</nav>

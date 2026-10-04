@@ -1,0 +1,10 @@
+<div class="lx-quiz-progress">
+  <div class="lx-quiz-progress__row">
+    <span id="quiz-count">Question {{ number }} of {{ total }}</span>
+    <span class="lx-muted">{{ level_label }}</span>
+  </div>
+  <div class="progress lx-progress" role="progressbar" aria-labelledby="quiz-count"
+       aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: {{ percent }}%"></div>
+  </div>
+</div>

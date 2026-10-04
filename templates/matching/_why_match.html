@@ -1,0 +1,54 @@
+{# Why this match? Needs `card` and `factors`. #}
+    <section class="lx-card mt-4" aria-labelledby="why-title">
+      <div class="lx-card__body">
+        <div class="lx-panel-title">
+          <span class="lx-icon-badge"><i class="bi bi-lightbulb" aria-hidden="true"></i></span>
+          <h2 id="why-title">Why this match?</h2>
+        </div>
+        <ul class="lx-factors">
+          {% for f in factors %}
+          <li class="lx-factor">
+            <div class="lx-factor__head">
+              <span class="lx-factor__label"><i class="bi bi-{{ f.icon }}" aria-hidden="true"></i>{{ f.label }}</span>
+              {% if f.score is not None %}
+              <span class="lx-factor__score">{{ f.score }}<span class="lx-muted">/100</span></span>
+            </div>
+            <div class="lx-meter" role="img" aria-label="{{ f.label }}: {{ f.score }} out of 100"><span style="width: {{ f.score }}%"></span></div>
+              {% else %}
+              <span class="lx-factor__score">{% if f.points > 0 %}+{% endif %}{{ f.points }}<span class="lx-muted"> points</span></span>
+            </div>
+              {% endif %}
+            <p class="lx-factor__reason">{{ f.reason }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+        <details class="lx-why mb-0">
+          <summary><i class="bi bi-calculator" aria-hidden="true"></i>How the {{ card.percent }}% is calculated</summary>
+          <div class="lx-why__body">
+            <table class="lx-score-table">
+              <thead><tr><th scope="col">Factor</th><th scope="col">Score</th><th scope="col">Weight</th><th scope="col">Points</th></tr></thead>
+              <tbody>
+                {% for f in factors %}<tr><td>{{ f.label }}</td><td>{% if f.score is not None %}{{ f.score }}{% endif %}</td><td>{% if f.weight_percent is not None %}{{ f.weight_percent }}%{% else %}adjustment{% endif %}</td><td>{{ f.points }}</td></tr>{% endfor %}
+              </tbody>
+              <tfoot><tr><th scope="row" colspan="3">Match score</th><td>{{ card.score }}</td></tr></tfoot>
+            </table>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="lx-grid lx-grid--2 mt-4" aria-label="About {{ card.profile.display_name }}">
+      <div class="lx-card"><div class="lx-card__body">
+        <div class="lx-panel-title"><span class="lx-icon-badge"><i class="bi bi-bullseye" aria-hidden="true"></i></span><h2>Goals</h2></div>
+        <ul class="lx-chip-list">
+          {% for g in card.shared_goals %}<li class="lx-chip lx-chip--primary"><i class="bi bi-check-lg" aria-hidden="true"></i>{{ g }}</li>{% endfor %}
+          {% for g in card.other_goals %}<li class="lx-chip">{{ g }}</li>{% endfor %}
+        </ul>
+        {% if card.shared_goals %}<p class="lx-help mb-0 mt-2"><i class="bi bi-check-lg" aria-hidden="true"></i> marks goals you share.</p>{% endif %}
+      </div></div>
+      <div class="lx-card"><div class="lx-card__body">
+        <div class="lx-panel-title"><span class="lx-icon-badge lx-icon-badge--accent"><i class="bi bi-heart" aria-hidden="true"></i></span><h2>Interests in common</h2></div>
+        {% if card.shared_interests %}<ul class="lx-chip-list">{% for i in card.shared_interests %}<li class="lx-chip">{{ i }}</li>{% endfor %}</ul>
+        {% else %}<p class="lx-empty mb-0">None yet. A chance to talk about something new.</p>{% endif %}
+      </div></div>
+    </section>

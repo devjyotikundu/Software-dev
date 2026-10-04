@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Partners | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-narrow">
+    <header class="lx-page-header">
+      <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-people" aria-hidden="true"></i></span>
+      <div><h1>Partners</h1><p>People you've agreed to practise with. You help each other.</p></div>
+    </header>
+    {% include "partners/_tabs.html" with active="partners" %}
+
+    {% if partners %}
+    <div class="lx-card"><ul class="lx-list">
+      {% for item in partners %}
+      <li class="lx-list__item">
+        {% include "profiles/_avatar.html" with profile=item.other.profile size="lg" %}
+        <div class="lx-list__main">
+          <span class="fw-semibold">{{ item.other.profile.display_name }}</span>
+          <span class="lx-list__meta">You practise {{ item.you_learn.name }}; they practise {{ item.they_learn.name }}. Partners since {{ item.match.created_at|date:"j M Y" }}.</span>
+        </div>
+        <div class="lx-list__actions">
+          <a class="btn btn-secondary-lx btn-sm" href="{% url 'partners:detail' match_id=item.match.pk %}">Profile<span class="visually-hidden"> of {{ item.other.profile.display_name }}</span></a>
+          {% if item.match.room.is_active %}<a class="btn btn-primary btn-sm" href="{% url 'exchange:room' room_id=item.match.room.pk %}">Open room<span class="visually-hidden"> with {{ item.other.profile.display_name }}</span></a>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul></div>
+    {% else %}
+    <div class="lx-card lx-empty-state">
+      <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-person-plus" aria-hidden="true"></i></span>
+      <h2>No partners yet</h2>
+      <p class="lx-muted">When someone accepts your request, or you accept theirs, they'll appear here.</p>
+      <a class="btn btn-primary" href="{% url 'matching:discover' %}">Discover partners</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

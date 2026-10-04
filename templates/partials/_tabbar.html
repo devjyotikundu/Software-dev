@@ -1,0 +1,10 @@
+{# Mobile navigation: the main sections as a bottom tab bar (signed-in, onboarded users). #}
+{% with ns=request.resolver_match.namespace %}
+<nav class="lx-tabbar" aria-label="Sections">
+  <a class="lx-tabbar__item{% if request.resolver_match.view_name == 'core:home' %} is-active{% endif %}" href="{% url 'core:home' %}"{% if request.resolver_match.view_name == 'core:home' %} aria-current="page"{% endif %}><i class="bi bi-house" aria-hidden="true"></i><span>Home</span></a>
+  <a class="lx-tabbar__item{% if ns == 'practice' %} is-active{% endif %}" href="{% url 'practice:home' %}"{% if ns == 'practice' %} aria-current="page"{% endif %}><i class="bi bi-lightning-charge" aria-hidden="true"></i><span>Practice</span></a>
+  <a class="lx-tabbar__item{% if ns == 'matching' %} is-active{% endif %}" href="{% url 'matching:discover' %}"{% if ns == 'matching' %} aria-current="page"{% endif %}><i class="bi bi-compass" aria-hidden="true"></i><span>Discover</span></a>
+  <a class="lx-tabbar__item{% if ns == 'partners' or ns == 'exchange' %} is-active{% endif %}" href="{% url 'partners:list' %}"{% if ns == 'partners' %} aria-current="page"{% endif %}><i class="bi bi-chat-square-text" aria-hidden="true"></i><span>Partners</span>{% if pending_request_count %}<em class="lx-tabbar__count" aria-label="{{ pending_request_count }} new">{{ pending_request_count }}</em>{% endif %}</a>
+  <a class="lx-tabbar__item{% if ns == 'profiles' %} is-active{% endif %}" href="{% url 'profiles:detail' %}"{% if ns == 'profiles' %} aria-current="page"{% endif %}><i class="bi bi-person" aria-hidden="true"></i><span>Profile</span></a>
+</nav>
+{% endwith %}

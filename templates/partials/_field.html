@@ -1,0 +1,54 @@
+{# One form field. Checkbox groups become toggles; radio groups become option rows. #}
+{% with kind=field.widget_type %}
+<div class="lx-field">
+  {% if kind == "checkboxselectmultiple" or kind == "radioselect" %}
+  <fieldset{% if field.errors %} aria-describedby="{{ field.auto_id }}_error"{% endif %}>
+    <legend class="form-label">{{ field.label }}</legend>
+    {% if field.help_text %}<div class="lx-help">{{ field.help_text }}</div>{% endif %}
+    {% if kind == "radioselect" %}
+    <div class="lx-option-list">
+      {% for choice in field %}
+      {% with item=choice.data.value.instance %}
+      <input type="radio" class="btn-check" name="{{ field.html_name }}" id="{{ choice.id_for_label }}"
+             value="{{ choice.data.value }}" autocomplete="off"{% if choice.data.selected %} checked{% endif %}>
+      <label class="lx-option" for="{{ choice.id_for_label }}">
+        <span class="lx-option__radio" aria-hidden="true"></span>
+        <span>
+          <span class="lx-option__title">{{ choice.choice_label }}</span>
+          {% if item.description %}<span class="lx-option__text">{{ item.description }}</span>{% endif %}
+        </span>
+        {% if item.code %}<span class="lx-badge lx-badge--neutral" aria-hidden="true">{{ item.code }}</span>{% endif %}
+      </label>
+      {% endwith %}
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="lx-choices">
+      {% for choice in field %}
+      <input type="checkbox" class="btn-check" name="{{ field.html_name }}" id="{{ choice.id_for_label }}"
+             value="{{ choice.data.value }}" autocomplete="off"{% if choice.data.selected %} checked{% endif %}>
+      <label class="lx-choice" for="{{ choice.id_for_label }}">
+        <i class="bi bi-check-lg lx-choice__tick" aria-hidden="true"></i>{{ choice.choice_label }}
+      </label>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </fieldset>
+  {% elif kind == "checkbox" %}
+  <div class="lx-switch">
+    <input type="checkbox" role="switch" class="lx-switch__input" name="{{ field.html_name }}"
+           id="{{ field.id_for_label }}"{% if field.value %} checked{% endif %}
+           {% if field.help_text %}aria-describedby="{{ field.auto_id }}_help"{% endif %}>
+    <label class="lx-switch__label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+  </div>
+  {% if field.help_text %}<div class="lx-help lx-switch__help" id="{{ field.auto_id }}_help">{{ field.help_text }}</div>{% endif %}
+  {% else %}
+  <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+  {{ field }}
+  {% if field.help_text %}<div class="lx-help">{{ field.help_text }}</div>{% endif %}
+  {% endif %}
+  {% for error in field.errors %}
+  <p class="lx-error-text" id="{{ field.auto_id }}_error"><i class="bi bi-exclamation-circle" aria-hidden="true"></i><span>{{ error }}</span></p>
+  {% endfor %}
+</div>
+{% endwith %}

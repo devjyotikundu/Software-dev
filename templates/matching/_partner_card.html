@@ -1,0 +1,27 @@
+{# One suggested partner. Only public profile data and real match scores. #}
+<article class="lx-card lx-partner" aria-labelledby="partner-{{ card.profile.user_id }}">
+  <div class="lx-partner__top">
+    {% include "profiles/_avatar.html" with profile=card.profile size="lg" %}
+    <div class="lx-partner__who">
+      <h3 id="partner-{{ card.profile.user_id }}">{{ card.profile.display_name }}</h3>
+      <p class="lx-partner__langs">
+        <span><i class="bi bi-chat-quote" aria-hidden="true"></i>Speaks {{ card.they_speak }}</span>
+        <span><i class="bi bi-book" aria-hidden="true"></i>Learning {{ card.they_learn }}{% if card.their_level %}, {{ card.their_level }}{% endif %}</span>
+      </p>
+    </div>
+    <div class="lx-match-pill">
+      <span class="visually-hidden">{{ card.percent }}% match</span>
+      <strong aria-hidden="true">{{ card.percent }}%</strong> <span aria-hidden="true">match</span>
+    </div>
+  </div>
+
+  <dl class="lx-partner__facts">
+    {% if card.headline_goal %}<div><dt>Goal</dt><dd>{{ card.headline_goal }}</dd></div>{% endif %}
+    <div><dt>In common</dt><dd>
+      {% if card.shared_interests %}{% for name in card.shared_interests|slice:":3" %}<span class="lx-chip">{{ name }}</span>{% endfor %}{% if card.shared_interests|length > 3 %}<span class="lx-chip lx-chip--quiet">+{{ card.shared_interests|length|add:"-3" }}</span>{% endif %}
+      {% else %}<span class="lx-muted">No shared interests yet</span>{% endif %}
+    </dd></div>
+  </dl>
+
+  <a class="btn btn-secondary-lx w-100 mt-auto" href="{% url 'matching:detail' user_id=card.profile.user_id %}">View match<span class="visually-hidden"> with {{ card.profile.display_name }}</span></a>
+</article>

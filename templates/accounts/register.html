@@ -1,0 +1,14 @@
+{% extends "accounts/_auth_layout.html" %}
+{% block title %}Create account | {{ site_name }}{% endblock %}
+{% block icon %}bi-person-plus{% endblock %}
+{% block heading %}Create your account{% endblock %}
+{% block intro %}<p class="lx-muted mb-0">Next, you'll tell us which languages you speak and want to learn.</p>{% endblock %}
+{% block panel %}
+<form method="post" novalidate>
+  {% csrf_token %}
+  {% include "partials/_form_errors.html" %}
+  {% for field in form %}{% include "partials/_field.html" %}{% endfor %}
+  <button type="submit" class="btn btn-primary btn-lg w-100 mt-2">Create account</button>
+</form>
+{% endblock %}
+{% block after_panel %}<p class="lx-auth__alt">Already have an account? <a href="{% url 'accounts:login' %}">Log in</a></p>{% endblock %}

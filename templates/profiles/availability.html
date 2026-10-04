@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Availability | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-form">
+    <a class="lx-back-link" href="{% url 'profiles:detail' %}"><i class="bi bi-arrow-left" aria-hidden="true"></i>Back to profile</a>
+    <div class="lx-card lx-card--raised mt-3">
+      <div class="lx-card__body">
+        <div class="lx-panel-title">
+          <span class="lx-icon-badge"><i class="bi bi-calendar3" aria-hidden="true"></i></span>
+          <div>
+            <h1 class="lx-form-title">Availability</h1>
+            <p class="lx-muted mb-0">Weekly times you're usually free. Partners see overlapping times, not your exact schedule.</p>
+          </div>
+        </div>
+
+        <form method="post" novalidate>
+          {% csrf_token %}
+          {% for field in timezone_form %}{% include "partials/_field.html" %}{% endfor %}
+
+          {{ formset.management_form }}
+          {% if formset.non_form_errors %}
+          <div class="lx-alert lx-alert--danger mb-3" role="alert">
+            <i class="bi bi-exclamation-octagon" aria-hidden="true"></i>
+            <div class="lx-alert__body">{% for error in formset.non_form_errors %}<p class="mb-0">{{ error }}</p>{% endfor %}</div>
+          </div>
+          {% endif %}
+
+          <fieldset>
+            <legend class="form-label">Times</legend>
+            <div class="lx-slots" data-slot-list>
+              {% for slot_form in formset %}
+              {% include "profiles/_slot_row.html" with form=slot_form %}
+              {% endfor %}
+            </div>
+          </fieldset>
+          <template data-slot-template>{% include "profiles/_slot_row.html" with form=formset.empty_form %}</template>
+          <button type="button" class="lx-link-button mt-2" data-slot-add hidden><i class="bi bi-plus-lg" aria-hidden="true"></i>Add another time</button>
+
+          <div class="lx-form-actions">
+            <a class="btn btn-secondary-lx" href="{% url 'profiles:detail' %}">Cancel</a>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}<script src="{% static 'js/formset.js' %}" defer></script>{% endblock %}

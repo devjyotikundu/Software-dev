@@ -1,0 +1,17 @@
+<div class="lx-slot" data-slot>
+  {% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
+  <div class="lx-slot__fields">
+    <div><label class="visually-hidden" for="{{ form.weekday.id_for_label }}">Day</label>{{ form.weekday }}</div>
+    <div><label class="visually-hidden" for="{{ form.start_time.id_for_label }}">From</label>{{ form.start_time }}</div>
+    <span class="lx-slot__sep" aria-hidden="true">to</span>
+    <div><label class="visually-hidden" for="{{ form.end_time.id_for_label }}">To</label>{{ form.end_time }}</div>
+    {% if form.DELETE %}
+    <input type="checkbox" class="btn-check" name="{{ form.DELETE.html_name }}" id="{{ form.DELETE.id_for_label }}"{% if form.DELETE.value %} checked{% endif %} data-slot-delete>
+    <label class="lx-slot__remove" for="{{ form.DELETE.id_for_label }}" title="Remove this time"><i class="bi bi-x-lg" aria-hidden="true"></i><span class="visually-hidden">Remove this time</span></label>
+    {% endif %}
+  </div>
+  {% for field in form.visible_fields %}{% for error in field.errors %}
+  <p class="lx-error-text"><i class="bi bi-exclamation-circle" aria-hidden="true"></i><span>{{ error }}</span></p>
+  {% endfor %}{% endfor %}
+  {% for error in form.non_field_errors %}<p class="lx-error-text"><i class="bi bi-exclamation-circle" aria-hidden="true"></i><span>{{ error }}</span></p>{% endfor %}
+</div>

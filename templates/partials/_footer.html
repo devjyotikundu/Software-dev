@@ -1,0 +1,10 @@
+{% load static %}
+<footer class="lx-footer py-4 mt-auto">
+  <div class="container d-flex flex-column flex-md-row gap-2 align-items-md-center justify-content-between">
+    <span class="d-inline-flex align-items-center gap-2">
+      <img src="{% static 'img/logo.svg' %}" alt="" width="18" height="18">
+      {{ site_name|default:"Language Exchange Matcher" }}
+    </span>
+    <span><i class="bi bi-info-circle me-1" aria-hidden="true"></i>Proficiency levels shown here are estimates, not official certification.</span>
+  </div>
+</footer>

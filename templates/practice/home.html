@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Practice | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-narrow">
+    <header class="lx-page-header">
+      <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-lightning-charge" aria-hidden="true"></i></span>
+      <div>
+        <h1>Practice &amp; earn XP</h1>
+        <p>Ten questions per session. Your results shape your estimated level and your partner suggestions.</p>
+      </div>
+    </header>
+
+    <div class="lx-grid lx-grid--2">
+      {% for item in languages %}
+      <section class="lx-card lx-practice-lang" aria-labelledby="lang-{{ item.language.code }}">
+        <div class="lx-card__body">
+          <div class="lx-practice-lang__head">
+            <div>
+              <h2 id="lang-{{ item.language.code }}"><span lang="{{ item.language.code }}">{{ item.language.native_name }}</span>
+                {% if item.language.native_name != item.language.name %}<small>{{ item.language.name }}</small>{% endif %}</h2>
+              {% if item.plan_level %}<p class="lx-muted mb-0">Next session: mostly {{ item.plan_level.label }}</p>{% endif %}
+            </div>
+            <span class="lx-xp-chip"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>{{ item.progress.total_xp|default:0 }} XP</span>
+          </div>
+
+          {% if item.progress and item.progress.questions_answered %}
+          <dl class="lx-mini-stats">
+            <div><dt>Accuracy</dt><dd>{% widthratio item.progress.correct_answers item.progress.questions_answered 100 %}%</dd></div>
+            <div><dt>Answered</dt><dd>{{ item.progress.questions_answered }}</dd></div>
+            <div><dt>Sessions</dt><dd>{{ item.progress.sessions_completed }}</dd></div>
+          </dl>
+          {% else %}
+          <p class="lx-empty">No practice yet. Your first session sets your starting point.</p>
+          {% endif %}
+
+          {% if not item.active %}{% include "practice/_why_level.html" with plan=item.plan plan_mix=item.plan_mix main_label=item.plan_level.label %}{% endif %}
+
+          {% if item.active %}
+          <a class="btn btn-primary w-100" href="{% url 'practice:session' pk=item.active.pk %}"><i class="bi bi-play-fill" aria-hidden="true"></i>Resume session</a>
+          {% else %}
+          <form method="post" action="{% url 'practice:start' %}">
+            {% csrf_token %}
+            <input type="hidden" name="language" value="{{ item.language.code }}">
+            <button type="submit" class="btn btn-primary w-100"><i class="bi bi-play-fill" aria-hidden="true"></i>Start practice<span class="visually-hidden"> in {{ item.language.name }}</span></button>
+          </form>
+          {% endif %}
+        </div>
+      </section>
+      {% empty %}
+      <div class="lx-card lx-grid__wide"><div class="lx-card__body">
+        <p class="mb-3">Add a language you're learning to start practising.</p>
+        <a class="btn btn-primary" href="{% url 'profiles:languages' %}">Manage languages</a>
+      </div></div>
+      {% endfor %}
+    </div>
+
+    {% if history %}
+    <section class="mt-5" aria-labelledby="history-title">
+      <h2 class="lx-section-title" id="history-title">Recent sessions</h2>
+      <div class="lx-card">
+        <ul class="lx-list">
+          {% for past in history %}
+          <li class="lx-list__item">
+            <div class="lx-list__main">
+              <span class="fw-semibold">{{ past.language.name }}: {{ past.correct_count }} of {{ past.question_count }} correct</span>
+              <span class="lx-list__meta"><time datetime="{{ past.completed_at|date:'c' }}">{{ past.completed_at|date:"j M Y, H:i" }}</time></span>
+            </div>
+            <div class="lx-list__actions">
+              <span class="lx-xp-chip lx-xp-chip--quiet">+{{ past.xp_earned }} XP</span>
+              <a class="btn btn-secondary-lx btn-sm" href="{% url 'practice:results' pk=past.pk %}">Review<span class="visually-hidden"> session from {{ past.completed_at|date:"j M" }}</span></a>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

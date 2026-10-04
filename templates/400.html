@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Request not understood | {{ site_name|default:"Language Exchange Matcher" }}{% endblock %}
+
+{% block content %}
+<section class="lx-error">
+  <div class="container">
+    <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-question-circle" aria-hidden="true"></i></span>
+    <p class="lx-error__code">Error 400</p>
+    <h1>Request not understood</h1>
+    <p class="lx-lead mt-3">The request could not be processed. Check the address or form and try again.</p>
+    <a class="btn btn-primary btn-lg mt-3" href="{% url 'core:home' %}">Go to the home page</a>
+  </div>
+</section>
+{% endblock %}

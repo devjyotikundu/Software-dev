@@ -1,0 +1,1505 @@
+{
+ "language": "hi",
+ "questions": [
+  {
+   "difficulty": "A1",
+   "category": "vocabulary",
+   "question_text": "‘पानी’ का अर्थ क्या है?",
+   "options": {
+    "A": "fire",
+    "B": "food",
+    "C": "milk",
+    "D": "water"
+   },
+   "correct_option": "D",
+   "english_meaning": "What does ‘paani’ mean?",
+   "english_explanation": "पानी (paani) means water.",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "vocabulary",
+   "question_text": "‘पिता’ का अर्थ क्या है?",
+   "options": {
+    "A": "father",
+    "B": "mother",
+    "C": "teacher",
+    "D": "brother"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does ‘pita’ mean?",
+   "english_explanation": "पिता (pita) means father.",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "grammar",
+   "question_text": "मैं स्कूल जाता ___ ।",
+   "options": {
+    "A": "हूँ",
+    "B": "है",
+    "C": "हैं",
+    "D": "हो"
+   },
+   "correct_option": "A",
+   "english_meaning": "I go to school.",
+   "english_explanation": "With मैं (I), the helping verb is हूँ (hoon).",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "grammar",
+   "question_text": "वह लड़की पढ़ ___ है।",
+   "options": {
+    "A": "रहो",
+    "B": "रही",
+    "C": "रहा",
+    "D": "रहे"
+   },
+   "correct_option": "B",
+   "english_meaning": "That girl is studying.",
+   "english_explanation": "लड़की is feminine singular, so the continuous marker is रही (rahi).",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "sentence-completion",
+   "question_text": "एक, दो, तीन, ___",
+   "options": {
+    "A": "सात",
+    "B": "दस",
+    "C": "चार",
+    "D": "पाँच"
+   },
+   "correct_option": "C",
+   "english_meaning": "One, two, three, ___",
+   "english_explanation": "After तीन (three) comes चार (chaar, four).",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "sentence-completion",
+   "question_text": "गाय हमें ___ देती है।",
+   "options": {
+    "A": "दूध",
+    "B": "चाय",
+    "C": "पानी",
+    "D": "रस"
+   },
+   "correct_option": "A",
+   "english_meaning": "The cow gives us ___.",
+   "english_explanation": "Cows give दूध (doodh, milk).",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "context",
+   "question_text": "किसी से पहली बार मिलने पर आप क्या कहेंगे?",
+   "options": {
+    "A": "चुप रहो",
+    "B": "नमस्ते",
+    "C": "अलविदा",
+    "D": "माफ़ कीजिए"
+   },
+   "correct_option": "B",
+   "english_meaning": "What will you say when meeting someone for the first time?",
+   "english_explanation": "नमस्ते (namaste) is the standard respectful greeting.",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "reading-comprehension",
+   "question_text": "राहुल के पास एक कुत्ता है। कुत्ता भूरा है। राहुल का कुत्ता किस रंग का है?",
+   "options": {
+    "A": "काला",
+    "B": "सफ़ेद",
+    "C": "लाल",
+    "D": "भूरा"
+   },
+   "correct_option": "D",
+   "english_meaning": "Rahul has a dog. The dog is brown. What colour is Rahul's dog?",
+   "english_explanation": "The text says कुत्ता भूरा है: the dog is brown (bhoora).",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "everyday-expressions",
+   "question_text": "‘धन्यवाद’ का अर्थ क्या है?",
+   "options": {
+    "A": "Hello",
+    "B": "Thank you",
+    "C": "Sorry",
+    "D": "Goodbye"
+   },
+   "correct_option": "B",
+   "english_meaning": "What does ‘dhanyavaad’ mean?",
+   "english_explanation": "धन्यवाद (dhanyavaad) means thank you; शुक्रिया is also common.",
+   "verified": false
+  },
+  {
+   "difficulty": "A1",
+   "category": "everyday-expressions",
+   "question_text": "किसी का नाम पूछने के लिए आप क्या कहेंगे?",
+   "options": {
+    "A": "यह क्या है?",
+    "B": "आप कहाँ हैं?",
+    "C": "आपका नाम क्या है?",
+    "D": "इसका दाम क्या है?"
+   },
+   "correct_option": "C",
+   "english_meaning": "What will you say to ask someone's name?",
+   "english_explanation": "आपका नाम क्या है? (aapka naam kya hai?) means ‘What is your name?’",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "vocabulary",
+   "question_text": "‘बाज़ार’ का अर्थ क्या है?",
+   "options": {
+    "A": "market",
+    "B": "river",
+    "C": "school",
+    "D": "hospital"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does ‘bazaar’ mean?",
+   "english_explanation": "बाज़ार (bazaar) means market.",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "vocabulary",
+   "question_text": "‘बड़ा’ का विलोम शब्द क्या है?",
+   "options": {
+    "A": "लंबा",
+    "B": "मोटा",
+    "C": "छोटा",
+    "D": "अच्छा"
+   },
+   "correct_option": "C",
+   "english_meaning": "What is the opposite of ‘bada’ (big)?",
+   "english_explanation": "The opposite of बड़ा is छोटा (chhota, small).",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "grammar",
+   "question_text": "पिछले हफ़्ते मैं दिल्ली ___ था।",
+   "options": {
+    "A": "जाएगा",
+    "B": "जाऊँगा",
+    "C": "गया",
+    "D": "जाओ"
+   },
+   "correct_option": "C",
+   "english_meaning": "Last week I had gone to Delhi.",
+   "english_explanation": "पिछले हफ़्ते (last week) needs a past form: गया था (gaya tha).",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "grammar",
+   "question_text": "बच्चे मैदान में खेल ___ हैं।",
+   "options": {
+    "A": "रही",
+    "B": "रहो",
+    "C": "रहा",
+    "D": "रहे"
+   },
+   "correct_option": "D",
+   "english_meaning": "The children are playing in the field.",
+   "english_explanation": "बच्चे is masculine plural, so the continuous marker is रहे (rahe).",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "sentence-completion",
+   "question_text": "मुझे बहुत प्यास लगी है, एक गिलास ___ दो।",
+   "options": {
+    "A": "कुर्सी",
+    "B": "रोटी",
+    "C": "किताब",
+    "D": "पानी"
+   },
+   "correct_option": "D",
+   "english_meaning": "I'm very thirsty, give me a glass of ___.",
+   "english_explanation": "When thirsty you ask for पानी (water).",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "sentence-completion",
+   "question_text": "एक हफ़्ते में ___ दिन होते हैं।",
+   "options": {
+    "A": "दस",
+    "B": "सात",
+    "C": "छह",
+    "D": "पाँच"
+   },
+   "correct_option": "B",
+   "english_meaning": "There are ___ days in a week.",
+   "english_explanation": "A week has सात (saat, seven) days.",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "context",
+   "question_text": "बाहर बारिश हो रही है। बाहर जाते समय आप क्या लेंगे?",
+   "options": {
+    "A": "धूप का चश्मा",
+    "B": "छाता",
+    "C": "गेंद",
+    "D": "पंखा"
+   },
+   "correct_option": "B",
+   "english_meaning": "It is raining outside. What will you take when going out?",
+   "english_explanation": "छाता (chhaata) means umbrella.",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "reading-comprehension",
+   "question_text": "सीमा रोज़ सुबह छह बजे उठती है और सात बजे योग करती है। सीमा योग कब करती है?",
+   "options": {
+    "A": "सात बजे",
+    "B": "आठ बजे",
+    "C": "पाँच बजे",
+    "D": "छह बजे"
+   },
+   "correct_option": "A",
+   "english_meaning": "Seema gets up at six every morning and does yoga at seven. When does Seema do yoga?",
+   "english_explanation": "The text says सात बजे योग करती है: at seven.",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "everyday-expressions",
+   "question_text": "दुकान में किसी चीज़ का दाम पूछने के लिए क्या कहेंगे?",
+   "options": {
+    "A": "यह कहाँ है?",
+    "B": "आप कौन हैं?",
+    "C": "यह कितने का है?",
+    "D": "कितने बजे हैं?"
+   },
+   "correct_option": "C",
+   "english_meaning": "What will you say to ask the price of something in a shop?",
+   "english_explanation": "यह कितने का है? (yeh kitne ka hai?) means ‘How much is this?’",
+   "verified": false
+  },
+  {
+   "difficulty": "A2",
+   "category": "everyday-expressions",
+   "question_text": "‘फिर मिलेंगे’ का अर्थ क्या है?",
+   "options": {
+    "A": "Excuse me",
+    "B": "Welcome",
+    "C": "Well done",
+    "D": "See you again"
+   },
+   "correct_option": "D",
+   "english_meaning": "What does ‘phir milenge’ mean?",
+   "english_explanation": "Literally ‘we will meet again’: see you again.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "vocabulary",
+   "question_text": "‘शुरू’ का विलोम शब्द क्या है?",
+   "options": {
+    "A": "पहले",
+    "B": "ख़त्म",
+    "C": "बीच",
+    "D": "आरंभ"
+   },
+   "correct_option": "B",
+   "english_meaning": "What is the opposite of ‘shuru’ (start)?",
+   "english_explanation": "The opposite is ख़त्म (khatm, end). आरंभ is a synonym of शुरू.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "vocabulary",
+   "question_text": "जहाँ से रेलगाड़ी पकड़ी जाती है, उसे क्या कहते हैं?",
+   "options": {
+    "A": "अस्पताल",
+    "B": "डाकघर",
+    "C": "स्टेशन",
+    "D": "हवाई अड्डा"
+   },
+   "correct_option": "C",
+   "english_meaning": "What is the place where you catch a train called?",
+   "english_explanation": "Trains are caught at a स्टेशन (station).",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "grammar",
+   "question_text": "राम ___ खाना खाया।",
+   "options": {
+    "A": "का",
+    "B": "ने",
+    "C": "को",
+    "D": "से"
+   },
+   "correct_option": "B",
+   "english_meaning": "Ram ate the food.",
+   "english_explanation": "In the past tense of transitive verbs, the subject takes ने: राम ने खाना खाया.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "grammar",
+   "question_text": "सीता ने तीन आम ___ ।",
+   "options": {
+    "A": "खाया",
+    "B": "खाए",
+    "C": "खाई",
+    "D": "खाईं"
+   },
+   "correct_option": "B",
+   "english_meaning": "Sita ate three mangoes.",
+   "english_explanation": "With ने, the verb agrees with the object, not the subject: आम (masc. plural) → खाए.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "sentence-completion",
+   "question_text": "मैं पाँच साल ___ मुंबई में रह रहा हूँ।",
+   "options": {
+    "A": "को",
+    "B": "का",
+    "C": "से",
+    "D": "पर"
+   },
+   "correct_option": "C",
+   "english_meaning": "I have been living in Mumbai for five years.",
+   "english_explanation": "Hindi marks an ongoing duration with से: पाँच साल से = for five years.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "sentence-completion",
+   "question_text": "ज़रा नमक ___ दीजिए।",
+   "options": {
+    "A": "छिपा",
+    "B": "गिरा",
+    "C": "फेंक",
+    "D": "पकड़ा"
+   },
+   "correct_option": "D",
+   "english_meaning": "Please pass the salt.",
+   "english_explanation": "नमक पकड़ा दीजिए is the natural way to ask someone to pass something.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "context",
+   "question_text": "आप पहली बार अपने बॉस से बात कर रहे हैं। कौन-सा सर्वनाम सही रहेगा?",
+   "options": {
+    "A": "आप",
+    "B": "तू",
+    "C": "वह",
+    "D": "तुम"
+   },
+   "correct_option": "A",
+   "english_meaning": "You are talking to your boss for the first time. Which pronoun is right?",
+   "english_explanation": "आप is the respectful ‘you’; तुम is familiar and तू very intimate or rude.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "reading-comprehension",
+   "question_text": "अमन सुबह चाय पीता है, दोपहर में दाल-चावल और रात में रोटी-सब्ज़ी खाता है। अमन दोपहर में क्या खाता है?",
+   "options": {
+    "A": "रोटी-सब्ज़ी",
+    "B": "कुछ नहीं",
+    "C": "चाय",
+    "D": "दाल-चावल"
+   },
+   "correct_option": "D",
+   "english_meaning": "Aman drinks tea in the morning, eats dal-rice at noon and roti-sabzi at night. What does Aman eat at noon?",
+   "english_explanation": "दोपहर में दाल-चावल: dal and rice at noon.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "everyday-expressions",
+   "question_text": "‘क्या हाल है?’ का मतलब क्या है?",
+   "options": {
+    "A": "How are you?",
+    "B": "Where is the hall?",
+    "C": "What did you eat?",
+    "D": "What is the time?"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does ‘kya haal hai?’ mean?",
+   "english_explanation": "A casual way to ask how someone is doing.",
+   "verified": false
+  },
+  {
+   "difficulty": "A3",
+   "category": "everyday-expressions",
+   "question_text": "कोई ‘शुक्रिया’ कहे तो विनम्र जवाब क्या होगा?",
+   "options": {
+    "A": "कोई बात नहीं",
+    "B": "माफ़ कीजिए",
+    "C": "फिर से कहो",
+    "D": "चले जाओ"
+   },
+   "correct_option": "A",
+   "english_meaning": "If someone says ‘thank you’, what is a polite reply?",
+   "english_explanation": "कोई बात नहीं (koi baat nahin) means ‘no problem’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "vocabulary",
+   "question_text": "‘वार्षिक’ उत्सव कितने समय बाद होता है?",
+   "options": {
+    "A": "साल में एक बार",
+    "B": "हफ़्ते में एक बार",
+    "C": "हर दिन",
+    "D": "महीने में एक बार"
+   },
+   "correct_option": "A",
+   "english_meaning": "How often does a ‘vaarshik’ (annual) festival take place?",
+   "english_explanation": "वार्षिक comes from वर्ष (year): once a year.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "vocabulary",
+   "question_text": "बैठक ‘स्थगित’ करने का मतलब क्या है?",
+   "options": {
+    "A": "हमेशा के लिए रद्द करना",
+    "B": "जल्दी शुरू करना",
+    "C": "और लंबा करना",
+    "D": "बाद के लिए टाल देना"
+   },
+   "correct_option": "D",
+   "english_meaning": "What does it mean to make a meeting ‘sthagit’?",
+   "english_explanation": "स्थगित means postponed, not cancelled (रद्द).",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "grammar",
+   "question_text": "अगर कल बारिश हुई, तो हम घर पर ही ___ ।",
+   "options": {
+    "A": "रहे",
+    "B": "रह रहे थे",
+    "C": "रहते थे",
+    "D": "रहेंगे"
+   },
+   "correct_option": "D",
+   "english_meaning": "If it rains tomorrow, we will stay at home.",
+   "english_explanation": "A future condition takes the future in the result clause: रहेंगे.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "grammar",
+   "question_text": "उसने अपना गृहकार्य पहले ही पूरा कर ___ है।",
+   "options": {
+    "A": "ले",
+    "B": "लेता",
+    "C": "लेगा",
+    "D": "लिया"
+   },
+   "correct_option": "D",
+   "english_meaning": "He has already completed his homework.",
+   "english_explanation": "The compound verb कर लेना shows completion: कर लिया है = has done.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "sentence-completion",
+   "question_text": "फ़िल्म इतनी उबाऊ थी कि मुझे ___ आ गई।",
+   "options": {
+    "A": "ख़ुशी",
+    "B": "नींद",
+    "C": "प्यास",
+    "D": "भूख"
+   },
+   "correct_option": "B",
+   "english_meaning": "The film was so boring that I fell asleep.",
+   "english_explanation": "नींद आ जाना (neend aa jaana) means to fall asleep.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "sentence-completion",
+   "question_text": "खाना खाने से ___ हाथ धो लो, वरना कीटाणु पेट में जाएँगे।",
+   "options": {
+    "A": "पहले",
+    "B": "बीच",
+    "C": "बाद",
+    "D": "बजाय"
+   },
+   "correct_option": "A",
+   "english_meaning": "Wash your hands before eating, otherwise germs will go into your stomach.",
+   "english_explanation": "से पहले means ‘before’; the reason makes it the only logical choice.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "context",
+   "question_text": "सहकर्मी ने कहा, ‘ज़रा मेरे बैग पर नज़र रखना।’ वह क्या चाहता है?",
+   "options": {
+    "A": "बैग घर ले जाया जाए",
+    "B": "नया बैग ख़रीदा जाए",
+    "C": "थोड़ी देर बैग का ध्यान रखा जाए",
+    "D": "बैग के अंदर देखा जाए"
+   },
+   "correct_option": "C",
+   "english_meaning": "A colleague said, ‘Keep an eye on my bag.’ What does he want?",
+   "english_explanation": "नज़र रखना means to keep watch over.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "reading-comprehension",
+   "question_text": "पिंकी सब्ज़ी लेने बाज़ार गई, पर टमाटर ख़त्म हो चुके थे, इसलिए वह आलू लेकर लौटी। पिंकी क्या लेकर लौटी?",
+   "options": {
+    "A": "कुछ नहीं",
+    "B": "टमाटर",
+    "C": "आलू",
+    "D": "प्याज़"
+   },
+   "correct_option": "C",
+   "english_meaning": "Pinki went to the market for vegetables, but the tomatoes had run out, so she came back with potatoes. What did Pinki bring back?",
+   "english_explanation": "वह आलू लेकर लौटी: she returned with potatoes.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "everyday-expressions",
+   "question_text": "मेहमान से ‘इसे अपना ही घर समझिए’ कहने का अर्थ क्या है?",
+   "options": {
+    "A": "अभी घर लौट जाइए",
+    "B": "घर साफ़ कीजिए",
+    "C": "आराम से, बेझिझक रहिए",
+    "D": "अपना घर बनाइए"
+   },
+   "correct_option": "C",
+   "english_meaning": "What does telling a guest ‘consider this your own home’ mean?",
+   "english_explanation": "A host's way of saying: make yourself comfortable.",
+   "verified": false
+  },
+  {
+   "difficulty": "A4",
+   "category": "everyday-expressions",
+   "question_text": "‘चाय-वाय पिएँगे?’ — यहाँ ‘वाय’ जोड़ने से क्या अर्थ निकलता है?",
+   "options": {
+    "A": "बहुत सारी चाय",
+    "B": "चाय या उसके जैसा कुछ",
+    "C": "ठंडी चाय",
+    "D": "चाय का कप"
+   },
+   "correct_option": "B",
+   "english_meaning": "‘Will you have tea or something?’ What does adding ‘vaay’ express?",
+   "english_explanation": "Echo words (चाय-वाय) mean ‘X or something like it’, a friendly, casual touch.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "vocabulary",
+   "question_text": "‘अनिच्छुक’ का अर्थ क्या है?",
+   "options": {
+    "A": "जो बहुत उत्साहित हो",
+    "B": "जो बहुत आत्मविश्वासी हो",
+    "C": "जो कोई काम करना न चाहे",
+    "D": "जो बहुत सावधान हो"
+   },
+   "correct_option": "C",
+   "english_meaning": "What does ‘anichchhuk’ mean?",
+   "english_explanation": "अनिच्छुक means reluctant: अन- (not) + इच्छुक (willing).",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "vocabulary",
+   "question_text": "दर्द से ‘राहत’ मिलने का मतलब क्या है?",
+   "options": {
+    "A": "दर्द कम होना",
+    "B": "दर्द छिपाना",
+    "C": "दर्द बढ़ना",
+    "D": "दर्द नापना"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does getting ‘raahat’ from pain mean?",
+   "english_explanation": "राहत means relief: the pain eases.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "grammar",
+   "question_text": "हमारे पहुँचने से पहले ही फ़िल्म शुरू हो ___ थी।",
+   "options": {
+    "A": "चुका",
+    "B": "चुकीं",
+    "C": "चुके",
+    "D": "चुकी"
+   },
+   "correct_option": "D",
+   "english_meaning": "The film had already started before we arrived.",
+   "english_explanation": "फ़िल्म is feminine singular, so चुकना agrees as चुकी.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "grammar",
+   "question_text": "यह पत्र कल मैनेजर ___ लिखा गया था।",
+   "options": {
+    "A": "द्वारा",
+    "B": "के साथ",
+    "C": "के लिए",
+    "D": "की तरफ़"
+   },
+   "correct_option": "A",
+   "english_meaning": "This letter was written by the manager yesterday.",
+   "english_explanation": "In the passive voice, the agent is marked with द्वारा (dvaara), ‘by’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "sentence-completion",
+   "question_text": "देर से आने ___ उसने माफ़ी माँगी।",
+   "options": {
+    "A": "का",
+    "B": "को",
+    "C": "के लिए",
+    "D": "में"
+   },
+   "correct_option": "C",
+   "english_meaning": "He apologised for coming late.",
+   "english_explanation": "के लिए gives the reason: ‘for’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "sentence-completion",
+   "question_text": "काश, मेरे पास थोड़ा और समय ___ !",
+   "options": {
+    "A": "हो रहा है",
+    "B": "होता",
+    "C": "होगा",
+    "D": "है"
+   },
+   "correct_option": "B",
+   "english_meaning": "If only I had a little more time!",
+   "english_explanation": "काश (if only) is followed by the -ता form: होता.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "context",
+   "question_text": "डॉक्टर ने कहा, ‘यह दवा दिन में दो बार लेनी है।’ इसका मतलब क्या है?",
+   "options": {
+    "A": "हर घंटे",
+    "B": "जैसे सुबह एक बार और शाम एक बार",
+    "C": "दिन में सिर्फ़ एक बार",
+    "D": "दो दिन में एक बार"
+   },
+   "correct_option": "B",
+   "english_meaning": "The doctor said, ‘This medicine is to be taken twice a day.’ What does that mean?",
+   "english_explanation": "दिन में दो बार = twice a day, e.g. once in the morning and once in the evening.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "reading-comprehension",
+   "question_text": "रेलगाड़ी शाम पाँच बजे चलनी थी, लेकिन कोहरे के कारण वह दो घंटे देर से चली। रेलगाड़ी कितने बजे चली?",
+   "options": {
+    "A": "पाँच बजे",
+    "B": "तीन बजे",
+    "C": "छह बजे",
+    "D": "सात बजे"
+   },
+   "correct_option": "D",
+   "english_meaning": "The train was due to leave at five in the evening, but because of fog it left two hours late. At what time did the train leave?",
+   "english_explanation": "Five o'clock plus two hours is seven.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "everyday-expressions",
+   "question_text": "‘हाथ-पाँव फूल जाना’ मुहावरे का अर्थ क्या है?",
+   "options": {
+    "A": "बहुत घबरा जाना",
+    "B": "बहुत मोटा हो जाना",
+    "C": "चोट लगना",
+    "D": "बहुत थक जाना"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does the idiom ‘hands and feet swelling up’ mean?",
+   "english_explanation": "To panic or be badly flustered.",
+   "verified": false
+  },
+  {
+   "difficulty": "A5",
+   "category": "everyday-expressions",
+   "question_text": "‘आज के लिए इतना ही’ का मतलब क्या है?",
+   "options": {
+    "A": "आज से शुरुआत",
+    "B": "आज का काम यहीं ख़त्म",
+    "C": "कल मत आना",
+    "D": "यहाँ खड़े रहो"
+   },
+   "correct_option": "B",
+   "english_meaning": "What does ‘that's all for today’ mean?",
+   "english_explanation": "Said when stopping work for the day.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "vocabulary",
+   "question_text": "‘गहन’ जाँच का अर्थ क्या है?",
+   "options": {
+    "A": "पूरी और बारीकी से की गई जाँच",
+    "B": "बेकार जाँच",
+    "C": "देर से हुई जाँच",
+    "D": "जल्दबाज़ी में की गई जाँच"
+   },
+   "correct_option": "A",
+   "english_meaning": "What is a ‘gahan’ investigation?",
+   "english_explanation": "गहन means deep and thorough.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "vocabulary",
+   "question_text": "‘अनिवार्य’ का अर्थ क्या है?",
+   "options": {
+    "A": "जो बहुत दुर्लभ हो",
+    "B": "जो बहुत तेज़ हो",
+    "C": "जो ज़रूरी हो और टाला न जा सके",
+    "D": "जो बहुत आसान हो"
+   },
+   "correct_option": "C",
+   "english_meaning": "What does ‘anivaarya’ mean?",
+   "english_explanation": "अनिवार्य means compulsory or unavoidable.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "grammar",
+   "question_text": "लिंग (जेंडर) के हिसाब से कौन-सा वाक्य सही है?",
+   "options": {
+    "A": "मेरी किताब मेज़ पर रखी है।",
+    "B": "मेरी किताब मेज़ पर रखा है।",
+    "C": "मेरा किताब मेज़ पर रखा है।",
+    "D": "मेरा किताब मेज़ पर रखी है।"
+   },
+   "correct_option": "A",
+   "english_meaning": "By grammatical gender, which sentence is correct? (My book is kept on the table.)",
+   "english_explanation": "किताब is feminine, so both the possessive (मेरी) and the verb (रखी) must be feminine.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "grammar",
+   "question_text": "आदरसूचक प्रयोग के हिसाब से कौन-सा वाक्य सही है?",
+   "options": {
+    "A": "दादाजी आ रही है।",
+    "B": "दादाजी आ रहे हैं।",
+    "C": "दादाजी आ रहा है।",
+    "D": "दादाजी आ रहा हूँ।"
+   },
+   "correct_option": "B",
+   "english_meaning": "By honorific usage, which sentence is correct? (Grandfather is coming.)",
+   "english_explanation": "Respected elders take the honorific plural: आ रहे हैं.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "sentence-completion",
+   "question_text": "नया नियम अगले महीने से लागू ___ ।",
+   "options": {
+    "A": "होंगी",
+    "B": "होगे",
+    "C": "होगा",
+    "D": "होगी"
+   },
+   "correct_option": "C",
+   "english_meaning": "The new rule will come into force from next month.",
+   "english_explanation": "नियम is masculine singular, so the verb is होगा.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "sentence-completion",
+   "question_text": "हमें इस समस्या की जड़ तक ___ होगा।",
+   "options": {
+    "A": "पहुँचे",
+    "B": "पहुँचती",
+    "C": "पहुँचा",
+    "D": "पहुँचना"
+   },
+   "correct_option": "D",
+   "english_meaning": "We will have to get to the root of this problem.",
+   "english_explanation": "‘Have to’ is infinitive + होना: पहुँचना होगा.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "context",
+   "question_text": "बैठक में किसी ने कहा, ‘बात को घुमाइए मत, सीधे मुद्दे पर आइए।’ वे क्या चाहते हैं?",
+   "options": {
+    "A": "सब बाहर जाएँ",
+    "B": "सीधे मुख्य बात कही जाए",
+    "C": "विषय को टाला जाए",
+    "D": "और धीरे बोला जाए"
+   },
+   "correct_option": "B",
+   "english_meaning": "In a meeting someone said, ‘Don't go round in circles, come straight to the point.’ What do they want?",
+   "english_explanation": "They want directness.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "reading-comprehension",
+   "question_text": "गाँव के कुएँ की मरम्मत के बाद महिलाओं को पानी लाने के लिए दो किलोमीटर दूर नदी तक नहीं जाना पड़ता। मरम्मत का सबसे बड़ा फ़ायदा क्या हुआ?",
+   "options": {
+    "A": "गाँव ख़ाली हो गया",
+    "B": "कुआँ बंद हो गया",
+    "C": "पानी के लिए दूर नहीं जाना पड़ता",
+    "D": "नदी सूख गई"
+   },
+   "correct_option": "C",
+   "english_meaning": "After the village well was repaired, women no longer have to walk two kilometres to the river for water. What was the biggest benefit?",
+   "english_explanation": "They no longer have to walk far for water.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "everyday-expressions",
+   "question_text": "‘दुविधा में पड़ना’ का अर्थ क्या है?",
+   "options": {
+    "A": "बहुत ख़ुश होना",
+    "B": "बहुत नाराज़ होना",
+    "C": "दो चीज़ें उठाना",
+    "D": "तय न कर पाना कि क्या करें"
+   },
+   "correct_option": "D",
+   "english_meaning": "What does ‘falling into duvidha’ mean?",
+   "english_explanation": "दुविधा is a dilemma: being unable to decide.",
+   "verified": false
+  },
+  {
+   "difficulty": "A6",
+   "category": "everyday-expressions",
+   "question_text": "‘नौ दो ग्यारह होना’ मुहावरे का अर्थ क्या है?",
+   "options": {
+    "A": "देर से आना",
+    "B": "गिनती करना",
+    "C": "जोड़ना",
+    "D": "भाग जाना"
+   },
+   "correct_option": "D",
+   "english_meaning": "What does the idiom ‘to become nine-two-eleven’ mean?",
+   "english_explanation": "A classic idiom for running away or vanishing quickly.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "vocabulary",
+   "question_text": "‘सर्वव्यापी’ का अर्थ क्या है?",
+   "options": {
+    "A": "जो बहुत दुर्लभ हो",
+    "B": "जो हर जगह मौजूद हो",
+    "C": "जो बहुत पुराना हो",
+    "D": "जो आसानी से टूटे"
+   },
+   "correct_option": "B",
+   "english_meaning": "What does ‘sarvavyaapi’ mean?",
+   "english_explanation": "सर्वव्यापी means present everywhere (ubiquitous).",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "vocabulary",
+   "question_text": "‘जोखिम का शमन’ में ‘शमन’ का अर्थ क्या है?",
+   "options": {
+    "A": "नापना",
+    "B": "कम करना या शांत करना",
+    "C": "अनदेखा करना",
+    "D": "बढ़ाना"
+   },
+   "correct_option": "B",
+   "english_meaning": "In ‘jokhim ka shaman’ (risk mitigation), what does ‘shaman’ mean?",
+   "english_explanation": "शमन means reducing or calming.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "grammar",
+   "question_text": "‘ने’ के प्रयोग के हिसाब से कौन-सा वाक्य सही है?",
+   "options": {
+    "A": "लड़कियों ने गाना गाई।",
+    "B": "लड़कियों ने गाना गाईं।",
+    "C": "लड़कियाँ ने गाना गाया।",
+    "D": "लड़कियों ने गाना गाया।"
+   },
+   "correct_option": "D",
+   "english_meaning": "By the use of ‘ne’, which sentence is correct? (The girls sang a song.)",
+   "english_explanation": "Before ने the noun takes the oblique form (लड़कियों), and the verb agrees with the object गाना (masculine): गाया.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "grammar",
+   "question_text": "अगर मुझे पता होता, तो मैं पहले ही ___ ।",
+   "options": {
+    "A": "निकल जाऊँगा",
+    "B": "निकल जाए",
+    "C": "निकल जाता",
+    "D": "निकल गया हूँ"
+   },
+   "correct_option": "C",
+   "english_meaning": "If I had known, I would have left earlier.",
+   "english_explanation": "Unreal conditions use the -ता form in both clauses: होता… जाता.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "sentence-completion",
+   "question_text": "नतीजे हमारी उम्मीद ___ कहीं बेहतर रहे।",
+   "options": {
+    "A": "को",
+    "B": "से",
+    "C": "पर",
+    "D": "का"
+   },
+   "correct_option": "B",
+   "english_meaning": "The results were far better than our expectations.",
+   "english_explanation": "Comparison uses से: उम्मीद से बेहतर = better than expected.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "sentence-completion",
+   "question_text": "वे दस साल ___ ज़्यादा समय से यहाँ काम कर रहे हैं।",
+   "options": {
+    "A": "के लिए",
+    "B": "पर",
+    "C": "को",
+    "D": "से"
+   },
+   "correct_option": "D",
+   "english_meaning": "He has been working here for more than ten years.",
+   "english_explanation": "‘More than X’ is X से ज़्यादा.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "context",
+   "question_text": "समीक्षक ने लिखा कि उपन्यास ‘एक बार शुरू करो तो छोड़ने का मन नहीं करता’। इसका मतलब क्या है?",
+   "options": {
+    "A": "किताब इतनी रोचक है कि पढ़ना रोकना मुश्किल है",
+    "B": "किताब की जिल्द ख़राब है",
+    "C": "किताब बहुत उबाऊ है",
+    "D": "किताब बहुत भारी है"
+   },
+   "correct_option": "A",
+   "english_meaning": "A reviewer wrote that once you start the novel you don't feel like stopping. What does this mean?",
+   "english_explanation": "The book is gripping: a page-turner.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "reading-comprehension",
+   "question_text": "दुकानदार ने ग्राहकों को लुभाने के लिए दाम आधे कर दिए। बिक्री तो तीन गुना हो गई, लेकिन हर सामान पर मुनाफ़ा इतना घट गया कि महीने के अंत में कुल कमाई पहले से कम निकली। अनुच्छेद से क्या पता चलता है?",
+   "options": {
+    "A": "ज़्यादा बिक्री का मतलब हमेशा ज़्यादा कमाई नहीं होता",
+    "B": "दुकान बंद हो गई",
+    "C": "बिक्री कम हो गई",
+    "D": "दाम घटाने से कमाई बढ़ी"
+   },
+   "correct_option": "A",
+   "english_meaning": "The shopkeeper halved prices to attract customers. Sales tripled, but profit per item fell so much that total earnings for the month were lower than before. What does the passage show?",
+   "english_explanation": "Sales rose but earnings fell: more sales do not always mean more profit.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "everyday-expressions",
+   "question_text": "‘अपने मुँह मियाँ मिट्ठू बनना’ का अर्थ क्या है?",
+   "options": {
+    "A": "अपनी तारीफ़ ख़ुद करना",
+    "B": "चुप रहना",
+    "C": "मीठा खाना",
+    "D": "तोता पालना"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does ‘becoming Mister Parrot with one's own mouth’ mean?",
+   "english_explanation": "To praise oneself: blowing one's own trumpet.",
+   "verified": false
+  },
+  {
+   "difficulty": "A7",
+   "category": "everyday-expressions",
+   "question_text": "‘दाल में कुछ काला होना’ का अर्थ क्या है?",
+   "options": {
+    "A": "खाना स्वादिष्ट होना",
+    "B": "रंग बदल जाना",
+    "C": "कुछ गड़बड़ या संदिग्ध होना",
+    "D": "दाल जल जाना"
+   },
+   "correct_option": "C",
+   "english_meaning": "What does ‘something black in the dal’ mean?",
+   "english_explanation": "Something suspicious is going on: something fishy.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "vocabulary",
+   "question_text": "‘नुक्ताचीं’ व्यक्ति कैसा होता है?",
+   "options": {
+    "A": "जो जल्दी ख़ुश हो जाए",
+    "B": "जो बहुत उदार हो",
+    "C": "जो कम बोलता हो",
+    "D": "जो छोटी-छोटी बातों में कमियाँ निकाले"
+   },
+   "correct_option": "D",
+   "english_meaning": "What kind of person is a ‘nuktacheen’?",
+   "english_explanation": "नुक्ताचीं means a nitpicker who finds fault in every detail.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "vocabulary",
+   "question_text": "‘निंदा’ का विलोम शब्द क्या है?",
+   "options": {
+    "A": "प्रशंसा",
+    "B": "उपेक्षा",
+    "C": "आलोचना",
+    "D": "शिकायत"
+   },
+   "correct_option": "A",
+   "english_meaning": "What is the opposite of ‘ninda’ (condemnation)?",
+   "english_explanation": "The opposite of निंदा is प्रशंसा (praise).",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "grammar",
+   "question_text": "‘विद्या + आलय’ की संधि क्या होगी?",
+   "options": {
+    "A": "विद्यआलय",
+    "B": "विद्यैलय",
+    "C": "विद्यालय",
+    "D": "विद्योलय"
+   },
+   "correct_option": "C",
+   "english_meaning": "What is the sandhi of ‘vidya + aalay’?",
+   "english_explanation": "आ + आ = आ (दीर्घ संधि), so विद्या + आलय = विद्यालय (school).",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "grammar",
+   "question_text": "मानक हिंदी में कौन-सा वाक्य शुद्ध है?",
+   "options": {
+    "A": "मैंने घर जाना है।",
+    "B": "मेरे को घर जाना हैं।",
+    "C": "मुझे घर जाना है।",
+    "D": "मैं घर जाना है।"
+   },
+   "correct_option": "C",
+   "english_meaning": "Which sentence is correct in standard Hindi? (I have to go home.)",
+   "english_explanation": "Obligation uses मुझे + infinitive + है. ‘मैंने… जाना है’ is a regional (Punjabi-influenced) form.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "sentence-completion",
+   "question_text": "उस पर गोपनीय दस्तावेज़ लीक करने ___ आरोप लगा है।",
+   "options": {
+    "A": "से",
+    "B": "को",
+    "C": "पर",
+    "D": "का"
+   },
+   "correct_option": "D",
+   "english_meaning": "He has been accused of leaking confidential documents.",
+   "english_explanation": "The accusation is ‘of doing something’: …करने का आरोप.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "sentence-completion",
+   "question_text": "प्रस्ताव ___ होते ही हम काम शुरू कर देंगे।",
+   "options": {
+    "A": "मंज़ूरदार",
+    "B": "मंज़ूरी",
+    "C": "मंज़ूरियाँ",
+    "D": "मंज़ूर"
+   },
+   "correct_option": "D",
+   "english_meaning": "As soon as the proposal is approved, we will start work.",
+   "english_explanation": "मंज़ूर होना means to be approved; मंज़ूरी is the noun ‘approval’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "context",
+   "question_text": "संपादक ने कहा कि मसौदा ‘ग़लतियों से भरा’ है। मसौदा कैसा है?",
+   "options": {
+    "A": "उसमें बहुत सारी ग़लतियाँ हैं",
+    "B": "वह लगभग सही है",
+    "C": "उसमें एक-दो ग़लतियाँ हैं",
+    "D": "वह एक पहेली है"
+   },
+   "correct_option": "A",
+   "english_meaning": "The editor said the draft is ‘full of mistakes’. What is the draft like?",
+   "english_explanation": "ग़लतियों से भरा means full of errors.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "reading-comprehension",
+   "question_text": "कबीर का भाव है कि बड़ा होना तब तक व्यर्थ है जब तक उससे किसी का भला न हो — जैसे खजूर का पेड़, जो इतना ऊँचा है कि न राहगीर को छाया मिलती है, न फल आसानी से तोड़े जा सकते हैं। इस विचार का मूल संदेश क्या है?",
+   "options": {
+    "A": "ऊँचा होना हमेशा अच्छा है",
+    "B": "बड़प्पन तभी सार्थक है जब वह दूसरों के काम आए",
+    "C": "राहगीरों को पेड़ नहीं काटने चाहिए",
+    "D": "खजूर के पेड़ बहुत उपयोगी हैं"
+   },
+   "correct_option": "B",
+   "english_meaning": "Kabir's idea is that greatness is useless unless it helps someone, like the date palm, so tall that travellers get no shade and its fruit is hard to reach. What is the core message?",
+   "english_explanation": "Greatness matters only if it benefits others.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "everyday-expressions",
+   "question_text": "‘ऊँट के मुँह में जीरा’ का अर्थ क्या है?",
+   "options": {
+    "A": "बहुत स्वादिष्ट भोजन",
+    "B": "बहुत बड़ी मात्रा",
+    "C": "ज़रूरत के मुक़ाबले बहुत कम चीज़",
+    "D": "ऊँट को खाना खिलाना"
+   },
+   "correct_option": "C",
+   "english_meaning": "What does ‘a cumin seed in a camel's mouth’ mean?",
+   "english_explanation": "Far too little compared with what is needed.",
+   "verified": false
+  },
+  {
+   "difficulty": "A8",
+   "category": "everyday-expressions",
+   "question_text": "‘आसमान से गिरे, खजूर में अटके’ का अर्थ क्या है?",
+   "options": {
+    "A": "पेड़ पर चढ़ना",
+    "B": "एक मुसीबत से निकलकर दूसरी में फँस जाना",
+    "C": "ऊँचाई से गिरना",
+    "D": "अचानक अमीर बनना"
+   },
+   "correct_option": "B",
+   "english_meaning": "What does ‘fell from the sky, got stuck in a date palm’ mean?",
+   "english_explanation": "Escaping one trouble only to land in another: out of the frying pan into the fire.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "vocabulary",
+   "question_text": "‘दुर्बोध’ का अर्थ क्या है?",
+   "options": {
+    "A": "जो आसानी से समझ में न आए",
+    "B": "जो बहुत मज़ेदार हो",
+    "C": "जो बहुत आसान हो",
+    "D": "जो बहुत पुराना हो"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does ‘durbodh’ mean?",
+   "english_explanation": "दुर्बोध means hard to understand (obscure).",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "vocabulary",
+   "question_text": "जो व्यक्ति स्वार्थ के लिए बड़ों की झूठी तारीफ़ करे, उसे क्या कहते हैं?",
+   "options": {
+    "A": "आलोचक",
+    "B": "चापलूस",
+    "C": "संन्यासी",
+    "D": "निर्भीक"
+   },
+   "correct_option": "B",
+   "english_meaning": "What do you call someone who falsely praises superiors for personal gain?",
+   "english_explanation": "चापलूस (chaaploos) means sycophant.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "grammar",
+   "question_text": "‘राजपुत्र’ में कौन-सा समास है?",
+   "options": {
+    "A": "तत्पुरुष",
+    "B": "द्वंद्व",
+    "C": "द्विगु",
+    "D": "बहुव्रीहि"
+   },
+   "correct_option": "A",
+   "english_meaning": "Which samaas (compound type) is ‘raajputra’?",
+   "english_explanation": "राजा का पुत्र (son of the king): the case marker is dropped, so it is तत्पुरुष.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "grammar",
+   "question_text": "‘दशानन’ (रावण) में कौन-सा समास है?",
+   "options": {
+    "A": "बहुव्रीहि",
+    "B": "द्वंद्व",
+    "C": "कर्मधारय",
+    "D": "द्विगु"
+   },
+   "correct_option": "A",
+   "english_meaning": "Which samaas is ‘dashaanan’ (Ravana)?",
+   "english_explanation": "दस हैं आनन जिसके (the one with ten faces) points to someone else: बहुव्रीहि, even though it starts with a number.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "sentence-completion",
+   "question_text": "सबूत मज़बूत होने ___, वे उसे दोषी ठहराने के लिए काफ़ी नहीं थे।",
+   "options": {
+    "A": "के कारण",
+    "B": "के साथ",
+    "C": "के बावजूद",
+    "D": "के लिए"
+   },
+   "correct_option": "C",
+   "english_meaning": "Despite the evidence being strong, it was not enough to convict him.",
+   "english_explanation": "के बावजूद means ‘despite’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "sentence-completion",
+   "question_text": "उनकी सफ़ाई हमारी आशंकाएँ दूर करने में ___ रही।",
+   "options": {
+    "A": "नाकामियाँ",
+    "B": "नाकाम",
+    "C": "नाकामी",
+    "D": "नाकामयाबी"
+   },
+   "correct_option": "B",
+   "english_meaning": "His explanation failed to dispel our fears.",
+   "english_explanation": "The predicate needs the adjective नाकाम (unsuccessful): नाकाम रही.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "context",
+   "question_text": "पत्रकार ने लिखा कि नेता का जवाब ‘गोलमोल’ था। जवाब कैसा था?",
+   "options": {
+    "A": "ग़ुस्से भरा",
+    "B": "बहुत छोटा",
+    "C": "बहुत साफ़",
+    "D": "जानबूझकर अस्पष्ट"
+   },
+   "correct_option": "D",
+   "english_meaning": "A journalist wrote that the leader's reply was ‘golmol’. What was the reply like?",
+   "english_explanation": "गोलमोल means evasive and deliberately vague.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "reading-comprehension",
+   "question_text": "लेखिका मानती हैं कि परीक्षा में अच्छे अंक लाना ज़रूरी है, फिर भी उनका कहना है कि जब पढ़ाई सिर्फ़ अंकों के लिए होती है, तो जिज्ञासा — जो सीखने की असली ताक़त है — धीरे-धीरे मर जाती है। लेखिका का मुख्य तर्क क्या है?",
+   "options": {
+    "A": "जिज्ञासा से अंक कम आते हैं",
+    "B": "केवल अंकों पर ध्यान देने से सीखने की जिज्ञासा ख़त्म होती है",
+    "C": "परीक्षाएँ बंद कर देनी चाहिए",
+    "D": "अंकों का कोई महत्व नहीं है"
+   },
+   "correct_option": "B",
+   "english_meaning": "The writer accepts that good marks matter, yet argues that when study is only for marks, curiosity (the real engine of learning) slowly dies. What is her main argument?",
+   "english_explanation": "She concedes marks matter but argues a marks-only focus kills curiosity.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "everyday-expressions",
+   "question_text": "‘थोथा चना बाजे घना’ का अर्थ क्या है?",
+   "options": {
+    "A": "अच्छा गायक",
+    "B": "चने बहुत आवाज़ करते हैं",
+    "C": "जिसमें गुण कम हों, वह दिखावा ज़्यादा करता है",
+    "D": "बहुत खाना"
+   },
+   "correct_option": "C",
+   "english_meaning": "What does ‘the hollow chickpea rattles loudest’ mean?",
+   "english_explanation": "Those with the least substance make the most noise: empty vessels make the most sound.",
+   "verified": false
+  },
+  {
+   "difficulty": "A9",
+   "category": "everyday-expressions",
+   "question_text": "‘घर का भेदी लंका ढाए’ का अर्थ क्या है?",
+   "options": {
+    "A": "पड़ोसी से झगड़ा",
+    "B": "घर बनाना कठिन है",
+    "C": "लंका बहुत सुंदर थी",
+    "D": "अपना ही भेदी सबसे बड़ा नुक़सान करता है"
+   },
+   "correct_option": "D",
+   "english_meaning": "What does ‘the household insider brings down Lanka’ mean?",
+   "english_explanation": "From the Ramayana: an insider who reveals secrets causes the greatest harm.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "vocabulary",
+   "question_text": "‘किंकर्तव्यविमूढ़’ व्यक्ति की क्या स्थिति होती है?",
+   "options": {
+    "A": "वह तय नहीं कर पाता कि क्या करे",
+    "B": "वह बहुत आलसी होता है",
+    "C": "वह बहुत ग़ुस्से में होता है",
+    "D": "वह बहुत ख़ुश होता है"
+   },
+   "correct_option": "A",
+   "english_meaning": "What state is a ‘kinkartavyavimoodh’ person in?",
+   "english_explanation": "Literally ‘bewildered about what ought to be done’: at a complete loss.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "vocabulary",
+   "question_text": "‘मृत्यु’ के लिए शिष्ट या सम्मानजनक शब्द कौन-सा है?",
+   "options": {
+    "A": "हत्या",
+    "B": "देहावसान",
+    "C": "गुमशुदगी",
+    "D": "नींद"
+   },
+   "correct_option": "B",
+   "english_meaning": "Which is a refined, respectful word for ‘death’?",
+   "english_explanation": "देहावसान (the ending of the body) is the respectful euphemism, like ‘passing away’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "grammar",
+   "question_text": "‘पीतांबर’ (श्रीकृष्ण के अर्थ में) में कौन-सा समास है?",
+   "options": {
+    "A": "कर्मधारय",
+    "B": "द्वंद्व",
+    "C": "द्विगु",
+    "D": "बहुव्रीहि"
+   },
+   "correct_option": "D",
+   "english_meaning": "Which samaas is ‘peetaambar’ when it means Krishna?",
+   "english_explanation": "पीत है अंबर जिसका (the one whose garment is yellow) refers to Krishna: बहुव्रीहि. As just ‘yellow cloth’ it would be कर्मधारय.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "grammar",
+   "question_text": "विनम्र अनुरोध के लिए मानक हिंदी में कौन-सा वाक्य शुद्ध है?",
+   "options": {
+    "A": "कृपया करके यह काम कर दीजिए।",
+    "B": "कृपा करके कृपया यह काम कीजिए।",
+    "C": "कृपया यह काम कर दीजिए।",
+    "D": "कृपया यह काम करके कर दीजिए।"
+   },
+   "correct_option": "C",
+   "english_meaning": "For a polite request, which sentence is correct in standard Hindi? (Please do this work.)",
+   "english_explanation": "कृपया already means ‘please’; adding करके (‘कृपया करके’) is a common redundancy error.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "sentence-completion",
+   "question_text": "संकट सुलझाना ___, नए क़दमों ने समस्या को और उलझा दिया।",
+   "options": {
+    "A": "के बाद",
+    "B": "तो दूर रहा",
+    "C": "की वजह से",
+    "D": "के बावजूद"
+   },
+   "correct_option": "B",
+   "english_meaning": "Far from solving the crisis, the new measures complicated the problem further.",
+   "english_explanation": "X तो दूर रहा means ‘let alone X / far from X’.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "sentence-completion",
+   "question_text": "उनके भाषण में ऐसी ___ थी कि विरोधी भी क़ायल हो गए।",
+   "options": {
+    "A": "वाक्पटु",
+    "B": "वक्ता",
+    "C": "वाचाल",
+    "D": "वाक्पटुता"
+   },
+   "correct_option": "D",
+   "english_meaning": "His speech had such eloquence that even opponents were convinced.",
+   "english_explanation": "The sentence needs the quality noun वाक्पटुता (eloquence); वाक्पटु is the adjective and वक्ता the speaker.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "context",
+   "question_text": "किसी ने कहा, ‘नाच न जाने आँगन टेढ़ा।’ वे किस पर व्यंग्य कर रहे हैं?",
+   "options": {
+    "A": "जो बहुत अच्छा नाचता हो",
+    "B": "जिसका आँगन सचमुच टेढ़ा हो",
+    "C": "जो अपनी कमी का दोष परिस्थितियों पर डाले",
+    "D": "जो नाच सिखाता हो"
+   },
+   "correct_option": "C",
+   "english_meaning": "Someone said, ‘Can't dance, so blames the crooked courtyard.’ Whom are they mocking?",
+   "english_explanation": "Someone who blames circumstances for their own lack of skill: a bad workman blames his tools.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "reading-comprehension",
+   "question_text": "कहानी में सेठ हर साल मंदिर को बड़ा दान देता है और उसकी ख़ूब चर्चा करवाता है, पर अपने नौकरों को महीनों तनख़्वाह नहीं देता। लेखक सेठ के बारे में क्या दिखाना चाहता है?",
+   "options": {
+    "A": "नौकर आलसी हैं",
+    "B": "सेठ बहुत धार्मिक और दयालु है",
+    "C": "मंदिर को दान देना ग़लत है",
+    "D": "उसकी दानशीलता दिखावा है, सच्ची उदारता नहीं"
+   },
+   "correct_option": "D",
+   "english_meaning": "In the story, the merchant makes a big, well-publicised donation to the temple every year, but doesn't pay his servants for months. What does the author want to show about him?",
+   "english_explanation": "The contrast exposes his charity as show, not true generosity.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "everyday-expressions",
+   "question_text": "‘एक अनार सौ बीमार’ का अर्थ क्या है?",
+   "options": {
+    "A": "सौ लोग बीमार हैं",
+    "B": "अनार बहुत महँगा है",
+    "C": "चीज़ एक और चाहने वाले बहुत",
+    "D": "अनार सेहत के लिए अच्छा है"
+   },
+   "correct_option": "C",
+   "english_meaning": "What does ‘one pomegranate, a hundred patients’ mean?",
+   "english_explanation": "One thing with very many people wanting it.",
+   "verified": false
+  },
+  {
+   "difficulty": "A10",
+   "category": "everyday-expressions",
+   "question_text": "‘नाकों चने चबवाना’ का अर्थ क्या है?",
+   "options": {
+    "A": "किसी को बहुत परेशान करना",
+    "B": "मज़ाक करना",
+    "C": "चने खिलाना",
+    "D": "नाक से साँस लेना"
+   },
+   "correct_option": "A",
+   "english_meaning": "What does ‘to make someone chew chickpeas through the nose’ mean?",
+   "english_explanation": "To give someone an extremely hard time.",
+   "verified": false
+  }
+ ]
+}

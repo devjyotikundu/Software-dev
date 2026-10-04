@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Your languages | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-page">
+  <div class="container lx-container-form">
+    <a class="lx-back-link" href="{% url 'profiles:detail' %}"><i class="bi bi-arrow-left" aria-hidden="true"></i>Back to profile</a>
+    <header class="lx-page-header mt-3">
+      <span class="lx-icon-badge lx-icon-badge--lg"><i class="bi bi-translate" aria-hidden="true"></i></span>
+      <div>
+        <h1>Your languages</h1>
+        <p>Up to {{ max_per_role }} you speak natively and {{ max_per_role }} you're learning.</p>
+      </div>
+    </header>
+
+    <div class="lx-card">
+      <ul class="lx-list">
+        {% for item in items %}
+        {% with row=item.row %}
+        <li class="lx-list__item">
+          <div class="lx-list__main">
+            <span class="lx-lang-row__name"><span lang="{{ row.language.code }}">{{ row.language.native_name }}</span>
+              {% if row.language.native_name != row.language.name %}<small>{{ row.language.name }}</small>{% endif %}</span>
+            <span class="lx-list__meta">
+              {% if row.role == "native" %}Native language
+              {% else %}Learning{% if row.self_declared_level %}, self-declared {{ row.self_declared_level.code }}{% endif %}{% if row.assessed_level %}, from practice {{ row.assessed_level.code }} ({% widthratio row.assessment_confidence 1 100 %}% confidence){% endif %}{% endif %}
+            </span>
+          </div>
+          <div class="lx-list__actions">
+            {% if row.role == "learning" %}
+            <a class="btn btn-secondary-lx btn-sm" href="{% url 'profiles:language_level' pk=row.pk %}">Change level<span class="visually-hidden"> for {{ row.language.name }}</span></a>
+            {% endif %}
+            {% if item.removable %}
+            <form method="post" action="{% url 'profiles:language_remove' pk=row.pk %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-ghost-danger btn-sm"><i class="bi bi-trash3" aria-hidden="true"></i>Remove<span class="visually-hidden"> {{ row.language.name }}</span></button>
+            </form>
+            {% else %}
+            <span class="lx-list__hint" title="Your profile needs at least one {{ row.get_role_display|lower }} language.">Required</span>
+            {% endif %}
+          </div>
+        </li>
+        {% endwith %}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="lx-card lx-card--raised mt-4">
+      <div class="lx-card__body">
+        <h2 class="lx-form-title">Add a language</h2>
+        {% if can_add %}
+        <form method="post" novalidate class="mt-3">
+          {% csrf_token %}
+          {% include "partials/_form_errors.html" %}
+          {% for field in form %}{% include "partials/_field.html" %}{% endfor %}
+          <div class="lx-form-actions"><button type="submit" class="btn btn-primary"><i class="bi bi-plus-lg" aria-hidden="true"></i>Add language</button></div>
+        </form>
+        {% else %}
+        <p class="lx-empty mb-0 mt-2">You've added every language we support right now.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

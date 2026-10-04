@@ -1,0 +1,23 @@
+{# Person header with score ring. Needs `card`; optional blocks via `rank`/`total`. #}
+    <div class="lx-card lx-card--raised lx-match-hero mt-3">
+      <div class="lx-card__body">
+        <div class="lx-match-hero__grid">
+          <div class="lx-match-hero__person">
+            {% include "profiles/_avatar.html" with profile=card.profile size="lg" %}
+            <div>
+              <h1>{{ card.profile.display_name }}</h1>
+              <p class="lx-partner__langs mb-0">
+                <span><i class="bi bi-chat-quote" aria-hidden="true"></i>Speaks {{ card.they_speak }}</span>
+                <span><i class="bi bi-book" aria-hidden="true"></i>Learning {{ card.they_learn }}{% if card.their_level %}, estimated {{ card.their_level }}{% endif %}</span>
+              </p>
+            </div>
+          </div>
+          <div class="lx-score-ring" style="--score: {{ card.percent }}" role="img" aria-label="{{ card.percent }} percent match">
+            <span><strong>{{ card.percent }}%</strong> match</span>
+          </div>
+        </div>
+        {% if card.profile.bio %}<p class="lx-bio mt-4 mb-0">{{ card.profile.bio|linebreaksbr }}</p>{% endif %}
+        {% if rank %}<p class="lx-help mt-3 mb-0">Your #{{ rank }} of {{ total }} suggestions. Scores update as profiles and practice change.</p>{% endif %}
+      </div>
+    </div>
+

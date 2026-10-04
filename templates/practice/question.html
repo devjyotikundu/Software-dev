@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Question {{ position }} of {{ total }} | {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="lx-quiz">
+  <div class="container lx-container-form">
+    {% include "practice/_progress.html" with number=position total=total percent=progress_percent level_label=question.difficulty.label %}
+
+    <div class="lx-card lx-card--raised">
+      <div class="lx-card__body">
+        <p class="lx-quiz__category">{{ question.category }}</p>
+        <h1 class="lx-quiz__question" lang="{{ question.language }}">{{ question.text|linebreaksbr }}</h1>
+
+        <form method="post" action="{% url 'practice:answer' pk=session.pk %}" novalidate data-quiz-form>
+          {% csrf_token %}
+          <input type="hidden" name="answer_id" value="{{ answer.pk }}">
+          <fieldset>
+            <legend class="visually-hidden">Choose one answer</legend>
+            <div class="lx-answers">
+              {% for option in question.options %}
+              <input type="radio" class="btn-check" name="option" id="option-{{ option.key }}" value="{{ option.key }}" autocomplete="off">
+              <label class="lx-answer" for="option-{{ option.key }}">
+                <span class="lx-answer__key" aria-hidden="true">{{ option.key }}</span>
+                <span class="lx-answer__text" lang="{{ question.language }}">{{ option.text }}</span>
+              </label>
+              {% endfor %}
+            </div>
+          </fieldset>
+          <div class="lx-quiz__actions">
+            <p class="lx-help mb-0 d-none d-md-block">Tip: press A–D or 1–4 to choose.</p>
+            <button type="submit" class="btn btn-primary btn-lg">Check answer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <form method="post" action="{% url 'practice:quit' pk=session.pk %}" class="lx-quiz__quit">
+      {% csrf_token %}
+      <button type="submit" class="lx-link-button lx-link-button--muted"><i class="bi bi-x-lg" aria-hidden="true"></i>End session</button>
+    </form>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}<script src="{% static 'js/practice.js' %}" defer></script>{% endblock %}
